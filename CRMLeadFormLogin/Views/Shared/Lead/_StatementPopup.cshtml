@@ -1,0 +1,24 @@
+﻿@using ResourcesLead = CRMLeadObjects.Resources.Lead.Lead;
+
+
+<div class="container-popup" id="statement-popup">
+    <div class="content-popup">
+      <div class="header-popup"><h6>@ResourcesLead.titleStatement</h6></div>
+      <div class="body-popup">
+        <p>@ResourcesLead.statementOne&nbsp;@ResourcesLead.statementTwo&nbsp;@ResourcesLead.statementThree</p>
+        <p> @ResourcesLead.statementFour</p>
+        <p>
+          @ResourcesLead.statementFive&nbsp;
+          @ResourcesLead.statementSix&nbsp;
+          @ResourcesLead.statementSeven&nbsp;
+          @ResourcesLead.statementEight&nbsp;
+          @ResourcesLead.statementNine
+        </p>
+        <p>
+        </p>
+      </div>
+      <div class="footer-popup">
+        <button class="btn btn-blue btn-small" onclick="modal.closeStatement()">@ResourcesLead.btnContinue</button>
+      </div>
+    </div>
+  </div>

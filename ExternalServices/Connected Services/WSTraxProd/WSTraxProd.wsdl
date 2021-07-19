@@ -1,0 +1,2566 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:intcomex:trax:production" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:S2="urn:intcomex:trax:production:WSTraxProd" xmlns:S1="urn:soap-fault:details" xmlns:prodata="urn:schemas-progress-com:xml-prodata:0001" name="WSTraxProd" targetNamespace="urn:intcomex:trax:production" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation>EncodingType=DOC_LITERAL, WSA_Product=11.6.3 - Thu Sep  8 18:10:07 EDT 2016</wsdl:documentation>
+  <wsdl:types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" targetNamespace="urn:soap-fault:details">
+      <xsd:element name="FaultDetail">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="errorMessage" type="xsd:string" />
+            <xsd:element name="requestID" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="urn:intcomex:trax:production:WSTraxProd">
+      <xsd:complexType name="changeUserID_wsResultRow">
+        <xsd:sequence>
+          <xsd:element name="ErrorNo" nillable="true" type="xsd:int" />
+          <xsd:element name="Description" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="changeUserID_wsResultParam">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="wsResultRow" type="S2:changeUserID_wsResultRow" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element prodata:datasetName="Results" name="checkcart31_results">
+        <xsd:annotation>
+          <xsd:appinfo>
+            <prodata:relation name="CartLine" prodata:child="OrderLine" prodata:nested="true" prodata:parent="Order" prodata:relationFields="transno,transno" />
+          </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element prodata:tableName="wsResult" minOccurs="0" maxOccurs="unbounded" name="wsResult">
+              <xsd:complexType>
+                <xsd:sequence />
+                <xsd:attribute name="ErrorNo" type="xsd:int" />
+                <xsd:attribute name="Description" type="xsd:string" />
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element prodata:tableName="Order" minOccurs="0" maxOccurs="unbounded" name="Order">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="orderexists" nillable="true" type="xsd:boolean" />
+                  <xsd:element name="transno" nillable="true" type="xsd:int" />
+                  <xsd:element name="transcode" nillable="true" type="xsd:string" />
+                  <xsd:element name="numlines" nillable="true" type="xsd:int" />
+                  <xsd:element name="shipping" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="handling" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="mincharge" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="tax" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="totalamt" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="discamt" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="orderamt" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="currencyid" nillable="true" type="xsd:string" />
+                  <xsd:element name="foreignexchrate" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="homecurrid" nillable="true" type="xsd:string" />
+                  <xsd:element name="homeamt" nillable="true" type="xsd:decimal" />
+                  <xsd:element prodata:tableName="OrderLine" minOccurs="0" maxOccurs="unbounded" name="OrderLineD">
+                    <xsd:complexType>
+                      <xsd:sequence>
+                        <xsd:element name="parentprodrecno" nillable="true" type="xsd:string" />
+                        <xsd:element name="prodid" nillable="true" type="xsd:string" />
+                        <xsd:element name="quantity" nillable="true" type="xsd:decimal" />
+                        <xsd:element name="price" nillable="true" type="xsd:decimal" />
+                        <xsd:element name="extendedprice" nillable="true" type="xsd:decimal" />
+                        <xsd:element name="locid" nillable="true" type="xsd:string" />
+                        <xsd:element name="prodtype" nillable="true" type="xsd:string" />
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element prodata:datasetName="Results_checkcart31d" name="checkcart31d_results">
+        <xsd:annotation>
+          <xsd:appinfo>
+            <prodata:relation name="CartLine" prodata:child="OrderLine" prodata:nested="true" prodata:parent="Order" prodata:relationFields="transno,transno" />
+          </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element prodata:tableName="wsResult" minOccurs="0" maxOccurs="unbounded" name="wsResult">
+              <xsd:complexType>
+                <xsd:sequence />
+                <xsd:attribute name="ErrorNo" type="xsd:int" />
+                <xsd:attribute name="Description" type="xsd:string" />
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element prodata:tableName="Order" minOccurs="0" maxOccurs="unbounded" name="Order">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="orderexists" nillable="true" type="xsd:boolean" />
+                  <xsd:element name="transno" nillable="true" type="xsd:int" />
+                  <xsd:element name="transcode" nillable="true" type="xsd:string" />
+                  <xsd:element name="numlines" nillable="true" type="xsd:int" />
+                  <xsd:element name="shipping" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="handling" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="mincharge" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="tax" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="totalamt" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="discamt" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="orderamt" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="currencyid" nillable="true" type="xsd:string" />
+                  <xsd:element name="foreignexchrate" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="homecurrid" nillable="true" type="xsd:string" />
+                  <xsd:element name="homeamt" nillable="true" type="xsd:decimal" />
+                  <xsd:element prodata:tableName="OrderLine" minOccurs="0" maxOccurs="unbounded" name="OrderLineD">
+                    <xsd:complexType>
+                      <xsd:sequence>
+                        <xsd:element name="parentprodrecno" nillable="true" type="xsd:string" />
+                        <xsd:element name="prodid" nillable="true" type="xsd:string" />
+                        <xsd:element name="quantity" nillable="true" type="xsd:decimal" />
+                        <xsd:element name="price" nillable="true" type="xsd:decimal" />
+                        <xsd:element name="extendedprice" nillable="true" type="xsd:decimal" />
+                        <xsd:element name="locid" nillable="true" type="xsd:string" />
+                        <xsd:element name="prodtype" nillable="true" type="xsd:string" />
+                        <xsd:element name="baseprice" nillable="true" type="xsd:decimal" />
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element prodata:datasetName="Results" name="checkcarttransid_results">
+        <xsd:annotation>
+          <xsd:appinfo>
+            <prodata:relation name="CartLine" prodata:child="OrderLine" prodata:nested="true" prodata:parent="Order" prodata:relationFields="transno,transno" />
+          </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element prodata:tableName="wsResult" minOccurs="0" maxOccurs="unbounded" name="wsResult">
+              <xsd:complexType>
+                <xsd:sequence />
+                <xsd:attribute name="ErrorNo" type="xsd:int" />
+                <xsd:attribute name="Description" type="xsd:string" />
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element prodata:tableName="Order" minOccurs="0" maxOccurs="unbounded" name="Order">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="orderexists" nillable="true" type="xsd:boolean" />
+                  <xsd:element name="transno" nillable="true" type="xsd:int" />
+                  <xsd:element name="transcode" nillable="true" type="xsd:string" />
+                  <xsd:element name="numlines" nillable="true" type="xsd:int" />
+                  <xsd:element name="shipping" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="handling" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="mincharge" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="tax" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="subtotalamt" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="totalamt" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="orderamt" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="discount" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="fixedchargeamt" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="currencyid" nillable="true" type="xsd:string" />
+                  <xsd:element name="foreignexchrate" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="homecurrid" nillable="true" type="xsd:string" />
+                  <xsd:element name="homeamt" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="depositsurchargeamt" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="surchargeamt" nillable="true" type="xsd:decimal" />
+                  <xsd:element prodata:tableName="OrderLine" minOccurs="0" maxOccurs="unbounded" name="OrderLineD">
+                    <xsd:complexType>
+                      <xsd:sequence>
+                        <xsd:element name="parentprodrecno" nillable="true" type="xsd:string" />
+                        <xsd:element name="prodid" nillable="true" type="xsd:string" />
+                        <xsd:element name="quantity" nillable="true" type="xsd:decimal" />
+                        <xsd:element name="price" nillable="true" type="xsd:decimal" />
+                        <xsd:element name="extendedprice" nillable="true" type="xsd:decimal" />
+                        <xsd:element name="baseprice" nillable="true" type="xsd:decimal" />
+                        <xsd:element name="locid" nillable="true" type="xsd:string" />
+                        <xsd:element name="prodtype" nillable="true" type="xsd:string" />
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element prodata:datasetName="Results" name="custser_results">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element prodata:tableName="wsResult" minOccurs="0" maxOccurs="unbounded" name="wsResult">
+              <xsd:complexType>
+                <xsd:sequence />
+                <xsd:attribute name="ErrorNo" type="xsd:int" />
+                <xsd:attribute name="Description" type="xsd:string" />
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="custserResult">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Control-Ent" nillable="true" type="xsd:string" />
+                  <xsd:element name="Cust-ID" nillable="true" type="xsd:string" />
+                  <xsd:element name="Serial" nillable="true" type="xsd:string" />
+                  <xsd:element name="Prod-Recno" nillable="true" type="xsd:string" />
+                  <xsd:element name="Invoice-no" nillable="true" type="xsd:int" />
+                  <xsd:element name="Invoice-date" nillable="true" type="xsd:date" />
+                  <xsd:element name="Imei-no" nillable="true" type="xsd:string" />
+                  <xsd:element name="Sim-no" nillable="true" type="xsd:string" />
+                  <xsd:element name="Cell-phone-no" nillable="true" type="xsd:string" />
+                  <xsd:element name="Plan-no" nillable="true" type="xsd:string" />
+                  <xsd:element name="Warr-exp-date" nillable="true" type="xsd:date" />
+                  <xsd:element name="Failure-ID" nillable="true" type="xsd:string" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+        <xsd:unique prodata:primaryIndex="true" name="idx1">
+          <xsd:selector xpath=".//S2:custserResult" />
+          <xsd:field xpath="S2:Prod-Recno" />
+          <xsd:field xpath="S2:Serial" />
+        </xsd:unique>
+      </xsd:element>
+      <xsd:element name="dsartrans">
+        <xsd:annotation>
+          <xsd:appinfo>
+            <prodata:index name="artransIndex" prodata:primaryIndex="true">
+              <prodata:table name="artransbf" />
+              <prodata:field name="trans-no" />
+            </prodata:index>
+            <prodata:index name="artransdIdx" prodata:primaryIndex="true">
+              <prodata:table name="artransdbf" />
+              <prodata:field name="trans-no" />
+              <prodata:field name="line-no" />
+            </prodata:index>
+            <prodata:relation name="artransrel" prodata:child="artransdbf" prodata:nested="true" prodata:parent="artransbf" prodata:relationFields="trans-no,trans-no" />
+          </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="artransbf">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="control-ent" nillable="true" type="xsd:string" />
+                  <xsd:element name="charge-cust" nillable="true" type="xsd:string" />
+                  <xsd:element name="trans-code" nillable="true" type="xsd:string" />
+                  <xsd:element name="trans-no" nillable="true" type="xsd:int" />
+                  <xsd:element name="trans-id" nillable="true" type="xsd:string" />
+                  <xsd:element name="trans-desc" nillable="true" type="xsd:string" />
+                  <xsd:element name="trans-date" nillable="true" type="xsd:date" />
+                  <xsd:element name="currency-id" nillable="true" type="xsd:string" />
+                  <xsd:element name="trans-amt" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="exch-rate" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="original-doc" nillable="true" type="xsd:string" />
+                  <xsd:element name="trans-home-amt" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="term-id" nillable="true" type="xsd:string" />
+                  <xsd:element name="term-desc" nillable="true" type="xsd:string" />
+                  <xsd:element name="due-date" nillable="true" type="xsd:date" />
+                  <xsd:element name="disc-date" nillable="true" type="xsd:date" />
+                  <xsd:element name="discount-amt" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="carrier-id" nillable="true" type="xsd:string" />
+                  <xsd:element name="carrier-desc" nillable="true" type="xsd:string" />
+                  <xsd:element name="fully-paid-date" nillable="true" type="xsd:date" />
+                  <xsd:element name="cust-name" nillable="true" type="xsd:string" />
+                  <xsd:element name="tax-amt" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="home-tax-amt" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="prnumber" nillable="true" type="xsd:string" />
+                  <xsd:element name="doc-amt" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="bal-amt" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="home-amt" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="home-bal-amt" nillable="true" type="xsd:decimal" />
+                  <xsd:element minOccurs="0" maxOccurs="unbounded" name="artransdbf">
+                    <xsd:complexType>
+                      <xsd:sequence>
+                        <xsd:element name="parentprodrecno" nillable="true" type="xsd:string" />
+                        <xsd:element name="parentlineno" nillable="true" type="xsd:int" />
+                        <xsd:element name="prodid" nillable="true" type="xsd:string" />
+                        <xsd:element name="quantity" nillable="true" type="xsd:decimal" />
+                        <xsd:element name="trans-no" nillable="true" type="xsd:int" />
+                        <xsd:element name="line-no" nillable="true" type="xsd:int" />
+                        <xsd:element name="prod-recno" nillable="true" type="xsd:string" />
+                        <xsd:element name="sku" nillable="true" type="xsd:string" />
+                        <xsd:element name="DESCRIPTION" nillable="true" type="xsd:string" />
+                        <xsd:element name="home-amt" nillable="true" type="xsd:decimal" />
+                        <xsd:element name="amount" nillable="true" type="xsd:decimal" />
+                        <xsd:element name="ship-qty" nillable="true" type="xsd:int" />
+                        <xsd:element name="unit-id" nillable="true" type="xsd:string" />
+                        <xsd:element name="unit-price" nillable="true" type="xsd:decimal" />
+                        <xsd:element name="mpn" nillable="true" type="xsd:string" />
+                        <xsd:element name="perpetual" nillable="true" type="xsd:boolean" />
+                        <xsd:element name="prodtype" nillable="true" type="xsd:string" />
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="getDeliveryInfo_ttdeliveryRow">
+        <xsd:sequence>
+          <xsd:element name="carrier-id" nillable="true" type="xsd:string" />
+          <xsd:element name="carrier-desc" nillable="true" type="xsd:string" />
+          <xsd:element name="shipped" nillable="true" type="xsd:boolean" />
+          <xsd:element name="driver" nillable="true" type="xsd:string" />
+          <xsd:element name="dispatched-date" nillable="true" type="xsd:string" />
+          <xsd:element name="dispatched-time" nillable="true" type="xsd:string" />
+          <xsd:element name="status-id" nillable="true" type="xsd:string" />
+          <xsd:element name="status-desc" nillable="true" type="xsd:string" />
+          <xsd:element name="status-detail" nillable="true" type="xsd:string" />
+          <xsd:element name="pack-no" nillable="true" type="xsd:int" />
+          <xsd:element name="deliver-user" nillable="true" type="xsd:string" />
+          <xsd:element name="deliver-date" nillable="true" type="xsd:string" />
+          <xsd:element name="deliver-time" nillable="true" type="xsd:string" />
+          <xsd:element name="no-of-boxes" nillable="true" type="xsd:int" />
+          <xsd:element name="notes" nillable="true" type="xsd:string" />
+          <xsd:element name="recby" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getDeliveryInfo_ttdeliveryParam">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="ttdeliveryRow" type="S2:getDeliveryInfo_ttdeliveryRow" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element prodata:datasetName="Results" name="getInvURL_results">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element prodata:tableName="wsResult" minOccurs="0" maxOccurs="unbounded" name="wsResult">
+              <xsd:complexType>
+                <xsd:sequence />
+                <xsd:attribute name="ErrorNo" type="xsd:int" />
+                <xsd:attribute name="Description" type="xsd:string" />
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="ttInv">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="cust-id" nillable="true" type="xsd:string" />
+                  <xsd:element name="Invoice-No" nillable="true" type="xsd:string" />
+                  <xsd:element name="Pr-No" nillable="true" type="xsd:string" />
+                  <xsd:element name="InvURL" nillable="true" type="xsd:string" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="getprafs31sd_prodsRow">
+        <xsd:sequence>
+          <xsd:element name="prodrecno" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getprafs31sd_prodsParam">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="prodsRow" type="S2:getprafs31sd_prodsRow" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element prodata:datasetName="dsprodafsresult" name="getprafs3sd_results">
+        <xsd:annotation>
+          <xsd:appinfo>
+            <prodata:index name="idxprod" prodata:primaryIndex="true">
+              <prodata:table name="prodresultbf" />
+              <prodata:field name="prodrecno" />
+            </prodata:index>
+            <prodata:relation name="pordafsrel" prodata:child="afsresultbf" prodata:nested="true" prodata:parent="prodresultbf" prodata:relationFields="prodrecno,prodrecno" />
+            <prodata:relation name="SDrel" prodata:child="ProductPrcSD" prodata:nested="true" prodata:parent="prodresultbf" prodata:relationFields="prodrecno,prodid" />
+          </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="prodresultbf">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="prodrecno" nillable="true" type="xsd:string" />
+                  <xsd:element name="price" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="unitid" nillable="true" type="xsd:string" />
+                  <xsd:element name="currid" nillable="true" type="xsd:string" />
+                  <xsd:element name="mpn" nillable="true" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="unbounded" name="afsresultbf">
+                    <xsd:complexType>
+                      <xsd:sequence>
+                        <xsd:element name="prodrecno" nillable="true" type="xsd:string" />
+                        <xsd:element name="locid" nillable="true" type="xsd:string" />
+                        <xsd:element name="afs" nillable="true" type="xsd:decimal" />
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                  <xsd:element prodata:tableName="ProductPrcSD" minOccurs="0" maxOccurs="unbounded" name="ProductPrcSD">
+                    <xsd:complexType>
+                      <xsd:sequence>
+                        <xsd:element name="prodid" nillable="true" type="xsd:string" />
+                        <xsd:element name="lineno" nillable="true" type="xsd:int" />
+                        <xsd:element name="seqno" nillable="true" type="xsd:int" />
+                        <xsd:element name="rebatecost" nillable="true" type="xsd:decimal" />
+                        <xsd:element name="suppliercost" nillable="true" type="xsd:decimal" />
+                        <xsd:element name="rebateprice" nillable="true" type="xsd:boolean" />
+                        <xsd:element name="rebatepriceamt" nillable="true" type="xsd:decimal" />
+                        <xsd:element name="rebatecurrencyid" nillable="true" type="xsd:string" />
+                        <xsd:element name="debittype" nillable="true" type="xsd:string" />
+                        <xsd:element name="Shipdebitno" nillable="true" type="xsd:int" />
+                        <xsd:element name="maxqty" nillable="true" type="xsd:decimal" />
+                        <xsd:element name="orderqty" nillable="true" type="xsd:decimal" />
+                        <xsd:element name="shipqty" nillable="true" type="xsd:decimal" />
+                        <xsd:element name="custid" nillable="true" type="xsd:string" />
+                        <xsd:element name="currencyid" nillable="true" type="xsd:string" />
+                        <xsd:element name="effectdate" nillable="true" type="xsd:date" />
+                        <xsd:element name="expirydate" nillable="true" type="xsd:date" />
+                        <xsd:element name="locgroupid" nillable="true" type="xsd:string" />
+                        <xsd:element name="levelid" nillable="true" type="xsd:string" />
+                        <xsd:element name="parentmaxqty" nillable="true" type="xsd:boolean" />
+                        <xsd:element name="sdlineno" nillable="true" type="xsd:int" />
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+        <xsd:unique prodata:primaryIndex="true" name="idx1_2">
+          <xsd:selector xpath=".//S2:afsresultbf" />
+          <xsd:field xpath="S2:prodrecno" />
+          <xsd:field xpath="S2:locid" />
+        </xsd:unique>
+      </xsd:element>
+      <xsd:complexType name="getprafs4_prodsRow">
+        <xsd:sequence>
+          <xsd:element name="prodrecno" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getprafs4_prodsParam">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="prodsRow" type="S2:getprafs4_prodsRow" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element prodata:datasetName="dsprodafsresult4" name="getprafs4_results">
+        <xsd:annotation>
+          <xsd:appinfo>
+            <prodata:index name="idxprod" prodata:primaryIndex="true">
+              <prodata:table name="prodresultbf" />
+              <prodata:field name="prodrecno" />
+            </prodata:index>
+            <prodata:index name="idxafs" prodata:primaryIndex="true">
+              <prodata:table name="afsresultbf" />
+              <prodata:field name="prodrecno" />
+              <prodata:field name="locid" />
+            </prodata:index>
+            <prodata:relation name="pordafsrel" prodata:child="afsresultbf" prodata:nested="true" prodata:parent="prodresultbf" prodata:relationFields="prodrecno,prodrecno" />
+            <prodata:relation name="SDrel" prodata:child="ProductPrcSD" prodata:nested="true" prodata:parent="prodresultbf" prodata:relationFields="prodrecno,prodid" />
+          </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="prodresultbf">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="prodrecno" nillable="true" type="xsd:string" />
+                  <xsd:element name="price" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="unitid" nillable="true" type="xsd:string" />
+                  <xsd:element name="currid" nillable="true" type="xsd:string" />
+                  <xsd:element name="mpn" nillable="true" type="xsd:string" />
+                  <xsd:element name="soprice" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="baseprice" nillable="true" type="xsd:decimal" />
+                  <xsd:element minOccurs="0" maxOccurs="unbounded" name="afsresultbf">
+                    <xsd:complexType>
+                      <xsd:sequence>
+                        <xsd:element name="prodrecno" nillable="true" type="xsd:string" />
+                        <xsd:element name="locid" nillable="true" type="xsd:string" />
+                        <xsd:element name="afs" nillable="true" type="xsd:decimal" />
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                  <xsd:element prodata:tableName="ProductPrcSD" minOccurs="0" maxOccurs="unbounded" name="ProductPrcSD">
+                    <xsd:complexType>
+                      <xsd:sequence>
+                        <xsd:element name="prodid" nillable="true" type="xsd:string" />
+                        <xsd:element name="lineno" nillable="true" type="xsd:int" />
+                        <xsd:element name="seqno" nillable="true" type="xsd:int" />
+                        <xsd:element name="rebatecost" nillable="true" type="xsd:decimal" />
+                        <xsd:element name="suppliercost" nillable="true" type="xsd:decimal" />
+                        <xsd:element name="rebateprice" nillable="true" type="xsd:boolean" />
+                        <xsd:element name="rebatepriceamt" nillable="true" type="xsd:decimal" />
+                        <xsd:element name="rebatecurrencyid" nillable="true" type="xsd:string" />
+                        <xsd:element name="debittype" nillable="true" type="xsd:string" />
+                        <xsd:element name="Shipdebitno" nillable="true" type="xsd:int" />
+                        <xsd:element name="maxqty" nillable="true" type="xsd:decimal" />
+                        <xsd:element name="orderqty" nillable="true" type="xsd:decimal" />
+                        <xsd:element name="shipqty" nillable="true" type="xsd:decimal" />
+                        <xsd:element name="custid" nillable="true" type="xsd:string" />
+                        <xsd:element name="currencyid" nillable="true" type="xsd:string" />
+                        <xsd:element name="effectdate" nillable="true" type="xsd:date" />
+                        <xsd:element name="expirydate" nillable="true" type="xsd:date" />
+                        <xsd:element name="locgroupid" nillable="true" type="xsd:string" />
+                        <xsd:element name="levelid" nillable="true" type="xsd:string" />
+                        <xsd:element name="parentmaxqty" nillable="true" type="xsd:boolean" />
+                        <xsd:element name="sdlineno" nillable="true" type="xsd:int" />
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="getProdList_prodlistRow">
+        <xsd:sequence>
+          <xsd:element name="productid" nillable="true" type="xsd:string" />
+          <xsd:element name="DESCRIPTION" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getProdList_prodlistParam">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="prodlistRow" type="S2:getProdList_prodlistRow" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element prodata:datasetName="dsOrderOrderline" name="getSalesOrders6_results">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="orderbf">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="trans-no" nillable="true" type="xsd:int" />
+                  <xsd:element name="cust-id" nillable="true" type="xsd:string" />
+                  <xsd:element name="cust-name" nillable="true" type="xsd:string" />
+                  <xsd:element name="trans-date" nillable="true" type="xsd:date" />
+                  <xsd:element name="tStatus" nillable="true" type="xsd:string" />
+                  <xsd:element name="tStatusCode" nillable="true" type="xsd:int" />
+                  <xsd:element name="subtotal" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="subtotal-home" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="currency-id" nillable="true" type="xsd:string" />
+                  <xsd:element name="tax-rate" nillable="true" type="xsd:string" />
+                  <xsd:element name="totalhometaxamt" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="totaltaxamt" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="shipping-fee" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="other-fees" nillable="true" type="xsd:string" />
+                  <xsd:element name="TOTAL-home" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="total-amt" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="Web-user" nillable="true" type="xsd:string" />
+                  <xsd:element name="web-complete" nillable="true" type="xsd:boolean" />
+                  <xsd:element name="discAmt" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="invprintedno" nillable="true" type="xsd:string" />
+                  <xsd:element name="carrier-ID" nillable="true" type="xsd:string" />
+                  <xsd:element name="carrier" nillable="true" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="unbounded" name="orderlinebf">
+                    <xsd:complexType>
+                      <xsd:sequence>
+                        <xsd:element name="parentprodrecno" nillable="true" type="xsd:string" />
+                        <xsd:element name="parentlineno" nillable="true" type="xsd:int" />
+                        <xsd:element name="line-no" nillable="true" type="xsd:int" />
+                        <xsd:element name="trans-no" nillable="true" type="xsd:int" />
+                        <xsd:element name="prod-recno" nillable="true" type="xsd:string" />
+                        <xsd:element name="DESCRIPTION" nillable="true" type="xsd:string" />
+                        <xsd:element name="quantity" nillable="true" type="xsd:decimal" />
+                        <xsd:element name="price" nillable="true" type="xsd:decimal" />
+                        <xsd:element name="extprice-home" nillable="true" type="xsd:decimal" />
+                        <xsd:element name="extprice" nillable="true" type="xsd:decimal" />
+                        <xsd:element name="tax-home-amt" nillable="true" type="xsd:decimal" />
+                        <xsd:element name="tax-amt" nillable="true" type="xsd:decimal" />
+                        <xsd:element name="sku" nillable="true" type="xsd:string" />
+                        <xsd:element name="MPN" nillable="true" type="xsd:string" />
+                        <xsd:element name="kitcomp" nillable="true" type="xsd:string" />
+                        <xsd:element name="perpetual" nillable="true" type="xsd:boolean" />
+                        <xsd:element name="loc-id" nillable="true" type="xsd:string" />
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+        <xsd:unique prodata:primaryIndex="true" name="orderIndex">
+          <xsd:selector xpath=".//S2:orderbf" />
+          <xsd:field xpath="S2:trans-no" />
+        </xsd:unique>
+        <xsd:unique prodata:primaryIndex="true" name="linenoIdx">
+          <xsd:selector xpath=".//S2:orderlinebf" />
+          <xsd:field xpath="S2:line-no" />
+          <xsd:field xpath="S2:trans-no" />
+        </xsd:unique>
+        <xsd:keyref prodata:nested="true" name="orderrel" refer="S2:orderIndex">
+          <xsd:selector xpath=".//S2:orderlinebf" />
+          <xsd:field xpath="S2:trans-no" />
+        </xsd:keyref>
+      </xsd:element>
+      <xsd:element prodata:datasetName="dsOrderOrderline" name="getSalesOrders7_results">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="orderbf">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="trans-no" nillable="true" type="xsd:int" />
+                  <xsd:element name="cust-id" nillable="true" type="xsd:string" />
+                  <xsd:element name="cust-name" nillable="true" type="xsd:string" />
+                  <xsd:element name="trans-date" nillable="true" type="xsd:date" />
+                  <xsd:element name="tStatus" nillable="true" type="xsd:string" />
+                  <xsd:element name="tStatusCode" nillable="true" type="xsd:int" />
+                  <xsd:element name="subtotal" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="subtotal-home" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="currency-id" nillable="true" type="xsd:string" />
+                  <xsd:element name="tax-rate" nillable="true" type="xsd:string" />
+                  <xsd:element name="totalhometaxamt" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="totaltaxamt" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="shipping-fee" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="other-fees" nillable="true" type="xsd:string" />
+                  <xsd:element name="TOTAL-home" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="total-amt" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="Web-user" nillable="true" type="xsd:string" />
+                  <xsd:element name="web-complete" nillable="true" type="xsd:boolean" />
+                  <xsd:element name="discAmt" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="invprintedno" nillable="true" type="xsd:string" />
+                  <xsd:element name="carrier-ID" nillable="true" type="xsd:string" />
+                  <xsd:element name="carrier" nillable="true" type="xsd:string" />
+                  <xsd:element name="trans-id" nillable="true" type="xsd:string" />
+                  <xsd:element name="cust-po" nillable="true" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="unbounded" name="orderlinebf">
+                    <xsd:complexType>
+                      <xsd:sequence>
+                        <xsd:element name="parentprodrecno" nillable="true" type="xsd:string" />
+                        <xsd:element name="parentlineno" nillable="true" type="xsd:int" />
+                        <xsd:element name="line-no" nillable="true" type="xsd:int" />
+                        <xsd:element name="trans-no" nillable="true" type="xsd:int" />
+                        <xsd:element name="prod-recno" nillable="true" type="xsd:string" />
+                        <xsd:element name="DESCRIPTION" nillable="true" type="xsd:string" />
+                        <xsd:element name="quantity" nillable="true" type="xsd:decimal" />
+                        <xsd:element name="price" nillable="true" type="xsd:decimal" />
+                        <xsd:element name="extprice-home" nillable="true" type="xsd:decimal" />
+                        <xsd:element name="extprice" nillable="true" type="xsd:decimal" />
+                        <xsd:element name="tax-home-amt" nillable="true" type="xsd:decimal" />
+                        <xsd:element name="tax-amt" nillable="true" type="xsd:decimal" />
+                        <xsd:element name="sku" nillable="true" type="xsd:string" />
+                        <xsd:element name="MPN" nillable="true" type="xsd:string" />
+                        <xsd:element name="kitcomp" nillable="true" type="xsd:string" />
+                        <xsd:element name="perpetual" nillable="true" type="xsd:boolean" />
+                        <xsd:element name="loc-id" nillable="true" type="xsd:string" />
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+        <xsd:unique prodata:primaryIndex="true" name="orderIndex_2">
+          <xsd:selector xpath=".//S2:orderbf" />
+          <xsd:field xpath="S2:trans-no" />
+        </xsd:unique>
+        <xsd:unique prodata:primaryIndex="true" name="linenoIdx_2">
+          <xsd:selector xpath=".//S2:orderlinebf" />
+          <xsd:field xpath="S2:line-no" />
+          <xsd:field xpath="S2:trans-no" />
+        </xsd:unique>
+        <xsd:keyref prodata:nested="true" name="orderrel_2" refer="S2:orderIndex_2">
+          <xsd:selector xpath=".//S2:orderlinebf" />
+          <xsd:field xpath="S2:trans-no" />
+        </xsd:keyref>
+      </xsd:element>
+      <xsd:element prodata:datasetName="dsOrderOrderline" name="getSOInfo_results">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="orderbf">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="trans-no" nillable="true" type="xsd:int" />
+                  <xsd:element name="cust-id" nillable="true" type="xsd:string" />
+                  <xsd:element name="cust-name" nillable="true" type="xsd:string" />
+                  <xsd:element name="trans-date" nillable="true" type="xsd:date" />
+                  <xsd:element name="tStatus" nillable="true" type="xsd:string" />
+                  <xsd:element name="tStatusCode" nillable="true" type="xsd:int" />
+                  <xsd:element name="subtotal" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="subtotal-home" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="currency-id" nillable="true" type="xsd:string" />
+                  <xsd:element name="tax-rate" nillable="true" type="xsd:string" />
+                  <xsd:element name="totalhometaxamt" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="totaltaxamt" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="shipping-fee" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="other-fees" nillable="true" type="xsd:string" />
+                  <xsd:element name="TOTAL-home" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="total-amt" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="Web-user" nillable="true" type="xsd:string" />
+                  <xsd:element name="web-complete" nillable="true" type="xsd:boolean" />
+                  <xsd:element name="discAmt" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="invprintedno" nillable="true" type="xsd:string" />
+                  <xsd:element name="carrier-ID" nillable="true" type="xsd:string" />
+                  <xsd:element name="carrier" nillable="true" type="xsd:string" />
+                  <xsd:element name="trans-id" nillable="true" type="xsd:string" />
+                  <xsd:element name="cust-po" nillable="true" type="xsd:string" />
+                  <xsd:element name="depositsurchargeamt" nillable="true" type="xsd:decimal" />
+                  <xsd:element minOccurs="0" maxOccurs="unbounded" name="orderlinebf">
+                    <xsd:complexType>
+                      <xsd:sequence>
+                        <xsd:element name="parentprodrecno" nillable="true" type="xsd:string" />
+                        <xsd:element name="parentlineno" nillable="true" type="xsd:int" />
+                        <xsd:element name="line-no" nillable="true" type="xsd:int" />
+                        <xsd:element name="trans-no" nillable="true" type="xsd:int" />
+                        <xsd:element name="prod-recno" nillable="true" type="xsd:string" />
+                        <xsd:element name="DESCRIPTION" nillable="true" type="xsd:string" />
+                        <xsd:element name="quantity" nillable="true" type="xsd:decimal" />
+                        <xsd:element name="price" nillable="true" type="xsd:decimal" />
+                        <xsd:element name="extprice-home" nillable="true" type="xsd:decimal" />
+                        <xsd:element name="extprice" nillable="true" type="xsd:decimal" />
+                        <xsd:element name="tax-home-amt" nillable="true" type="xsd:decimal" />
+                        <xsd:element name="tax-amt" nillable="true" type="xsd:decimal" />
+                        <xsd:element name="sku" nillable="true" type="xsd:string" />
+                        <xsd:element name="MPN" nillable="true" type="xsd:string" />
+                        <xsd:element name="kitcomp" nillable="true" type="xsd:string" />
+                        <xsd:element name="perpetual" nillable="true" type="xsd:boolean" />
+                        <xsd:element name="loc-id" nillable="true" type="xsd:string" />
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+        <xsd:unique prodata:primaryIndex="true" name="orderIndex_3">
+          <xsd:selector xpath=".//S2:orderbf" />
+          <xsd:field xpath="S2:trans-no" />
+        </xsd:unique>
+        <xsd:unique prodata:primaryIndex="true" name="linenoIdx_3">
+          <xsd:selector xpath=".//S2:orderlinebf" />
+          <xsd:field xpath="S2:line-no" />
+          <xsd:field xpath="S2:trans-no" />
+        </xsd:unique>
+        <xsd:keyref prodata:nested="true" name="orderrel_3" refer="S2:orderIndex_3">
+          <xsd:selector xpath=".//S2:orderlinebf" />
+          <xsd:field xpath="S2:trans-no" />
+        </xsd:keyref>
+      </xsd:element>
+      <xsd:element prodata:datasetName="dsOrderOrderline" name="getSOInv_results">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="orderbf">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="trans-no" nillable="true" type="xsd:int" />
+                  <xsd:element name="cust-id" nillable="true" type="xsd:string" />
+                  <xsd:element name="cust-name" nillable="true" type="xsd:string" />
+                  <xsd:element name="trans-date" nillable="true" type="xsd:date" />
+                  <xsd:element name="tStatus" nillable="true" type="xsd:string" />
+                  <xsd:element name="tStatusCode" nillable="true" type="xsd:int" />
+                  <xsd:element name="subtotal" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="subtotal-home" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="currency-id" nillable="true" type="xsd:string" />
+                  <xsd:element name="tax-rate" nillable="true" type="xsd:string" />
+                  <xsd:element name="totalhometaxamt" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="totaltaxamt" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="shipping-fee" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="other-fees" nillable="true" type="xsd:string" />
+                  <xsd:element name="TOTAL-home" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="total-amt" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="Web-user" nillable="true" type="xsd:string" />
+                  <xsd:element name="web-complete" nillable="true" type="xsd:boolean" />
+                  <xsd:element name="discAmt" nillable="true" type="xsd:decimal" />
+                  <xsd:element name="invprintedno" nillable="true" type="xsd:string" />
+                  <xsd:element name="invno" nillable="true" type="xsd:string" />
+                  <xsd:element name="carrier-ID" nillable="true" type="xsd:string" />
+                  <xsd:element name="carrier" nillable="true" type="xsd:string" />
+                  <xsd:element name="trans-id" nillable="true" type="xsd:string" />
+                  <xsd:element name="cust-po" nillable="true" type="xsd:string" />
+                  <xsd:element name="depositsurchargeamt" nillable="true" type="xsd:decimal" />
+                  <xsd:element minOccurs="0" maxOccurs="unbounded" name="orderlinebf">
+                    <xsd:complexType>
+                      <xsd:sequence>
+                        <xsd:element name="parentprodrecno" nillable="true" type="xsd:string" />
+                        <xsd:element name="parentlineno" nillable="true" type="xsd:int" />
+                        <xsd:element name="line-no" nillable="true" type="xsd:int" />
+                        <xsd:element name="trans-no" nillable="true" type="xsd:int" />
+                        <xsd:element name="prod-recno" nillable="true" type="xsd:string" />
+                        <xsd:element name="DESCRIPTION" nillable="true" type="xsd:string" />
+                        <xsd:element name="quantity" nillable="true" type="xsd:decimal" />
+                        <xsd:element name="price" nillable="true" type="xsd:decimal" />
+                        <xsd:element name="extprice-home" nillable="true" type="xsd:decimal" />
+                        <xsd:element name="extprice" nillable="true" type="xsd:decimal" />
+                        <xsd:element name="tax-home-amt" nillable="true" type="xsd:decimal" />
+                        <xsd:element name="tax-amt" nillable="true" type="xsd:decimal" />
+                        <xsd:element name="sku" nillable="true" type="xsd:string" />
+                        <xsd:element name="MPN" nillable="true" type="xsd:string" />
+                        <xsd:element name="kitcomp" nillable="true" type="xsd:string" />
+                        <xsd:element name="perpetual" nillable="true" type="xsd:boolean" />
+                        <xsd:element name="loc-id" nillable="true" type="xsd:string" />
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+        <xsd:unique prodata:primaryIndex="true" name="orderIndex_4">
+          <xsd:selector xpath=".//S2:orderbf" />
+          <xsd:field xpath="S2:trans-no" />
+        </xsd:unique>
+        <xsd:unique prodata:primaryIndex="true" name="linenoIdx_4">
+          <xsd:selector xpath=".//S2:orderlinebf" />
+          <xsd:field xpath="S2:line-no" />
+          <xsd:field xpath="S2:trans-no" />
+        </xsd:unique>
+        <xsd:keyref prodata:nested="true" name="orderrel_4" refer="S2:orderIndex_4">
+          <xsd:selector xpath=".//S2:orderlinebf" />
+          <xsd:field xpath="S2:trans-no" />
+        </xsd:keyref>
+      </xsd:element>
+      <xsd:element prodata:datasetName="Results" name="getusersalesrep_results">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element prodata:tableName="wsResult" minOccurs="0" maxOccurs="unbounded" name="wsResult">
+              <xsd:complexType>
+                <xsd:sequence />
+                <xsd:attribute name="ErrorNo" type="xsd:int" />
+                <xsd:attribute name="Description" type="xsd:string" />
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element prodata:tableName="WebUserSalesRep" minOccurs="0" maxOccurs="unbounded" name="SalesRep">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element prodata:fieldName="webuserid" name="webuserid" nillable="true" type="xsd:string" />
+                  <xsd:element name="salesid" nillable="true" type="xsd:string" />
+                  <xsd:element name="salesname" nillable="true" type="xsd:string" />
+                  <xsd:element name="salesemail" nillable="true" type="xsd:string" />
+                  <xsd:element name="ismanager" nillable="true" type="xsd:boolean" />
+                  <xsd:element name="sscudf1" nillable="true" type="xsd:string" />
+                  <xsd:element name="sscudf2" nillable="true" type="xsd:string" />
+                  <xsd:element name="workphone" nillable="true" type="xsd:string" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="getWebuser_tweb_userRow">
+        <xsd:sequence>
+          <xsd:element name="USER_ID" nillable="true" type="xsd:string" />
+          <xsd:element name="e_mail" nillable="true" type="xsd:string" />
+          <xsd:element name="cust-id" nillable="true" type="xsd:string" />
+          <xsd:element name="cust-name" nillable="true" type="xsd:string" />
+          <xsd:element name="lang-ID" nillable="true" type="xsd:string" />
+          <xsd:element name="web_group_list" nillable="true" type="xsd:string" />
+          <xsd:element name="change_login" nillable="true" type="xsd:boolean" />
+          <xsd:element name="acct_inq" nillable="true" type="xsd:boolean" />
+          <xsd:element name="ord_inq" nillable="true" type="xsd:boolean" />
+          <xsd:element name="revise_qu" nillable="true" type="xsd:boolean" />
+          <xsd:element name="pay_acct" nillable="true" type="xsd:boolean" />
+          <xsd:element name="LOGOUT" nillable="true" type="xsd:boolean" />
+          <xsd:element name="change_loc" nillable="true" type="xsd:boolean" />
+          <xsd:element name="change_carr" nillable="true" type="xsd:boolean" />
+          <xsd:element name="change_ship_addr" nillable="true" type="xsd:boolean" />
+          <xsd:element name="change_po" nillable="true" type="xsd:boolean" />
+          <xsd:element name="sales_login" nillable="true" type="xsd:boolean" />
+          <xsd:element name="NAME" nillable="true" type="xsd:string" />
+          <xsd:element name="loc-id" nillable="true" type="xsd:string" />
+          <xsd:element name="control-ent" nillable="true" type="xsd:string" />
+          <xsd:element name="afs-loc-list" nillable="true" type="xsd:string" />
+          <xsd:element name="carrier-id" nillable="true" type="xsd:string" />
+          <xsd:element name="carrier-name" nillable="true" type="xsd:string" />
+          <xsd:element name="prof-id" nillable="true" type="xsd:string" />
+          <xsd:element name="BROWSE_product" nillable="true" type="xsd:boolean" />
+          <xsd:element name="loc-list" nillable="true" type="xsd:string" />
+          <xsd:element name="currency-list" nillable="true" type="xsd:string" />
+          <xsd:element name="setup_user" nillable="true" type="xsd:boolean" />
+          <xsd:element name="carrier-list" nillable="true" type="xsd:string" />
+          <xsd:element name="source-id" nillable="true" type="xsd:string" />
+          <xsd:element name="oper-id" nillable="true" type="xsd:string" />
+          <xsd:element name="guest" nillable="true" type="xsd:boolean" />
+          <xsd:element name="download-dir" nillable="true" type="xsd:string" />
+          <xsd:element name="ACTIVE" nillable="true" type="xsd:boolean" />
+          <xsd:element name="admin" nillable="true" type="xsd:boolean" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getWebuser_tweb_userParam">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="tweb_userRow" type="S2:getWebuser_tweb_userRow" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getWebuser2_tweb_userRow">
+        <xsd:sequence>
+          <xsd:element name="USER_ID" nillable="true" type="xsd:string" />
+          <xsd:element name="e_mail" nillable="true" type="xsd:string" />
+          <xsd:element name="cust-id" nillable="true" type="xsd:string" />
+          <xsd:element name="cust-name" nillable="true" type="xsd:string" />
+          <xsd:element name="lang-ID" nillable="true" type="xsd:string" />
+          <xsd:element name="web_group_list" nillable="true" type="xsd:string" />
+          <xsd:element name="change_login" nillable="true" type="xsd:boolean" />
+          <xsd:element name="acct_inq" nillable="true" type="xsd:boolean" />
+          <xsd:element name="ord_inq" nillable="true" type="xsd:boolean" />
+          <xsd:element name="revise_qu" nillable="true" type="xsd:boolean" />
+          <xsd:element name="pay_acct" nillable="true" type="xsd:boolean" />
+          <xsd:element name="LOGOUT" nillable="true" type="xsd:boolean" />
+          <xsd:element name="change_loc" nillable="true" type="xsd:boolean" />
+          <xsd:element name="change_carr" nillable="true" type="xsd:boolean" />
+          <xsd:element name="change_ship_addr" nillable="true" type="xsd:boolean" />
+          <xsd:element name="change_po" nillable="true" type="xsd:boolean" />
+          <xsd:element name="sales_login" nillable="true" type="xsd:boolean" />
+          <xsd:element name="NAME" nillable="true" type="xsd:string" />
+          <xsd:element name="loc-id" nillable="true" type="xsd:string" />
+          <xsd:element name="control-ent" nillable="true" type="xsd:string" />
+          <xsd:element name="afs-loc-list" nillable="true" type="xsd:string" />
+          <xsd:element name="carrier-id" nillable="true" type="xsd:string" />
+          <xsd:element name="carrier-name" nillable="true" type="xsd:string" />
+          <xsd:element name="prof-id" nillable="true" type="xsd:string" />
+          <xsd:element name="BROWSE_product" nillable="true" type="xsd:boolean" />
+          <xsd:element name="loc-list" nillable="true" type="xsd:string" />
+          <xsd:element name="currency-list" nillable="true" type="xsd:string" />
+          <xsd:element name="setup_user" nillable="true" type="xsd:boolean" />
+          <xsd:element name="carrier-list" nillable="true" type="xsd:string" />
+          <xsd:element name="source-id" nillable="true" type="xsd:string" />
+          <xsd:element name="oper-id" nillable="true" type="xsd:string" />
+          <xsd:element name="guest" nillable="true" type="xsd:boolean" />
+          <xsd:element name="download-dir" nillable="true" type="xsd:string" />
+          <xsd:element name="ACTIVE" nillable="true" type="xsd:boolean" />
+          <xsd:element name="admin" nillable="true" type="xsd:boolean" />
+          <xsd:element name="require-po" nillable="true" type="xsd:boolean" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getWebuser2_tweb_userParam">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="tweb_userRow" type="S2:getWebuser2_tweb_userRow" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getWebusersbyadm_tweb_userRow">
+        <xsd:sequence>
+          <xsd:element name="USER_ID" nillable="true" type="xsd:string" />
+          <xsd:element name="e_mail" nillable="true" type="xsd:string" />
+          <xsd:element name="cust-id" nillable="true" type="xsd:string" />
+          <xsd:element name="cust-name" nillable="true" type="xsd:string" />
+          <xsd:element name="lang-ID" nillable="true" type="xsd:string" />
+          <xsd:element name="web_group_list" nillable="true" type="xsd:string" />
+          <xsd:element name="change_login" nillable="true" type="xsd:boolean" />
+          <xsd:element name="acct_inq" nillable="true" type="xsd:boolean" />
+          <xsd:element name="ord_inq" nillable="true" type="xsd:boolean" />
+          <xsd:element name="revise_qu" nillable="true" type="xsd:boolean" />
+          <xsd:element name="pay_acct" nillable="true" type="xsd:boolean" />
+          <xsd:element name="LOGOUT" nillable="true" type="xsd:boolean" />
+          <xsd:element name="change_loc" nillable="true" type="xsd:boolean" />
+          <xsd:element name="change_carr" nillable="true" type="xsd:boolean" />
+          <xsd:element name="change_ship_addr" nillable="true" type="xsd:boolean" />
+          <xsd:element name="change_po" nillable="true" type="xsd:boolean" />
+          <xsd:element name="sales_login" nillable="true" type="xsd:boolean" />
+          <xsd:element name="NAME" nillable="true" type="xsd:string" />
+          <xsd:element name="loc-id" nillable="true" type="xsd:string" />
+          <xsd:element name="control-ent" nillable="true" type="xsd:string" />
+          <xsd:element name="afs-loc-list" nillable="true" type="xsd:string" />
+          <xsd:element name="carrier-id" nillable="true" type="xsd:string" />
+          <xsd:element name="carrier-name" nillable="true" type="xsd:string" />
+          <xsd:element name="prof-id" nillable="true" type="xsd:string" />
+          <xsd:element name="BROWSE_product" nillable="true" type="xsd:boolean" />
+          <xsd:element name="loc-list" nillable="true" type="xsd:string" />
+          <xsd:element name="currency-list" nillable="true" type="xsd:string" />
+          <xsd:element name="setup_user" nillable="true" type="xsd:boolean" />
+          <xsd:element name="carrier-list" nillable="true" type="xsd:string" />
+          <xsd:element name="source-id" nillable="true" type="xsd:string" />
+          <xsd:element name="oper-id" nillable="true" type="xsd:string" />
+          <xsd:element name="guest" nillable="true" type="xsd:boolean" />
+          <xsd:element name="download-dir" nillable="true" type="xsd:string" />
+          <xsd:element name="ACTIVE" nillable="true" type="xsd:boolean" />
+          <xsd:element name="admin" nillable="true" type="xsd:boolean" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getWebusersbyadm_tweb_userParam">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="tweb_userRow" type="S2:getWebusersbyadm_tweb_userRow" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element prodata:datasetName="Results" name="login2_results">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element prodata:tableName="wsResult" minOccurs="0" maxOccurs="unbounded" name="wsResult">
+              <xsd:complexType>
+                <xsd:sequence />
+                <xsd:attribute name="ErrorNo" type="xsd:int" />
+                <xsd:attribute name="Description" type="xsd:string" />
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element prodata:tableName="Login" minOccurs="0" maxOccurs="unbounded" name="Login">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="LoginId" nillable="true" type="xsd:string" />
+                  <xsd:element name="SessionId" nillable="true" type="xsd:int" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element prodata:datasetName="Results" name="setCarrier_results">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element prodata:tableName="wsResult" minOccurs="0" maxOccurs="unbounded" name="wsResult">
+              <xsd:complexType>
+                <xsd:sequence />
+                <xsd:attribute name="ErrorNo" type="xsd:int" />
+                <xsd:attribute name="Description" type="xsd:string" />
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="setsomisc_SOparamRow">
+        <xsd:sequence>
+          <xsd:element name="paramName" nillable="true" type="xsd:string" />
+          <xsd:element name="paramValue" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="setsomisc_SOparamParam">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="SOparamRow" type="S2:setsomisc_SOparamRow" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element prodata:datasetName="Results" name="setsomisc_results">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element prodata:tableName="wsResult" minOccurs="0" maxOccurs="unbounded" name="wsResult">
+              <xsd:complexType>
+                <xsd:sequence />
+                <xsd:attribute name="ErrorNo" type="xsd:int" />
+                <xsd:attribute name="Description" type="xsd:string" />
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="skucat_upd_ttSkuCategRow">
+        <xsd:sequence>
+          <xsd:element name="Prod-recno" nillable="true" type="xsd:string" />
+          <xsd:element name="Loc-Group-ID" nillable="true" type="xsd:string" />
+          <xsd:element name="Parent-Loc" nillable="true" type="xsd:string" />
+          <xsd:element name="Locale" nillable="true" type="xsd:string" />
+          <xsd:element name="brand-id" nillable="true" type="xsd:string" />
+          <xsd:element name="cat-status" nillable="true" type="xsd:string" />
+          <xsd:element name="cat-id" nillable="true" type="xsd:string" />
+          <xsd:element name="sub-cat-id" nillable="true" type="xsd:string" />
+          <xsd:element name="category" nillable="true" type="xsd:string" />
+          <xsd:element name="disp-web" nillable="true" type="xsd:boolean" />
+          <xsd:element name="udf-1" nillable="true" type="xsd:string" />
+          <xsd:element name="udf-2" nillable="true" type="xsd:string" />
+          <xsd:element name="udf-3" nillable="true" type="xsd:string" />
+          <xsd:element name="udf-4" nillable="true" type="xsd:string" />
+          <xsd:element name="udf-5" nillable="true" type="xsd:string" />
+          <xsd:element name="udf-6" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="skucat_upd_ttSkuCategParam">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="ttSkuCategRow" type="S2:skucat_upd_ttSkuCategRow" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element prodata:datasetName="Results" name="skucat_upd_results">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element prodata:tableName="wsResult" minOccurs="0" maxOccurs="unbounded" name="wsResult">
+              <xsd:complexType>
+                <xsd:sequence />
+                <xsd:attribute name="ErrorNo" type="xsd:int" />
+                <xsd:attribute name="Description" type="xsd:string" />
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="ttSkuUpdRes">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Prod-recno" nillable="true" type="xsd:string" />
+                  <xsd:element name="Loc-Group-ID" nillable="true" type="xsd:string" />
+                  <xsd:element name="Parent-Loc" nillable="true" type="xsd:string" />
+                  <xsd:element name="Locale" nillable="true" type="xsd:string" />
+                  <xsd:element name="brand-id" nillable="true" type="xsd:string" />
+                  <xsd:element name="cat-status" nillable="true" type="xsd:string" />
+                  <xsd:element name="cat-id" nillable="true" type="xsd:string" />
+                  <xsd:element name="sub-cat-id" nillable="true" type="xsd:string" />
+                  <xsd:element name="category" nillable="true" type="xsd:string" />
+                  <xsd:element name="disp-web" nillable="true" type="xsd:boolean" />
+                  <xsd:element name="udf-1" nillable="true" type="xsd:string" />
+                  <xsd:element name="udf-2" nillable="true" type="xsd:string" />
+                  <xsd:element name="udf-3" nillable="true" type="xsd:string" />
+                  <xsd:element name="udf-4" nillable="true" type="xsd:string" />
+                  <xsd:element name="udf-5" nillable="true" type="xsd:string" />
+                  <xsd:element name="udf-6" nillable="true" type="xsd:string" />
+                  <xsd:element name="errorDesc" nillable="true" type="xsd:string" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+        <xsd:unique prodata:primaryIndex="true" name="idx1_3">
+          <xsd:selector xpath=".//S2:ttSkuUpdRes" />
+          <xsd:field xpath="S2:Prod-recno" />
+          <xsd:field xpath="S2:Loc-Group-ID" />
+        </xsd:unique>
+      </xsd:element>
+      <xsd:complexType name="updateWebuser_tweb_userRow">
+        <xsd:sequence>
+          <xsd:element name="USER_ID" nillable="true" type="xsd:string" />
+          <xsd:element name="e_mail" nillable="true" type="xsd:string" />
+          <xsd:element name="cust-id" nillable="true" type="xsd:string" />
+          <xsd:element name="lang-ID" nillable="true" type="xsd:string" />
+          <xsd:element name="web_group_list" nillable="true" type="xsd:string" />
+          <xsd:element name="change_login" nillable="true" type="xsd:boolean" />
+          <xsd:element name="acct_inq" nillable="true" type="xsd:boolean" />
+          <xsd:element name="ord_inq" nillable="true" type="xsd:boolean" />
+          <xsd:element name="revise_qu" nillable="true" type="xsd:boolean" />
+          <xsd:element name="pay_acct" nillable="true" type="xsd:boolean" />
+          <xsd:element name="LOGOUT" nillable="true" type="xsd:boolean" />
+          <xsd:element name="change_loc" nillable="true" type="xsd:boolean" />
+          <xsd:element name="change_carr" nillable="true" type="xsd:boolean" />
+          <xsd:element name="change_ship_addr" nillable="true" type="xsd:boolean" />
+          <xsd:element name="change_po" nillable="true" type="xsd:boolean" />
+          <xsd:element name="sales_login" nillable="true" type="xsd:boolean" />
+          <xsd:element name="NAME" nillable="true" type="xsd:string" />
+          <xsd:element name="loc-id" nillable="true" type="xsd:string" />
+          <xsd:element name="control-ent" nillable="true" type="xsd:string" />
+          <xsd:element name="afs-loc-list" nillable="true" type="xsd:string" />
+          <xsd:element name="carrier-id" nillable="true" type="xsd:string" />
+          <xsd:element name="prof-id" nillable="true" type="xsd:string" />
+          <xsd:element name="BROWSE_product" nillable="true" type="xsd:boolean" />
+          <xsd:element name="loc-list" nillable="true" type="xsd:string" />
+          <xsd:element name="currency-list" nillable="true" type="xsd:string" />
+          <xsd:element name="setup_user" nillable="true" type="xsd:boolean" />
+          <xsd:element name="carrier-list" nillable="true" type="xsd:string" />
+          <xsd:element name="source-id" nillable="true" type="xsd:string" />
+          <xsd:element name="oper-id" nillable="true" type="xsd:string" />
+          <xsd:element name="guest" nillable="true" type="xsd:boolean" />
+          <xsd:element name="download-dir" nillable="true" type="xsd:string" />
+          <xsd:element name="ACTIVE" nillable="true" type="xsd:boolean" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="updateWebuser_tweb_userParam">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="tweb_userRow" type="S2:updateWebuser_tweb_userRow" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="addWebuser">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="imasteruserid" nillable="true" type="xsd:string" />
+            <xsd:element name="imasterpassword" nillable="true" type="xsd:string" />
+            <xsd:element name="inewuserid" nillable="true" type="xsd:string" />
+            <xsd:element name="inewpassword" nillable="true" type="xsd:string" />
+            <xsd:element name="inewname" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="addWebuserResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="canrunws">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="iuser" nillable="true" type="xsd:string" />
+            <xsd:element name="ifunction" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="canrunwsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:string" />
+            <xsd:element name="ocando" nillable="true" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="changeUserID">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="psessid" nillable="true" type="xsd:int" />
+            <xsd:element name="pcEmail" nillable="true" type="xsd:string" />
+            <xsd:element name="pnEmail" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="changeUserIDResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:string" />
+            <xsd:element name="wsResult" nillable="true" type="S2:changeUserID_wsResultParam" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="changeWebuserpwd">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="iuserid" nillable="true" type="xsd:string" />
+            <xsd:element name="ipassword" nillable="true" type="xsd:string" />
+            <xsd:element name="inewpassword" nillable="true" type="xsd:string" />
+            <xsd:element name="iconfpassword" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="changeWebuserpwdResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="checkcart31">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="pSession" nillable="true" type="xsd:string" />
+            <xsd:element name="pTransCode" nillable="true" type="xsd:string" />
+            <xsd:element name="pDispLines" nillable="true" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="checkcart31Response">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:string" />
+            <xsd:element ref="S2:checkcart31_results" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="checkcart31d">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="pSession" nillable="true" type="xsd:string" />
+            <xsd:element name="pTransCode" nillable="true" type="xsd:string" />
+            <xsd:element name="pDispLines" nillable="true" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="checkcart31dResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:string" />
+            <xsd:element ref="S2:checkcart31d_results" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="checkcarttransid">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="pSession" nillable="true" type="xsd:string" />
+            <xsd:element name="pTransCode" nillable="true" type="xsd:string" />
+            <xsd:element name="pDispLines" nillable="true" type="xsd:boolean" />
+            <xsd:element name="pTransId" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="checkcarttransidResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:string" />
+            <xsd:element ref="S2:checkcarttransid_results" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="custser">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="pSession" nillable="true" type="xsd:int" />
+            <xsd:element name="pSerial" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="custserResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:string" />
+            <xsd:element ref="S2:custser_results" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="deleteWebuser">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="imasteruserid" nillable="true" type="xsd:string" />
+            <xsd:element name="imasterpassword" nillable="true" type="xsd:string" />
+            <xsd:element name="iuserid" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="deleteWebuserResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="emailinv">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="pSession" nillable="true" type="xsd:string" />
+            <xsd:element name="pTransNoList" nillable="true" type="xsd:string" />
+            <xsd:element name="pEmailAddress" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="emailinvResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:string" />
+            <xsd:element name="pResult" nillable="true" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getARtrans2">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="icompanyid" nillable="true" type="xsd:string" />
+            <xsd:element name="icustomerid" nillable="true" type="xsd:string" />
+            <xsd:element name="istartdate" nillable="true" type="xsd:date" />
+            <xsd:element name="ienddate" nillable="true" type="xsd:date" />
+            <xsd:element name="itype" nillable="true" type="xsd:int" />
+            <xsd:element name="itransno" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getARtrans2Response">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:string" />
+            <xsd:element ref="S2:dsartrans" />
+            <xsd:element name="norecords" nillable="true" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getCustCreditTerm">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="custId" nillable="true" type="xsd:string" />
+            <xsd:element name="controlEnt" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getCustCreditTermResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:string" />
+            <xsd:element name="ocustcredit" nillable="true" type="xsd:decimal" />
+            <xsd:element name="oarbalance" nillable="true" type="xsd:decimal" />
+            <xsd:element name="osobalance" nillable="true" type="xsd:decimal" />
+            <xsd:element name="ocustbalance" nillable="true" type="xsd:decimal" />
+            <xsd:element name="ocravailable" nillable="true" type="xsd:decimal" />
+            <xsd:element name="olastpaydate" nillable="true" type="xsd:date" />
+            <xsd:element name="olastpayamt" nillable="true" type="xsd:decimal" />
+            <xsd:element name="otermid" nillable="true" type="xsd:string" />
+            <xsd:element name="otermdescription" nillable="true" type="xsd:string" />
+            <xsd:element name="ocurrency" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getdefaultentity">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="iuserid" nillable="true" type="xsd:string" />
+            <xsd:element name="imodule" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getdefaultentityResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:string" />
+            <xsd:element name="oentity" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getDeliveryInfo">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="iCompanyID" nillable="true" type="xsd:string" />
+            <xsd:element name="iOrderno" nillable="true" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getDeliveryInfoResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:string" />
+            <xsd:element name="ttdelivery" nillable="true" type="S2:getDeliveryInfo_ttdeliveryParam" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getInvURL">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="iSession" nillable="true" type="xsd:string" />
+            <xsd:element name="iTransNo" nillable="true" type="xsd:string" />
+            <xsd:element name="iPrNo" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getInvURLResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:string" />
+            <xsd:element ref="S2:getInvURL_results" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getprafs31sd">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="prods" nillable="true" type="S2:getprafs31sd_prodsParam" />
+            <xsd:element name="icurrid" nillable="true" type="xsd:string" />
+            <xsd:element name="isessionid" nillable="true" type="xsd:string" />
+            <xsd:element name="optionparam" nillable="true" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getprafs31sdResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:string" />
+            <xsd:element ref="S2:getprafs3sd_results" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getprafs4">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="prods" nillable="true" type="S2:getprafs4_prodsParam" />
+            <xsd:element name="icurrid" nillable="true" type="xsd:string" />
+            <xsd:element name="isessionid" nillable="true" type="xsd:string" />
+            <xsd:element name="optionparam" nillable="true" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getprafs4Response">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:string" />
+            <xsd:element ref="S2:getprafs4_results" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getProdList">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="iprod" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getProdListResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:string" />
+            <xsd:element name="prodlist" nillable="true" type="S2:getProdList_prodlistParam" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getSalesOrders6">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="iCompanyID" nillable="true" type="xsd:string" />
+            <xsd:element name="iCustomerID" nillable="true" type="xsd:string" />
+            <xsd:element name="iStartDate" nillable="true" type="xsd:string" />
+            <xsd:element name="iEndDate" nillable="true" type="xsd:string" />
+            <xsd:element name="iStatus" nillable="true" type="xsd:int" />
+            <xsd:element name="iOrderno" nillable="true" type="xsd:string" />
+            <xsd:element name="iOrderLine" nillable="true" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getSalesOrders6Response">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:string" />
+            <xsd:element ref="S2:getSalesOrders6_results" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getSalesOrders7">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="iCompanyID" nillable="true" type="xsd:string" />
+            <xsd:element name="iCustomerID" nillable="true" type="xsd:string" />
+            <xsd:element name="iStartDate" nillable="true" type="xsd:string" />
+            <xsd:element name="iEndDate" nillable="true" type="xsd:string" />
+            <xsd:element name="iStatus" nillable="true" type="xsd:int" />
+            <xsd:element name="iOrderno" nillable="true" type="xsd:string" />
+            <xsd:element name="iOrderLine" nillable="true" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getSalesOrders7Response">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:string" />
+            <xsd:element ref="S2:getSalesOrders7_results" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getSOInfo">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="iCompanyID" nillable="true" type="xsd:string" />
+            <xsd:element name="iCustomerID" nillable="true" type="xsd:string" />
+            <xsd:element name="iStartDate" nillable="true" type="xsd:string" />
+            <xsd:element name="iEndDate" nillable="true" type="xsd:string" />
+            <xsd:element name="iStatus" nillable="true" type="xsd:int" />
+            <xsd:element name="iOrderno" nillable="true" type="xsd:string" />
+            <xsd:element name="iOrderLine" nillable="true" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getSOInfoResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:string" />
+            <xsd:element ref="S2:getSOInfo_results" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getSOInv">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="iCompanyID" nillable="true" type="xsd:string" />
+            <xsd:element name="iStatus" nillable="true" type="xsd:int" />
+            <xsd:element name="iInvno" nillable="true" type="xsd:string" />
+            <xsd:element name="iOrderLine" nillable="true" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getSOInvResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:string" />
+            <xsd:element ref="S2:getSOInv_results" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getusersalesrep">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="pUserId" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getusersalesrepResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:string" />
+            <xsd:element ref="S2:getusersalesrep_results" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getWebuser">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="iuserid" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getWebuserResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:string" />
+            <xsd:element name="tweb_user" nillable="true" type="S2:getWebuser_tweb_userParam" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getWebuser2">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="iuserid" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getWebuser2Response">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:string" />
+            <xsd:element name="tweb_user" nillable="true" type="S2:getWebuser2_tweb_userParam" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getWebusersbyadm">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="imasteruser" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getWebusersbyadmResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:string" />
+            <xsd:element name="tweb_user" nillable="true" type="S2:getWebusersbyadm_tweb_userParam" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="login2">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="pLogin" nillable="true" type="xsd:string" />
+            <xsd:element name="pPassword" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="login2Response">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:string" />
+            <xsd:element ref="S2:login2_results" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="recnoInfo">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ipcrecno" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="recnoInfoResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:string" />
+            <xsd:element name="opcrecno" nillable="true" type="xsd:string" />
+            <xsd:element name="opcprodid" nillable="true" type="xsd:string" />
+            <xsd:element name="opcpartno" nillable="true" type="xsd:string" />
+            <xsd:element name="opcdsc" nillable="true" type="xsd:string" />
+            <xsd:element name="oplOK" nillable="true" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="setCarrier">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="pSession" nillable="true" type="xsd:string" />
+            <xsd:element name="pTransCode" nillable="true" type="xsd:string" />
+            <xsd:element name="pCarrier" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="setCarrierResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:string" />
+            <xsd:element ref="S2:setCarrier_results" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="setPaymentMethod">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="iSessionID" nillable="true" type="xsd:long" />
+            <xsd:element name="iTransNo" nillable="true" type="xsd:int" />
+            <xsd:element name="imethod" nillable="true" type="xsd:string" />
+            <xsd:element name="iBankId" nillable="true" type="xsd:string" />
+            <xsd:element name="iAmount" nillable="true" type="xsd:decimal" />
+            <xsd:element name="iDate" nillable="true" type="xsd:date" />
+            <xsd:element name="iRemark" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="setPaymentMethodResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:string" />
+            <xsd:element name="oErrorString" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="setsomisc">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="pSessionID" nillable="true" type="xsd:string" />
+            <xsd:element name="SOparam" nillable="true" type="S2:setsomisc_SOparamParam" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="setsomiscResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:string" />
+            <xsd:element ref="S2:setsomisc_results" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="skucat_upd">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ttSkuCateg" nillable="true" type="S2:skucat_upd_ttSkuCategParam" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="skucat_updResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:string" />
+            <xsd:element ref="S2:skucat_upd_results" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="updateWebuser">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="imasteruserid" nillable="true" type="xsd:string" />
+            <xsd:element name="imasterpassword" nillable="true" type="xsd:string" />
+            <xsd:element name="tweb_user" nillable="true" type="S2:updateWebuser_tweb_userParam" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="updateWebuserResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="webuserforgotpwd">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="iuserid" nillable="true" type="xsd:string" />
+            <xsd:element name="iemail" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="webuserforgotpwdResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:string" />
+            <xsd:element name="success" nillable="true" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="webusermisc">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="pUserId" nillable="true" type="xsd:string" />
+            <xsd:element name="pRead" nillable="true" type="xsd:boolean" />
+            <xsd:element name="pField" nillable="true" type="xsd:string" />
+            <xsd:element name="pValue" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="webusermiscResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="xsd:string" />
+            <xsd:element name="retCode" nillable="true" type="xsd:int" />
+            <xsd:element name="retDesc" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="WSTraxProd_custser">
+    <wsdl:part name="parameters" element="S2:custser" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_getInvURL">
+    <wsdl:part name="parameters" element="S2:getInvURL" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_getSOInv">
+    <wsdl:part name="parameters" element="S2:getSOInv" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_getARtrans2">
+    <wsdl:part name="parameters" element="S2:getARtrans2" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_getWebuser2Response">
+    <wsdl:part name="parameters" element="S2:getWebuser2Response" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_addWebuserResponse">
+    <wsdl:part name="parameters" element="S2:addWebuserResponse" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_getWebusersbyadm">
+    <wsdl:part name="parameters" element="S2:getWebusersbyadm" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_recnoInfoResponse">
+    <wsdl:part name="parameters" element="S2:recnoInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_getdefaultentity">
+    <wsdl:part name="parameters" element="S2:getdefaultentity" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_getWebuserResponse">
+    <wsdl:part name="parameters" element="S2:getWebuserResponse" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_checkcart31">
+    <wsdl:part name="parameters" element="S2:checkcart31" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_getWebuser2">
+    <wsdl:part name="parameters" element="S2:getWebuser2" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_getWebusersbyadmResponse">
+    <wsdl:part name="parameters" element="S2:getWebusersbyadmResponse" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_login2">
+    <wsdl:part name="parameters" element="S2:login2" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_getCustCreditTermResponse">
+    <wsdl:part name="parameters" element="S2:getCustCreditTermResponse" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_getInvURLResponse">
+    <wsdl:part name="parameters" element="S2:getInvURLResponse" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_getSalesOrders6Response">
+    <wsdl:part name="parameters" element="S2:getSalesOrders6Response" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_webusermisc">
+    <wsdl:part name="parameters" element="S2:webusermisc" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_setCarrier">
+    <wsdl:part name="parameters" element="S2:setCarrier" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_skucat_upd">
+    <wsdl:part name="parameters" element="S2:skucat_upd" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_getprafs4">
+    <wsdl:part name="parameters" element="S2:getprafs4" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_checkcart31d">
+    <wsdl:part name="parameters" element="S2:checkcart31d" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_setsomiscResponse">
+    <wsdl:part name="parameters" element="S2:setsomiscResponse" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_getSOInfo">
+    <wsdl:part name="parameters" element="S2:getSOInfo" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_checkcarttransidResponse">
+    <wsdl:part name="parameters" element="S2:checkcarttransidResponse" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_getSalesOrders7">
+    <wsdl:part name="parameters" element="S2:getSalesOrders7" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_deleteWebuserResponse">
+    <wsdl:part name="parameters" element="S2:deleteWebuserResponse" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_getSalesOrders6">
+    <wsdl:part name="parameters" element="S2:getSalesOrders6" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_getSOInfoResponse">
+    <wsdl:part name="parameters" element="S2:getSOInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_getWebuser">
+    <wsdl:part name="parameters" element="S2:getWebuser" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_canrunws">
+    <wsdl:part name="parameters" element="S2:canrunws" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_webuserforgotpwdResponse">
+    <wsdl:part name="parameters" element="S2:webuserforgotpwdResponse" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_getARtrans2Response">
+    <wsdl:part name="parameters" element="S2:getARtrans2Response" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_checkcart31dResponse">
+    <wsdl:part name="parameters" element="S2:checkcart31dResponse" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_setPaymentMethodResponse">
+    <wsdl:part name="parameters" element="S2:setPaymentMethodResponse" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_getSOInvResponse">
+    <wsdl:part name="parameters" element="S2:getSOInvResponse" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_setsomisc">
+    <wsdl:part name="parameters" element="S2:setsomisc" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_getCustCreditTerm">
+    <wsdl:part name="parameters" element="S2:getCustCreditTerm" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_getdefaultentityResponse">
+    <wsdl:part name="parameters" element="S2:getdefaultentityResponse" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_getSalesOrders7Response">
+    <wsdl:part name="parameters" element="S2:getSalesOrders7Response" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_changeUserIDResponse">
+    <wsdl:part name="parameters" element="S2:changeUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_login2Response">
+    <wsdl:part name="parameters" element="S2:login2Response" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_recnoInfo">
+    <wsdl:part name="parameters" element="S2:recnoInfo" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_getusersalesrep">
+    <wsdl:part name="parameters" element="S2:getusersalesrep" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_getprafs4Response">
+    <wsdl:part name="parameters" element="S2:getprafs4Response" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_setPaymentMethod">
+    <wsdl:part name="parameters" element="S2:setPaymentMethod" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_getprafs31sd">
+    <wsdl:part name="parameters" element="S2:getprafs31sd" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_skucat_updResponse">
+    <wsdl:part name="parameters" element="S2:skucat_updResponse" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_changeWebuserpwdResponse">
+    <wsdl:part name="parameters" element="S2:changeWebuserpwdResponse" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_checkcarttransid">
+    <wsdl:part name="parameters" element="S2:checkcarttransid" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_emailinv">
+    <wsdl:part name="parameters" element="S2:emailinv" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_updateWebuser">
+    <wsdl:part name="parameters" element="S2:updateWebuser" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_webusermiscResponse">
+    <wsdl:part name="parameters" element="S2:webusermiscResponse" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_getProdListResponse">
+    <wsdl:part name="parameters" element="S2:getProdListResponse" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_getprafs31sdResponse">
+    <wsdl:part name="parameters" element="S2:getprafs31sdResponse" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_deleteWebuser">
+    <wsdl:part name="parameters" element="S2:deleteWebuser" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_getDeliveryInfoResponse">
+    <wsdl:part name="parameters" element="S2:getDeliveryInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_addWebuser">
+    <wsdl:part name="parameters" element="S2:addWebuser" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_getProdList">
+    <wsdl:part name="parameters" element="S2:getProdList" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_emailinvResponse">
+    <wsdl:part name="parameters" element="S2:emailinvResponse" />
+  </wsdl:message>
+  <wsdl:message name="FaultDetailMessage">
+    <wsdl:part name="FaultDetail" element="S1:FaultDetail" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_getDeliveryInfo">
+    <wsdl:part name="parameters" element="S2:getDeliveryInfo" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_getusersalesrepResponse">
+    <wsdl:part name="parameters" element="S2:getusersalesrepResponse" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_webuserforgotpwd">
+    <wsdl:part name="parameters" element="S2:webuserforgotpwd" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_changeUserID">
+    <wsdl:part name="parameters" element="S2:changeUserID" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_changeWebuserpwd">
+    <wsdl:part name="parameters" element="S2:changeWebuserpwd" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_updateWebuserResponse">
+    <wsdl:part name="parameters" element="S2:updateWebuserResponse" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_setCarrierResponse">
+    <wsdl:part name="parameters" element="S2:setCarrierResponse" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_canrunwsResponse">
+    <wsdl:part name="parameters" element="S2:canrunwsResponse" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_custserResponse">
+    <wsdl:part name="parameters" element="S2:custserResponse" />
+  </wsdl:message>
+  <wsdl:message name="WSTraxProd_checkcart31Response">
+    <wsdl:part name="parameters" element="S2:checkcart31Response" />
+  </wsdl:message>
+  <wsdl:portType name="WSTraxProdObj">
+    <wsdl:operation name="addWebuser">
+      <wsdl:input message="tns:WSTraxProd_addWebuser" />
+      <wsdl:output message="tns:WSTraxProd_addWebuserResponse" />
+      <wsdl:fault name="WSTraxProdFault" message="tns:FaultDetailMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="canrunws">
+      <wsdl:input message="tns:WSTraxProd_canrunws" />
+      <wsdl:output message="tns:WSTraxProd_canrunwsResponse" />
+      <wsdl:fault name="WSTraxProdFault" message="tns:FaultDetailMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="changeUserID">
+      <wsdl:input message="tns:WSTraxProd_changeUserID" />
+      <wsdl:output message="tns:WSTraxProd_changeUserIDResponse" />
+      <wsdl:fault name="WSTraxProdFault" message="tns:FaultDetailMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="changeWebuserpwd">
+      <wsdl:input message="tns:WSTraxProd_changeWebuserpwd" />
+      <wsdl:output message="tns:WSTraxProd_changeWebuserpwdResponse" />
+      <wsdl:fault name="WSTraxProdFault" message="tns:FaultDetailMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="checkcart31">
+      <wsdl:input message="tns:WSTraxProd_checkcart31" />
+      <wsdl:output message="tns:WSTraxProd_checkcart31Response" />
+      <wsdl:fault name="WSTraxProdFault" message="tns:FaultDetailMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="checkcart31d">
+      <wsdl:input message="tns:WSTraxProd_checkcart31d" />
+      <wsdl:output message="tns:WSTraxProd_checkcart31dResponse" />
+      <wsdl:fault name="WSTraxProdFault" message="tns:FaultDetailMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="checkcarttransid">
+      <wsdl:input message="tns:WSTraxProd_checkcarttransid" />
+      <wsdl:output message="tns:WSTraxProd_checkcarttransidResponse" />
+      <wsdl:fault name="WSTraxProdFault" message="tns:FaultDetailMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="custser">
+      <wsdl:input message="tns:WSTraxProd_custser" />
+      <wsdl:output message="tns:WSTraxProd_custserResponse" />
+      <wsdl:fault name="WSTraxProdFault" message="tns:FaultDetailMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteWebuser">
+      <wsdl:input message="tns:WSTraxProd_deleteWebuser" />
+      <wsdl:output message="tns:WSTraxProd_deleteWebuserResponse" />
+      <wsdl:fault name="WSTraxProdFault" message="tns:FaultDetailMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="emailinv">
+      <wsdl:input message="tns:WSTraxProd_emailinv" />
+      <wsdl:output message="tns:WSTraxProd_emailinvResponse" />
+      <wsdl:fault name="WSTraxProdFault" message="tns:FaultDetailMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getARtrans2">
+      <wsdl:input message="tns:WSTraxProd_getARtrans2" />
+      <wsdl:output message="tns:WSTraxProd_getARtrans2Response" />
+      <wsdl:fault name="WSTraxProdFault" message="tns:FaultDetailMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCustCreditTerm">
+      <wsdl:input message="tns:WSTraxProd_getCustCreditTerm" />
+      <wsdl:output message="tns:WSTraxProd_getCustCreditTermResponse" />
+      <wsdl:fault name="WSTraxProdFault" message="tns:FaultDetailMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getdefaultentity">
+      <wsdl:input message="tns:WSTraxProd_getdefaultentity" />
+      <wsdl:output message="tns:WSTraxProd_getdefaultentityResponse" />
+      <wsdl:fault name="WSTraxProdFault" message="tns:FaultDetailMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getDeliveryInfo">
+      <wsdl:input message="tns:WSTraxProd_getDeliveryInfo" />
+      <wsdl:output message="tns:WSTraxProd_getDeliveryInfoResponse" />
+      <wsdl:fault name="WSTraxProdFault" message="tns:FaultDetailMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getInvURL">
+      <wsdl:input message="tns:WSTraxProd_getInvURL" />
+      <wsdl:output message="tns:WSTraxProd_getInvURLResponse" />
+      <wsdl:fault name="WSTraxProdFault" message="tns:FaultDetailMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getprafs31sd">
+      <wsdl:input message="tns:WSTraxProd_getprafs31sd" />
+      <wsdl:output message="tns:WSTraxProd_getprafs31sdResponse" />
+      <wsdl:fault name="WSTraxProdFault" message="tns:FaultDetailMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getprafs4">
+      <wsdl:input message="tns:WSTraxProd_getprafs4" />
+      <wsdl:output message="tns:WSTraxProd_getprafs4Response" />
+      <wsdl:fault name="WSTraxProdFault" message="tns:FaultDetailMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getProdList">
+      <wsdl:input message="tns:WSTraxProd_getProdList" />
+      <wsdl:output message="tns:WSTraxProd_getProdListResponse" />
+      <wsdl:fault name="WSTraxProdFault" message="tns:FaultDetailMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getSalesOrders6">
+      <wsdl:input message="tns:WSTraxProd_getSalesOrders6" />
+      <wsdl:output message="tns:WSTraxProd_getSalesOrders6Response" />
+      <wsdl:fault name="WSTraxProdFault" message="tns:FaultDetailMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getSalesOrders7">
+      <wsdl:input message="tns:WSTraxProd_getSalesOrders7" />
+      <wsdl:output message="tns:WSTraxProd_getSalesOrders7Response" />
+      <wsdl:fault name="WSTraxProdFault" message="tns:FaultDetailMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getSOInfo">
+      <wsdl:input message="tns:WSTraxProd_getSOInfo" />
+      <wsdl:output message="tns:WSTraxProd_getSOInfoResponse" />
+      <wsdl:fault name="WSTraxProdFault" message="tns:FaultDetailMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getSOInv">
+      <wsdl:input message="tns:WSTraxProd_getSOInv" />
+      <wsdl:output message="tns:WSTraxProd_getSOInvResponse" />
+      <wsdl:fault name="WSTraxProdFault" message="tns:FaultDetailMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getusersalesrep">
+      <wsdl:input message="tns:WSTraxProd_getusersalesrep" />
+      <wsdl:output message="tns:WSTraxProd_getusersalesrepResponse" />
+      <wsdl:fault name="WSTraxProdFault" message="tns:FaultDetailMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getWebuser">
+      <wsdl:input message="tns:WSTraxProd_getWebuser" />
+      <wsdl:output message="tns:WSTraxProd_getWebuserResponse" />
+      <wsdl:fault name="WSTraxProdFault" message="tns:FaultDetailMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getWebuser2">
+      <wsdl:input message="tns:WSTraxProd_getWebuser2" />
+      <wsdl:output message="tns:WSTraxProd_getWebuser2Response" />
+      <wsdl:fault name="WSTraxProdFault" message="tns:FaultDetailMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getWebusersbyadm">
+      <wsdl:input message="tns:WSTraxProd_getWebusersbyadm" />
+      <wsdl:output message="tns:WSTraxProd_getWebusersbyadmResponse" />
+      <wsdl:fault name="WSTraxProdFault" message="tns:FaultDetailMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="login2">
+      <wsdl:input message="tns:WSTraxProd_login2" />
+      <wsdl:output message="tns:WSTraxProd_login2Response" />
+      <wsdl:fault name="WSTraxProdFault" message="tns:FaultDetailMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="recnoInfo">
+      <wsdl:input message="tns:WSTraxProd_recnoInfo" />
+      <wsdl:output message="tns:WSTraxProd_recnoInfoResponse" />
+      <wsdl:fault name="WSTraxProdFault" message="tns:FaultDetailMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="setCarrier">
+      <wsdl:input message="tns:WSTraxProd_setCarrier" />
+      <wsdl:output message="tns:WSTraxProd_setCarrierResponse" />
+      <wsdl:fault name="WSTraxProdFault" message="tns:FaultDetailMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="setPaymentMethod">
+      <wsdl:input message="tns:WSTraxProd_setPaymentMethod" />
+      <wsdl:output message="tns:WSTraxProd_setPaymentMethodResponse" />
+      <wsdl:fault name="WSTraxProdFault" message="tns:FaultDetailMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="setsomisc">
+      <wsdl:input message="tns:WSTraxProd_setsomisc" />
+      <wsdl:output message="tns:WSTraxProd_setsomiscResponse" />
+      <wsdl:fault name="WSTraxProdFault" message="tns:FaultDetailMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="skucat_upd">
+      <wsdl:input message="tns:WSTraxProd_skucat_upd" />
+      <wsdl:output message="tns:WSTraxProd_skucat_updResponse" />
+      <wsdl:fault name="WSTraxProdFault" message="tns:FaultDetailMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateWebuser">
+      <wsdl:input message="tns:WSTraxProd_updateWebuser" />
+      <wsdl:output message="tns:WSTraxProd_updateWebuserResponse" />
+      <wsdl:fault name="WSTraxProdFault" message="tns:FaultDetailMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="webuserforgotpwd">
+      <wsdl:input message="tns:WSTraxProd_webuserforgotpwd" />
+      <wsdl:output message="tns:WSTraxProd_webuserforgotpwdResponse" />
+      <wsdl:fault name="WSTraxProdFault" message="tns:FaultDetailMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="webusermisc">
+      <wsdl:input message="tns:WSTraxProd_webusermisc" />
+      <wsdl:output message="tns:WSTraxProd_webusermiscResponse" />
+      <wsdl:fault name="WSTraxProdFault" message="tns:FaultDetailMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSTraxProdObj" type="tns:WSTraxProdObj">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="addWebuser">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WSTraxProdFault">
+        <soap:fault use="literal" name="WSTraxProdFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="canrunws">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WSTraxProdFault">
+        <soap:fault use="literal" name="WSTraxProdFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="changeUserID">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WSTraxProdFault">
+        <soap:fault use="literal" name="WSTraxProdFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="changeWebuserpwd">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WSTraxProdFault">
+        <soap:fault use="literal" name="WSTraxProdFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="checkcart31">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WSTraxProdFault">
+        <soap:fault use="literal" name="WSTraxProdFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="checkcart31d">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WSTraxProdFault">
+        <soap:fault use="literal" name="WSTraxProdFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="checkcarttransid">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WSTraxProdFault">
+        <soap:fault use="literal" name="WSTraxProdFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="custser">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WSTraxProdFault">
+        <soap:fault use="literal" name="WSTraxProdFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="deleteWebuser">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WSTraxProdFault">
+        <soap:fault use="literal" name="WSTraxProdFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="emailinv">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WSTraxProdFault">
+        <soap:fault use="literal" name="WSTraxProdFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getARtrans2">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WSTraxProdFault">
+        <soap:fault use="literal" name="WSTraxProdFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCustCreditTerm">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WSTraxProdFault">
+        <soap:fault use="literal" name="WSTraxProdFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getdefaultentity">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WSTraxProdFault">
+        <soap:fault use="literal" name="WSTraxProdFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getDeliveryInfo">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WSTraxProdFault">
+        <soap:fault use="literal" name="WSTraxProdFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getInvURL">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WSTraxProdFault">
+        <soap:fault use="literal" name="WSTraxProdFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getprafs31sd">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WSTraxProdFault">
+        <soap:fault use="literal" name="WSTraxProdFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getprafs4">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WSTraxProdFault">
+        <soap:fault use="literal" name="WSTraxProdFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getProdList">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WSTraxProdFault">
+        <soap:fault use="literal" name="WSTraxProdFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getSalesOrders6">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WSTraxProdFault">
+        <soap:fault use="literal" name="WSTraxProdFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getSalesOrders7">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WSTraxProdFault">
+        <soap:fault use="literal" name="WSTraxProdFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getSOInfo">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WSTraxProdFault">
+        <soap:fault use="literal" name="WSTraxProdFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getSOInv">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WSTraxProdFault">
+        <soap:fault use="literal" name="WSTraxProdFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getusersalesrep">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WSTraxProdFault">
+        <soap:fault use="literal" name="WSTraxProdFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getWebuser">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WSTraxProdFault">
+        <soap:fault use="literal" name="WSTraxProdFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getWebuser2">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WSTraxProdFault">
+        <soap:fault use="literal" name="WSTraxProdFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getWebusersbyadm">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WSTraxProdFault">
+        <soap:fault use="literal" name="WSTraxProdFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="login2">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WSTraxProdFault">
+        <soap:fault use="literal" name="WSTraxProdFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="recnoInfo">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WSTraxProdFault">
+        <soap:fault use="literal" name="WSTraxProdFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="setCarrier">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WSTraxProdFault">
+        <soap:fault use="literal" name="WSTraxProdFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="setPaymentMethod">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WSTraxProdFault">
+        <soap:fault use="literal" name="WSTraxProdFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="setsomisc">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WSTraxProdFault">
+        <soap:fault use="literal" name="WSTraxProdFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="skucat_upd">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WSTraxProdFault">
+        <soap:fault use="literal" name="WSTraxProdFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updateWebuser">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WSTraxProdFault">
+        <soap:fault use="literal" name="WSTraxProdFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="webuserforgotpwd">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WSTraxProdFault">
+        <soap:fault use="literal" name="WSTraxProdFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="webusermisc">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WSTraxProdFault">
+        <soap:fault use="literal" name="WSTraxProdFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WSTraxProdService">
+    <wsdl:port name="WSTraxProdObj" binding="tns:WSTraxProdObj">
+      <wsdl:documentation>
+      </wsdl:documentation>
+      <soap:address location="http://s3tomcat.intcomex.com:8080/wsa/wsa1" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

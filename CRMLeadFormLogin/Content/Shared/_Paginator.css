@@ -1,0 +1,104 @@
+﻿#containerPaginator {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+
+#pagination a.current {
+  color: #C40047;
+}
+
+#pagination {
+  display: flex;
+  align-items: center;
+}
+
+#pageSizeSelect {
+  display: none;
+  padding-top: 3px;
+  padding-left: 10px;
+  line-height: 1.8;
+}
+
+.infoPagination {
+  display: flex;
+}
+
+  .infoPagination > span {
+    margin-left: 0.3em;
+  }
+
+#infoPagination {
+  display: none;
+  font-size: 18px;
+  color: #333333;
+  /*line-height: 1.8;*/
+}
+
+#selectPage {
+  position: absolute;
+  z-index: 1;
+  background: white;
+  width: 50px;
+}
+
+#listPageSize li {
+  list-style: none;
+}
+
+  #listPageSize li:hover {
+    background-color: #B3B3B3;
+    cursor: pointer;
+  }
+
+
+.select-page.select-page {
+  color: #0AA9CB;
+}
+
+
+.page-click-icon {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background: #F7F7F7;
+  border: 2px solid #E6E6E6;
+  margin: 0 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-page {
+  font-size: 14px;
+  padding-left: 30px
+}
+
+.page-click-icon-desactiv {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background: #FFFFFF;
+  border: 2px solid #E6E6E6;
+  margin: 0 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-items-page {
+  font-family: "Barlow";
+  font-weight: 600;
+  font-size: 14px;
+  color: #191515;
+}
+
+
+.infoPagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

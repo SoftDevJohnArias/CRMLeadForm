@@ -1,0 +1,31 @@
+﻿
+//Paragraph
+%main-text {
+  text-align: $main-aling;
+  font-size: $main-size;
+  font-weight: map-get( $font-weight-scale, regular);
+  font-family: $font-family-quaternary;
+  margin-bottom: 0.5em;
+}
+
+%main-text-second {
+  @extend %main-text;
+  font-size: $third-size;
+}
+
+.text-main {
+  @extend %main-text-second;
+  color: $bs-light-black;
+}
+
+.warning-text {
+  @extend %main-text-second;
+  font-size: $third-size;
+  color: $octanary-color;
+}
+
+.info-text {
+  @extend %main-text-second;
+  font-size: $fourth-size;
+  color: $bs-light-black;
+}

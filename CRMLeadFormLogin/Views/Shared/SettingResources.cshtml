@@ -1,0 +1,292 @@
+﻿
+@using IWS_Resources = CRMLeadObjects.Resources;
+
+<script>
+
+    const getConfigMessage =(() => {
+
+        let strings = {};
+        let scope = {};
+
+        //Variables ordenes
+  
+
+        //Variables CustomerIpAdresess
+        strings.CustomerIpAdresess ={
+
+        CreateError : "@Html.Raw(IWS_Resources.CustomerIpAddresses.CustomerIpAddresses.CreateError)",
+        DeleteError: "@Html.Raw(IWS_Resources.CustomerIpAddresses.CustomerIpAddresses.DeleteError)",
+        DeleteSuccess: "@Html.Raw(IWS_Resources.CustomerIpAddresses.CustomerIpAddresses.DeleteSuccess)",
+        IPnovalida: "@Html.Raw(IWS_Resources.CustomerIpAddresses.CustomerIpAddresses.IPnovalida)",
+        GetErrorIP: "@Html.Raw(IWS_Resources.CustomerIpAddresses.CustomerIpAddresses.GetErrorIP)",
+        ExistIP: "@Html.Raw(IWS_Resources.CustomerIpAddresses.CustomerIpAddresses.ExistIP)",
+        CreateSuccessIP:"@Html.Raw(IWS_Resources.CustomerIpAddresses.CustomerIpAddresses.CreateSuccessIP)"
+
+        }
+
+        //valiables descarga de catalogo
+   
+
+        // variables logs
+        strings.Logs = {
+            GroupErros : "@Html.Raw(IWS_Resources.Logs.IndexLog.GroupErros)"
+      }
+
+      // Customer vars
+      strings.customer = {
+        messageModalCustomer: "@Html.Raw(IWS_Resources.Account.Login.MessageModalCustomer)"
+      }
+
+         // variables noticias
+        strings.News = {
+            Nuevo: "@Html.Raw(IWS_Resources.News.News.Nuevo)",
+            VerMas: "@Html.Raw(IWS_Resources.News.News.VerMas)",
+            NuevaNoticia: "@Html.Raw(IWS_Resources.News.News.NuevaNotica)",
+            EditarNoticia: "@Html.Raw(IWS_Resources.News.News.EditarNoticia)",
+            Editar: "@Html.Raw(IWS_Resources.News.News.Editar)",
+            CreacionExitosa: "@Html.Raw(IWS_Resources.News.News.CreacionExitosa)",
+            CreacionFallida: "@Html.Raw(IWS_Resources.News.News.CreacionFallida)",
+            ActualizacionExitosa: "@Html.Raw(IWS_Resources.News.News.ActualizacionExitosa)",
+            ActualizacionFallida: "@Html.Raw(IWS_Resources.News.News.ActualizacionFallida)",
+            RequiredTitulo: "@Html.Raw(IWS_Resources.News.News.RequiredTitulo)",
+
+            RequiredDesc: "@Html.Raw(IWS_Resources.News.News.RequiredDesc)",
+            ErrorObteniendoNoticias: "@Html.Raw(IWS_Resources.News.News.ErrorObteniendoNoticias)",
+      }
+
+      strings.adminTokens = {
+            productKey: "@Html.Raw(IWS_Resources.Tokens.TokenStatus.ProductKey)",
+            status: "@Html.Raw(IWS_Resources.Tokens.TokenStatus.Status)",
+            descriptionStatus: "@Html.Raw(IWS_Resources.Tokens.TokenStatus.DescriptionStatus)",
+            activationDate: "@Html.Raw(IWS_Resources.Tokens.TokenStatus.ActivationDate)",
+            expirationDate: "@Html.Raw(IWS_Resources.Tokens.TokenStatus.ExpirationDate)",
+      }
+
+        //variables errores comunes
+        strings.CommonMistakes=
+        {
+            Edit: "@Html.Raw(IWS_Resources.CommonMistakes.CommonMistakes.Edit)",
+            New: "@Html.Raw(IWS_Resources.CommonMistakes.CommonMistakes.New)",
+            Opciones:"@Html.Raw(IWS_Resources.CommonMistakes.CommonMistakes.Opciones)",
+            ErrorGetCommonMistakes: "@Html.Raw(IWS_Resources.CommonMistakes.CommonMistakes.ErrorGetCommonMistakes)",
+            Add: "@Html.Raw(IWS_Resources.CommonMistakes.CommonMistakes.Add)",
+
+            CreateError: "@Html.Raw(IWS_Resources.CommonMistakes.CommonMistakes.CreateError)",
+            CreateSuccess: "@Html.Raw(IWS_Resources.CommonMistakes.CommonMistakes.CreateSuccess)",
+            UpdateError:"@Html.Raw(IWS_Resources.CommonMistakes.CommonMistakes.UpdateError)",
+            UpdateSuccess: "@Html.Raw(IWS_Resources.CommonMistakes.CommonMistakes.UpdateSuccess)",
+            DeleteError: "@Html.Raw(IWS_Resources.CommonMistakes.CommonMistakes.DeleteError)",
+            DeleteSuccess: "@Html.Raw(IWS_Resources.CommonMistakes.CommonMistakes.DeleteSuccess)",
+            De: "@Html.Raw(IWS_Resources.CommonMistakes.CommonMistakes.De)",
+            Records: "@Html.Raw(IWS_Resources.CommonMistakes.CommonMistakes.Records)",
+            ExistCommonMistake: "@Html.Raw(IWS_Resources.CommonMistakes.CommonMistakes.ExistCommonMistake)"
+        }
+
+        // General vars
+      strings.General = {
+        CargaError: "@Html.Raw(IWS_Resources.General.General.CargaError)",
+        Email: "@Html.Raw(IWS_Resources.General.General.Email)"
+      }
+
+   
+       strings.Paginator = {
+         De: "@Html.Raw(IWS_Resources.Paginator.Paginator.Of)",
+         Items: "@Html.Raw(IWS_Resources.Paginator.Paginator.Items)",
+         Page: "@Html.Raw(IWS_Resources.Paginator.Paginator.Page)",
+         Showing: "@Html.Raw(IWS_Resources.Paginator.Paginator.Showing)",
+         Out: "@Html.Raw(IWS_Resources.Paginator.Paginator.Out)",
+         To: "@Html.Raw(IWS_Resources.Paginator.Paginator.To)"
+      }
+
+   
+         //Lead
+      strings.Lead = {
+        CorporateMail: "@Html.Raw(IWS_Resources.Lead.Lead.CorporateMail)",
+        Email: "@Html.Raw(IWS_Resources.Lead.Lead.Email)",
+        ValidateMail: "@Html.Raw(IWS_Resources.Lead.Lead.ValidateMail)",
+        VerifyYourEmail: "@Html.Raw(IWS_Resources.Lead.Lead.VerifyYourEmail)",
+        TitleVerify: "@Html.Raw(IWS_Resources.Lead.Lead.TitleVerify)",
+        EnterCode: "@Html.Raw(IWS_Resources.Lead.Lead.EnterCode)",
+        NotReceivedMail: "@Html.Raw(IWS_Resources.Lead.Lead.NotReceivedMail)",
+        CodeIncorrect: "@Html.Raw(IWS_Resources.Lead.Lead.CodeIncorrect)",
+        ActiveCode: "@Html.Raw(IWS_Resources.Lead.Lead.ActiveCode)",
+        SuccessfullyVerified: "@Html.Raw(IWS_Resources.Lead.Lead.SuccessfullyVerified)",
+        CheckMail: "@Html.Raw(IWS_Resources.Lead.Lead.CheckMail)",
+        CheckCode: "@Html.Raw(IWS_Resources.Lead.Lead.CheckCode)",
+          GoBack: "@Html.Raw(IWS_Resources.Lead.Lead.GoBack)",
+        NextStep: "@Html.Raw(IWS_Resources.Lead.Lead.NextStep)",
+          FirstName: "@Html.Raw(IWS_Resources.Lead.Lead.firstname)",
+          SecondName: "@Html.Raw(IWS_Resources.Lead.Lead.SecondName)",
+          Cancel: "@Html.Raw(IWS_Resources.Lead.Lead.Cancel)",
+          UpdateContact: "@Html.Raw(IWS_Resources.Lead.Lead.UpdateContact)",
+          Edit: "@Html.Raw(IWS_Resources.Lead.Lead.Edit)",
+          Delete: "@Html.Raw(IWS_Resources.Lead.Lead.Delete)",
+          ThanksInformation: "@Html.Raw(IWS_Resources.Lead.Lead.ThanksInformation)",
+          TextConfirmUp: "@Html.Raw(IWS_Resources.Lead.Lead.TextConfirmUp)",
+          TextConfirmDown: "@Html.Raw(IWS_Resources.Lead.Lead.TextConfirmDown)",
+
+
+        TitleErrorInputsEmpty: "@Html.Raw(IWS_Resources.Lead.Lead.TitleErrorInputsEmpty)",
+        TitleErrorDocumentsEmpty: "@Html.Raw(IWS_Resources.Lead.Lead.TitleErrorDocumentsEmpty)",
+        TitleErrorUser: "@Html.Raw(IWS_Resources.Lead.Lead.TitleErrorUser)",
+        DescErrorInputsEmpty: "@Html.Raw(IWS_Resources.Lead.Lead.DescErrorInputsEmpty)",
+        DescErrorDocumentsEmpty: "@Html.Raw(IWS_Resources.Lead.Lead.DescErrorDocumentsEmpty)",
+        DescErrorUser: "@Html.Raw(IWS_Resources.Lead.Lead.DescErrorUser)",
+        ErrorValidateDocument: "@Html.Raw(IWS_Resources.Lead.Lead.ErrorValidateDocument)",
+        Important: "@Html.Raw(IWS_Resources.Lead.Lead.important)",
+          MessageWarning: "@Html.Raw(IWS_Resources.Lead.Lead.MessageWarning)",
+        NextSteps: "@Html.Raw(IWS_Resources.Lead.Lead.NextSteps)",
+        GetEmail: "@Html.Raw(IWS_Resources.Lead.Lead.GetEmail)",
+        ViewEmail: "@Html.Raw(IWS_Resources.Lead.Lead.ViewEmail)",
+        NeedHelp: "@Html.Raw(IWS_Resources.Lead.Lead.NeedHelp)",
+        AnyQuestion: "@Html.Raw(IWS_Resources.Lead.Lead.AnyQuestion)",
+        AnyQuestion: "@Html.Raw(IWS_Resources.Lead.Lead.AnyQuestion)",
+        GoStore: "@Html.Raw(IWS_Resources.Lead.Lead.GoStore)",
+        LoginAccount: "@Html.Raw(IWS_Resources.Lead.Lead.LoginAccount)",
+        ForgetPass: "@Html.Raw(IWS_Resources.Lead.Lead.ForgetPass)",
+        ValidateEmail: "@Html.Raw(IWS_Resources.Lead.Lead.ValidateEmail)",
+        OtherEmail: "@Html.Raw(IWS_Resources.Lead.Lead.OtherEmail)",
+        ViewMore: "@Html.Raw(IWS_Resources.Lead.Lead.ViewMore)",
+        AddContact: "@Html.Raw(IWS_Resources.Lead.Lead.AddContact)",
+        Email: "@Html.Raw(IWS_Resources.Lead.Lead.emailaddress1)",
+        Names: "@Html.Raw(IWS_Resources.Lead.Lead.Names)",
+        Surnames: "@Html.Raw(IWS_Resources.Lead.Lead.Surnames)",
+
+        Celular: "@Html.Raw(IWS_Resources.Lead.Lead.Celular)",
+        DocumentNumber: "@Html.Raw(IWS_Resources.Lead.Lead.DocumentNumber)",
+        Jobtitle: "@Html.Raw(IWS_Resources.Lead.Lead.jobtitle)",
+        Permissions: "@Html.Raw(IWS_Resources.Lead.Lead.Permissions)",
+        SeeLess: "@Html.Raw(IWS_Resources.Lead.Lead.SeeLess)",
+        ContactList: "@Html.Raw(IWS_Resources.Lead.Lead.ContactList)",
+        MessageValidationEmail: "@Html.Raw(IWS_Resources.Lead.Lead.MessageValidationEmail)",
+        MessageValidationContact: "@Html.Raw(IWS_Resources.Lead.Lead.MessageValidationContact)",
+        AnotherBillingEmail: "@Html.Raw(IWS_Resources.Lead.Lead.AnotherBillingEmail)",
+        TextElectronicBilling: "@Html.Raw(IWS_Resources.Lead.Lead.TextElectronicBilling)",
+
+        LogIn: "@Html.Raw(IWS_Resources.Lead.Lead.LogIn)",
+        EmailAlreadyRegistered: "@Html.Raw(IWS_Resources.Lead.Lead.EmailAlreadyRegistered)",
+        TextEmailAlreadyRegistered: "@Html.Raw(IWS_Resources.Lead.Lead.TextEmailAlreadyRegistered)",
+        IForgotMyPassword: "@Html.Raw(IWS_Resources.Lead.Lead.IForgotMyPassword)",
+        ViewStatus: "@Html.Raw(IWS_Resources.Lead.Lead.ViewStatus)",
+        RegistrationProcess: "@Html.Raw(IWS_Resources.Lead.Lead.RegistrationProcess)",
+        TextRegistrationProcess: "@Html.Raw(IWS_Resources.Lead.Lead.TextRegistrationProcess)",
+        TextCheckEmailAdministrator: "@Html.Raw(IWS_Resources.Lead.Lead.TextCheckEmailAdministrator)",
+        TextInformationEmailWebStore: "@Html.Raw(IWS_Resources.Lead.Lead.TextInformationEmailWebStore)",
+        TextInformationContactWebStore: "@Html.Raw(IWS_Resources.Lead.Lead.TextInformationContactWebStore)",
+        TextInformationContactAdministratorWebStore: "@Html.Raw(IWS_Resources.Lead.Lead.TextInformationContactAdministratorWebStore)",
+        EmailElectronicBilling: "@Html.Raw(IWS_Resources.Lead.Lead.EmailElectronicBilling)",
+        Emailaddress1: "@Html.Raw(IWS_Resources.Lead.Lead.emailaddress1)",
+        ContactsInformation: "@Html.Raw(IWS_Resources.Lead.Lead.ContactsInformation)",
+        AddOtherContact: "@Html.Raw(IWS_Resources.Lead.Lead.AddOtherContact)",
+        InfoContacts: "@Html.Raw(IWS_Resources.Lead.Lead.InfoContacts)",
+        AddContactAdministrator: "@Html.Raw(IWS_Resources.Lead.Lead.AddContactAdministrator)",
+        TextToolTipContact: "@Html.Raw(IWS_Resources.Lead.Lead.TextToolTipContact)",
+        RequiredFiles: "@Html.Raw(IWS_Resources.Lead.Lead.RequiredFiles)",
+        Send: "@Html.Raw(IWS_Resources.Lead.Lead.Send)",
+        TextNotificationRol: "@Html.Raw(IWS_Resources.Lead.Lead.TextNotificationRoles)",
+        OnlyLettersNumbers: "@Html.Raw(IWS_Resources.Lead.WarningMessages.OnlyLettersNumbers)",
+        MustBeCharacters: "@Html.Raw(IWS_Resources.Lead.WarningMessages.MustBeCharacters)",
+        AtLeastCharacters: "@Html.Raw(IWS_Resources.Lead.WarningMessages.AtLeastCharacters)",
+        MessageIdentification: "@Html.Raw(IWS_Resources.Lead.WarningMessages.MessageIdentification)",
+        MustBegin: "@Html.Raw(IWS_Resources.Lead.WarningMessages.MustBegin)",
+        InvalidId: "@Html.Raw(IWS_Resources.Lead.WarningMessages.InvalidId)",
+        FieldRequired: "@Html.Raw(IWS_Resources.Lead.WarningMessages.FieldRequired)",
+        InvalidZipCode: "@Html.Raw(IWS_Resources.Lead.WarningMessages.InvalidZipCode)",
+        Help: "@Html.Raw(IWS_Resources.Account.Login.Help)",
+        OnlyLetters: "@Html.Raw(IWS_Resources.Lead.WarningMessages.OnlyLetters)",
+        NineNumber:"@Html.Raw(IWS_Resources.Lead.WarningMessages.NineNumbers)",
+        InvalidEmail: "@Html.Raw(IWS_Resources.Lead.WarningMessages.InvalidEmail)",
+        OnlyNumbers: "@Html.Raw(IWS_Resources.Lead.WarningMessages.OnlyNumbers)",
+        UploadFile: "@Html.Raw(IWS_Resources.Lead.Lead.UploadFile)",
+        SizeExceeded: "@Html.Raw(IWS_Resources.Lead.Lead.SizeExceeded)",
+        Cedula: "@Html.Raw(IWS_Resources.Lead.Lead.Cedula_ph_companyidentification)",
+        RUT: "@Html.Raw(IWS_Resources.Lead.Lead.RUT_ph_companyidentification)",
+        NoContacts: "@Html.Raw(IWS_Resources.Lead.Lead.NoContacts)",
+        NoAddContact: "@Html.Raw(IWS_Resources.Lead.Lead.NoAddContact)",
+        NoValid: "@Html.Raw(IWS_Resources.Lead.WarningMessages.NoValid)",
+        InvalidDocument: "@Html.Raw(IWS_Resources.Lead.WarningMessages.InvalidDocument)",
+
+        ElectronicBill: "@Html.Raw(IWS_Resources.Lead.Lead.ElectronicBill)",
+        ChooseContact: "@Html.Raw(IWS_Resources.Lead.Lead.ChooseContact)",
+        EmailAssignment: "@Html.Raw(IWS_Resources.Lead.Lead.EmailAssignment)",
+        AssigningMail: "@Html.Raw(IWS_Resources.Lead.Lead.AssigningMail)",
+        MessageBill: "@Html.Raw(IWS_Resources.Lead.Lead.MessageBill)",
+        EmailAlterno: "@Html.Raw(IWS_Resources.Lead.Lead.EmailAlt)",
+        OtherEmailContact: "@Html.Raw(IWS_Resources.Lead.Lead.OtherEmailContact)",
+
+        SelectionElectronicBilling: "@Html.Raw(IWS_Resources.Lead.Lead.SelectionElectronicBilling)",
+        TextValidateLater: "@Html.Raw(IWS_Resources.Lead.Lead.TextValidateLater)",
+        TextEmailAlreadyRegisteredTwo: "@Html.Raw(IWS_Resources.Lead.Lead.TextEmailAlreadyRegisteredTwo)",
+        DocumentExists: "@Html.Raw(IWS_Resources.Lead.Lead.DocumentExists)",
+        UploadFile: "@Html.Raw(IWS_Resources.Lead.Lead.UploadFile)",
+        InfoAct: "@Html.Raw(IWS_Resources.Lead.Lead.InfoAct)",
+        InfoConst: "@Html.Raw(IWS_Resources.Lead.Lead.InfoConst)",
+        Here: "@Html.Raw(IWS_Resources.Lead.Lead.Here)",
+        InfoWebSat: "@Html.Raw(IWS_Resources.Lead.Lead.InfoWebSat)",
+        ValidSucessEmail: "@Html.Raw(IWS_Resources.Lead.Lead.ValidSucessEmail)",
+
+        phAccepttermsOne: "@Html.Raw(IWS_Resources.Lead.Lead.ph_accepttermsOne)",
+        phAccepttermsTwo: "@Html.Raw(IWS_Resources.Lead.Lead.ph_accepttermsTwo)",
+        termsConditions: "@Html.Raw(IWS_Resources.Lead.Lead.termsConditions)",
+        ToPrint: "@Html.Raw(IWS_Resources.Lead.Lead.ToPrint)",
+
+        Shop: "@Html.Raw(IWS_Resources.Lead.Lead.Shop)",
+        CloudContact: "@Html.Raw(IWS_Resources.Lead.Lead.CloudContact)",
+        PurchasingContact: "@Html.Raw(IWS_Resources.Lead.Lead.PurchasingContact)",
+        SignatureInvoice: "@Html.Raw(IWS_Resources.Lead.Lead.SignatureInvoice)",
+        Marketing: "@Html.Raw(IWS_Resources.Lead.Lead.Marketing)",
+        OtherContact: "@Html.Raw(IWS_Resources.Lead.Lead.OtherContact)",
+        InvoicePay: "@Html.Raw(IWS_Resources.Lead.Lead.InvoicePay)",
+        LegalRepresentative: "@Html.Raw(IWS_Resources.Lead.Lead.LegalRepresentative)",
+        Pickup: "@Html.Raw(IWS_Resources.Lead.Lead.Pickup)",
+        RequiredFields: "@Html.Raw(IWS_Resources.Lead.Lead.RequiredFields)",
+        ErrorDocument: "@Html.Raw(IWS_Resources.Lead.Lead.ErrorDocument)",
+        ErrorEmail: "@Html.Raw(IWS_Resources.Lead.Lead.ErrorEmail)",
+        EmailExistenceLead: "@Html.Raw(IWS_Resources.Lead.Lead.EmailExistenceLead)",
+        DocumentExistenceLead: "@Html.Raw(IWS_Resources.Lead.Lead.DocumentExistenceLead)",
+        TitleEmailExistenceLead: "@Html.Raw(IWS_Resources.Lead.Lead.TitleEmailExistenceLead)",
+        TitleEmailExistenceContactAccount: "@Html.Raw(IWS_Resources.Lead.Lead.TitleEmailExistenceContactAccount)",
+        AddContactComercial: "@Html.Raw(IWS_Resources.Lead.Lead.AddContactComercial)",
+        ComputingPortability: "@Html.Raw(IWS_Resources.Lead.Lead.ComputingPortability)",
+        Consumables: "@Html.Raw(IWS_Resources.Lead.Lead.Consumables)",
+        PointSale: "@Html.Raw(IWS_Resources.Lead.Lead.PointSale)",
+      }
+
+      //Warning Messagge
+      strings.WarningMessages = {
+        AtLeastCharacters : "@Html.Raw(IWS_Resources.Lead.WarningMessages.AtLeastCharacters)"
+      }
+
+
+      @{
+        string languageId = string.Empty;
+        switch (Culture)
+        {
+          case "en-US":
+            languageId = "en";
+            break;
+          case "pt-BR":
+            languageId = "pt";
+            break;
+          default:
+            languageId = "es";
+            break;
+        };
+
+      }
+
+      scope.language = "@languageId";
+      scope.Localizacion = "@Html.Raw(IWS_Resources.News.News.Localizacion)";
+
+      scope.typeLanguage = {
+        es: '@Html.Raw(IWS_Resources.Layout.Layout.Spanish)',
+        en: '@Html.Raw(IWS_Resources.Layout.Layout.English)',
+        pt: '@Html.Raw(IWS_Resources.Layout.Layout.Portuguese)'
+      };
+      return {
+        strings,
+        scope
+      };
+
+    })();
+</script>

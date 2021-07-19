@@ -1,0 +1,46 @@
+﻿.total {
+  background-color: #0AA9CB;
+  color: white;
+}
+
+.progress-bar {
+  background-color: #CBE530;
+  text-align: left;
+  color: #7D7272;
+  padding-left: 10px;
+}
+
+.progress {
+  height: 1.3rem;
+  border: 2px solid #CBE530;
+  border-radius: 15px;
+}
+
+.detailCalls {
+  cursor: pointer;
+}
+
+.title-statistics {
+  font-size: 26px;
+  color: #0AA9CB;
+  font-weight: 600;
+  margin-top: 0.5em;
+  font-family: "Overpass";
+}
+
+  .title-statistics span {
+    color: #7D7272;
+    font-size: 20px;
+  }
+
+
+.chart-container {
+  margin: auto;
+  height: 50vh;
+  width: 50vw;
+}
+
+.table-process-token {
+  width: 100%;
+  margin-top: 0.5em;
+}

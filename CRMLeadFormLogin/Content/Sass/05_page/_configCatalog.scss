@@ -1,0 +1,10 @@
+﻿.config-catalog-content {
+  //padding: 1.5em 0 .5em;
+  padding: 0 0 .5em;
+
+  & .return-catalog {
+    display: flex;
+    align-items: center;
+    color: $main-color;
+  }
+}

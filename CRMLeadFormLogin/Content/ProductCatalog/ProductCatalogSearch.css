@@ -1,0 +1,139 @@
+﻿
+.product-catalog-search {
+  display: flex;
+  align-items: center;
+  /*width:1158px;*/
+  height: 64px;
+  /*background: #F7F7F7;*/
+}
+
+.search {
+  position: relative;
+  display: inline-block;
+  font-size: 15px;
+  color: #AAAAAA;
+  width: 100%;
+}
+
+.product-catalog-search-input {
+  width: 80%;
+}
+
+.product-catalog-search .search input {
+  height: 48px;
+  border: none;
+  border-radius: 3px;
+}
+
+#textSearch:focus {
+  border-width: 0px;
+  border: none;
+  outline: none;
+}
+
+.search .icon-search {
+  width: 40px;
+  height: 40px;
+  border-radius: 2px;
+  background: #0AA9CB;
+  color: #FFFFFF;
+  position: absolute;
+  top: 4px;
+  left: auto;
+  right: 5px;
+}
+
+  .search .icon-search i {
+    font-size: 28px;
+    margin: 0.2em;
+    line-height: 1.5;
+  }
+
+h2 {
+  font-family: 'Overpass';
+  font-weight: bold;
+  font-size: 32px;
+  color: #191515;
+  margin: 0.5em 0.6em;
+}
+
+.place-holder-text {
+  font-family: 'Barlow';
+  font-size: 15px;
+  color: #AAAAAA;
+}
+
+
+.inner-control > span {
+  font-size: 18px;
+  line-height: 1;
+  position: absolute;
+  top: 35%;
+  left: 21px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.selectdivv {
+  position: relative;
+  /*Don't really need this just for demo styling*/
+  /*float: left;
+  min-width: 200px;
+  margin: 50px 33%;*/
+}
+
+
+  .selectdivv:after {
+    content: '\f078';
+    font: normal normal normal 17px/1 FontAwesome;
+    color: #0ebeff;
+    right: 11px;
+    height: 34px;
+    padding: 8px 0px 0px 8px;
+    position: absolute;
+    pointer-events: none;
+  }
+
+/* IE11 hide native button (thanks Matt!) */
+.select::-ms-expand {
+  display: none;
+}
+
+.selectdivv select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* Add some styling */
+  display: block;
+  width: 100%;
+  float: right;
+  padding: 0px 30px;
+  font-size: 16px;
+  line-height: 1.75;
+  color: #333;
+  background-color: #ffffff;
+  background-image: none;
+  -ms-word-break: normal;
+  word-break: normal;
+}
+
+.container-text {
+  width: 300px;
+  vertical-align: middle;
+  white-space: nowrap;
+  position: relative;
+}
+
+
+
+.container-group span {
+  position: absolute;
+  top: 10%;
+  margin-left: 741px;
+  /*margin-top: 7px;*/
+  z-index: 1;
+  color: #4f5b66;
+}

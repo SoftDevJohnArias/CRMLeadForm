@@ -1,0 +1,45 @@
+﻿.option-filter-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1em 0;
+  height: 88px;
+  background: $gs-white;
+  z-index: 10;
+
+
+  & .filter-option {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 1em;
+
+    & > button {
+      margin: 0 0.6em;
+      text-transform: uppercase;
+      font-family: $font-family-secondary;
+
+      &.undo-filter {
+        font-size: $fourth-size;
+        font-weight: map-get( $font-weight-scale, bold);
+
+        & .icon-ws-ico-min-revert::before {
+          width: 12.98px;
+          height: 11.15px;
+          font-size: $fiveth-size;
+        }
+      }
+
+      &.set-filter {
+        width: 197px;
+        font-size: $second-size;
+        font-weight: map-get( $font-weight-scale, extra-bold);
+      }
+
+      &.save-filter {
+        font-size: $fourth-size;
+        font-weight: map-get( $font-weight-scale, bold);
+      }
+    }
+  }
+}

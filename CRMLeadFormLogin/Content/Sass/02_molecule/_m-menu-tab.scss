@@ -1,0 +1,28 @@
+﻿.menu-config-catalog {
+  display: flex;
+  width: 100%;
+  background: $gs-gray-light;
+  height: 64px;
+
+  & .menu-option {
+    transition: all 0.5s;
+    display: flex;
+    align-items: center;
+    @include title-personalization($nonary-color,$second-size,$font-family-secondary,map-get( $font-weight-scale, bold));
+    margin: 0 1em;
+    height: 100%;
+    user-select: none;
+    border-bottom: 3px solid transparent;
+    @extend %c-pointer;
+
+    &:hover {
+      @extend .active-menu;
+    }
+  }
+
+  & .active-menu {
+    color: $bs-light-black;
+    border-bottom: 3px solid $secondary-color;
+    transition: all 0.5s;
+  }
+}

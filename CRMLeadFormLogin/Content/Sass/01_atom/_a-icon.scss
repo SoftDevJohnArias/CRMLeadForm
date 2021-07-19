@@ -1,0 +1,107 @@
+﻿.info-icon {
+  border: 1px solid $gs-gray-02;
+  @include set-circle(20px, 20px, $gs-gray-light);
+  @include title-personalization ( $gs-gray-02,$fourth-size,$font-family-secondary, map-get( $font-weight-scale, regular), null );
+
+  &::before {
+    content: "?";
+  }
+}
+
+.icon-check {
+  /* @include set-circle(40px, 40px, $gs-gray-light);
+  color: $quinary-color;
+  border: 1px solid $quinary-color;
+
+  &::before {
+    content: "\e923";
+  }*/
+  width: 40px;
+  height: 40px;
+  background: transparent url('../../../Content/img/np_success.svg') 0% 0% no-repeat padding-box;
+}
+
+.icon-ws-ico-min-phone {
+  width: 14px;
+  height: 14px;
+
+  &::before {
+    font-size: 14px;
+  }
+}
+
+.icon-bill {
+  background-image: url('../../../Content/Icons/Lead/bill.svg');
+  background-repeat: no-repeat;
+  width: 18px;
+  height: 18.58px; 
+}
+
+.icon-up-down {
+  background-image: url('../../../Content/Icons/ESD/updown.svg');
+  background-repeat: no-repeat;
+  width: 18px;
+  height: 18.58px;
+}
+
+.icon-building {
+  background-image: url('../../../Content/Icons/ESD/building.svg');
+  background-repeat: no-repeat;
+  width: 18px;
+  height: 18.58px;
+  display: flex;
+}
+
+.icon-face-recognition {
+  background-image: url('../../../Content/Icons/ESD/face-recognition.svg');
+  background-repeat: no-repeat;
+  width: 18px;
+  height: 18.58px;
+  display: flex;
+}
+
+.icon-check-notification {
+  background-image: url('../../../Content/Icons/ESD/check-notification.svg');
+  background-repeat: no-repeat;
+  width: 18px;
+  height: 18.58px;
+  display: flex;
+}
+
+.icon-down {
+  background-image: url('../../../Content/Icons/ESD/arrow-down.svg');
+  background-repeat: no-repeat;
+  width: 10px;
+  height: 10px;
+  display: flex;
+}
+.icon-info-main {
+  background-image: url('../../../Content/Icons/ESD/info-icon.svg');
+  background-repeat: no-repeat;
+  width: 26px;
+  height: 26px;
+  display: flex;
+}
+.icon-language {
+  background-image: url('../../../Content/Icons/ESD/language-card.svg');
+  background-repeat: no-repeat;
+  width: 22px;
+  height: 22px;
+  display: flex;
+}
+
+.icon-shop-car {
+  background-image: url('../../../Content/Icons/ESD/shop-car.svg');
+  background-repeat: no-repeat;
+  width: 26px;
+  height: 26px;
+  display: flex;
+}
+
+.icon-cancel {
+  background-image: url('../../../Content/Icons/ESD/np_chevron.svg');
+  background-repeat: no-repeat;
+  width: 22px;
+  height: 22px;
+  display: flex;
+}

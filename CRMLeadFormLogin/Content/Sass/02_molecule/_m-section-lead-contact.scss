@@ -1,0 +1,715 @@
+﻿
+.title-section {
+  display: flex;
+  gap: .5em;
+
+  & .tooltiptextinfo {
+    top: -13px;
+    background-color: $gs-gray-light;
+    padding: 0.7em 0 0 0.7em;
+    width: 350px;
+  }
+}
+
+.notification-static {
+  @include respond-to(mobile-portrait) {
+    & {
+      gap: 0.5em;
+      width: 100%;
+    }
+  }
+}
+
+.info-contacts {
+  border-bottom: 1px solid $gs-gray;
+  border-top: 1px solid $gs-gray;
+  width: 80%;
+
+  & h5 {
+    @include title-personalization ($bs-light-black, null, $font-family-secondary, map-get( $font-weight-scale, bold), null );
+    margin-top: 1em;
+  }
+}
+
+.contact-add {
+  border-bottom: 1px solid $gs-gray;
+
+  & button {
+    margin: 1.5em 0 1.5em 0;
+  }
+
+  @include respond-to(mobile-portrait) {
+    & {
+      position: unset;
+    }
+
+    & button {
+      width: 100%;
+    }
+
+    & .notification-static-contact {
+      width: 100%;
+
+      & .notification-static {
+        width: 100%;
+
+        & p {
+          margin-left: 0.5em;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+.multi-selection-form {
+  border-top: 2px solid $gs-gray;
+
+  & .contacts-radio {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: baseline;
+    column-count: 4;
+    column-gap: 0em;
+    width: 80%;
+  }
+}
+
+.multi-selection-form:not(:first-child) {
+  padding: 0;
+  border-top: 0;
+}
+
+.contact-other-contact {
+  margin: 1em 0 1em 0;
+
+  @include respond-to(mobile-portrait) {
+    & button {
+      width: 100%;
+    }
+  }
+}
+
+.notification-static-contact {
+  width: 80%;
+
+  @include respond-to(mobile-portrait) {
+    & {
+      width: 100%;
+    }
+  }
+}
+
+.content-contact {
+  display: flex;
+  border-radius: 2px;
+  border: 1px solid $gs-gray;
+  padding: 1em 1.5em;
+  width: 80%;
+  background: $gs-white;
+  //margin: 1em 0;
+  @extend %c-pointer;
+  flex-direction: column;
+  height: 80px;
+  overflow: hidden;
+
+  &.expand-collapse {
+    height: 100%;
+    margin: 0.5em 0;
+    border: 1px solid $gs-gray;
+
+    & .separator {
+      display: block;
+    }
+  }
+
+  & .separator {
+    display: none;
+  }
+
+  .notification-contact {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    background: $gs-white;
+    justify-content: space-between;
+
+    & input[type=radio] {
+      width: 18px;
+      height: 18px;
+      background: $gs-white;
+      border: 1px solid $gs-gray-02;
+    }
+
+    &.contact-select {
+      justify-content: normal;
+    }
+
+    & .content-contact-header {
+      display: flex;
+      align-items: center;
+
+      & .content-text {
+        margin-left: 0.5em;
+      }
+
+      & p:first-child {
+        @include title-personalization($bs-light-black,$second-size, $font-family-quaternary, map-get($font-weight-scale, bold));
+        margin: 0;
+      }
+
+      & p {
+        @include title-personalization($bs-light-black,$third-size, $font-family-quaternary, map-get($font-weight-scale, regular));
+        margin: 0;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        width: 350px;
+
+        @include respond-to(mobile-portrait) {
+          width: 250px;
+        }
+      }
+
+      &.representative {
+        &:before {
+          @include set-icon("\e96c",$main-medium-size);
+        }
+      }
+
+      &.commercial-contact {
+        &:before {
+          @include set-icon("\e979",$main-medium-size);
+        }
+      }
+
+      &.commercial-contact-list {
+        &:before {
+          @include set-icon("\e979",$main-medium-size);
+          color: $gs-gray;
+        }
+      }
+
+      &.add-contact {
+        &:before {
+          @include set-icon("\e959",$main-medium-size);
+          color: $gs-gray-02;
+          margin-right: 0.5em;
+        }
+      }
+    }
+
+    & .content-link {
+      display: flex;
+      justify-content: center;
+      gap: 0.4em;
+      line-height: 14px;
+      margin-bottom: .5em;
+    }
+  }
+
+  & .input-group {
+    margin-bottom: 1em;
+  }
+
+  & .content-buttons {
+    display: flex;
+    gap: 1em;
+    margin-top: 1em;
+  }
+
+  @include respond-to(mobile-portrait) {
+    & {
+      width: 100%;
+      height: 133px;
+      justify-content: center;
+      padding: 1em;
+    }
+
+    flex-direction: column;
+    align-items: flex-start;
+
+    & .notification-contact {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      & .content-contact-header {
+        & .content-text {
+          margin-left: 1em;
+        }
+      }
+
+      & .content-link {
+        margin: .5em 2.5em;
+      }
+    }
+
+
+    & #contact-form {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      /*& .content-validation-email{
+        width:100%;
+      }*/
+    }
+  }
+}
+
+.content-contact-list {
+  border-top: 1px solid $gs-gray;
+  /* border-bottom: 1px solid $gs-gray;*/
+  width: 80%;
+  //padding: 0 0 1em 0;
+  .content-contact {
+    display: flex;
+    border-radius: 2px;
+    border: 1px solid $gs-gray;
+    padding: 1em 1.5em;
+    width: 100%;
+    background: $gs-white;
+    @extend %c-pointer;
+    flex-direction: column;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 1em;
+  }
+
+  & .contact-new {
+    border: 2px dotted $gs-gray;
+  }
+
+  & .title-list {
+    & h5 {
+      @include title-personalization ($bs-light-black, null, $font-family-secondary, map-get( $font-weight-scale, bold), null );
+      margin-top: 1em;
+    }
+  }
+
+  & .contact-add {
+
+    & button {
+      font-size: $second-size;
+      margin-top: 1em;
+    }
+
+    @include respond-to(mobile-portrait) {
+      & button {
+        width: 100%;
+      }
+    }
+  }
+
+  @include respond-to(mobile-portrait) {
+    & {
+      width: 100%;
+    }
+
+    & .contact-other-contact {
+      & button {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.content-electronic-bill {
+  width: 80%;
+  margin-top: 1em;
+
+  & .row-title {
+    & .title-bill {
+      @include title-personalization($bs-light-black,$main-medium-size, $font-family-secondary, map-get($font-weight-scale, bold));
+      border-top: 1px solid $gs-gray;
+      padding-top: 1em;
+    }
+  }
+
+  & .row-body-content {
+    & .paragraph-bill {
+      @include title-personalization($bs-light-black,$main-size,$font-family-quaternary,map-get( $font-weight-scale, regular));
+      margin: 1em 0 1em 0;
+    }
+
+    & .notification-static {
+      & .content-img {
+        display: flex;
+        gap: 0.5em;
+      }
+
+      & .paragraph-assigning {
+        @include title-personalization($bs-black,$second-size, $font-family-secondary, map-get($font-weight-scale, bold));
+        width: 34em;
+      }
+
+      & i {
+        color: $gs-gray;
+      }
+
+      & button {
+        margin-left: 3em;
+      }
+    }
+  }
+
+  & .row-footer {
+    & .notification-static {
+      & .paragraph-messagge {
+        @include title-personalization($bs-light-black,$third-size, $font-family-quaternary, map-get($font-weight-scale, regular));
+      }
+
+      & i {
+        color: $main-color;
+      }
+    }
+  }
+
+  & [type=email] {
+    width: 507px;
+  }
+
+  & .notification-static-contact {
+    width: 100%;
+  }
+
+  & .content-contact {
+    width: 100%;
+  }
+
+  @include respond-to(mobile-portrait) {
+    & {
+      width: 100%;
+      justify-content: center;
+    }
+    /*   display: flex;*/
+    flex-direction: column;
+    align-items: flex-start;
+
+    & .row-title {
+      width: 100%;
+    }
+
+    & .form-group {
+      & .content-email-contact {
+        width: 100%;
+        margin: 0;
+
+        & .multi-selection-form {
+          & .row-email {
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            width: 100%;
+            height: auto;
+            gap: 0.4em;
+
+            & .container-label {
+              width: 100%;
+              padding-left: 0;
+            }
+
+            & p {
+              width: 100%;
+            }
+          }
+        }
+
+        & .list-email {
+          width: 100%;
+
+          & p {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    & .row-body-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      & .paragraph-bill {
+        width: 100%;
+        padding: .5em;
+      }
+
+      & .notification-static {
+        width: 100%;
+        height: 147px;
+        justify-content: center;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: .5em;
+        gap: 0;
+
+        & .content-img {
+          display: flex;
+          align-items: center;
+          margin: 0.7em;
+          gap: 0.5em;
+
+          & .paragraph-assigning {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    & .row-footer {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      & .notification-static {
+        gap: 0.5em;
+      }
+    }
+
+    & .content-contact {
+      width: 100%;
+
+      & .notification-contact {
+        display: flex;
+        flex-direction: row;
+        gap: 0.5em;
+
+        & .input-select {
+          width: 18px;
+          line-height: 46px;
+        }
+
+        & .content-contact-header {
+          display: flex;
+          align-items: center;
+
+          & .content-text {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+          }
+        }
+      }
+    }
+  }
+}
+/*Inicio de 1 email*/
+.content-email-contact {
+  margin: 1em 0 0.5em 1.5em;
+
+  & .multi-selection-form {
+
+    & .row-email {
+      text-transform: initial;
+      display: flex;
+      align-items: center;
+      background: $gs-gray-light;
+      width: 666px;
+      height: 64px;
+      margin: 2px;
+      padding: 17px;
+
+      & .email-contact {
+        @include title-personalization($bs-black,$second-size, $font-family-secondary, map-get($font-weight-scale, bold));
+        display: flex;
+        width: 36%;
+        float: left;
+      }
+
+      & p {
+        display: flex;
+        width: 60%;
+        float: left;
+        margin-bottom: 0rem;
+      }
+    }
+  }
+
+  & .content-verification-code {
+    margin-top: 1em;
+
+    & .verify-code {
+      display: flex;
+      gap: 1em;
+    }
+  }
+
+  & .check-email {
+    margin-top: 0.5em;
+  }
+}
+/*Fin de 1 email*/
+/*Inicio de list email*/
+/*.content-list-email-contact {
+  & .multi-selection-form {
+
+    & .row-email {
+      background: $gs-gray-light;
+      width: 666px;
+
+      & .first-email {
+        text-transform: initial;
+        display: flex;
+        align-items: center;
+        padding: 1.6em;
+
+        & .email-contact {
+          @include title-personalization($bs-black,$second-size, $font-family-secondary, map-get($font-weight-scale, bold));
+          display: flex;
+          width: 36%;
+          float: left;
+        }
+
+        & p {
+          display: flex;
+          width: 60%;
+          float: left;
+          margin-bottom: 0rem;
+        }
+      }
+
+
+      & .list-email {
+        text-transform: initial;
+        display: flex;
+        align-items: center;
+        padding: 1.6em;
+
+        & .email-contact {
+          @include title-personalization($bs-black,$second-size, $font-family-secondary, map-get($font-weight-scale, bold));
+          display: flex;
+          width: 36%;
+          float: left;
+        }
+
+        & p {
+          display: flex;
+          width: 60%;
+          float: left;
+          margin-bottom: 0rem;
+        }
+      }
+    }
+  }
+
+  & .check-email {
+    margin-top: 0.5em;
+  }
+}*/
+/*Fin de list email*/
+.list-electronic-billing {
+  margin: 1em 0 0.5em 1.5em;
+
+  & .list-email {
+    background: $gs-gray-light;
+    width: 80%;
+
+    & .first-email {
+      text-transform: initial;
+      display: flex;
+      align-items: center;
+      padding: 1.6em;
+      justify-content: space-between;
+
+      & label {
+        @include title-personalization($bs-black,$second-size, $font-family-secondary, map-get($font-weight-scale, bold));
+        display: flex;
+        width: 36%;
+        float: left;
+      }
+
+      & p {
+        display: flex;
+        width: 60%;
+        float: left;
+        margin-bottom: 0rem;
+      }
+    }
+
+    & .separator {
+      border: 1px solid $gs-white;
+      margin: 0 1em 0 1em;
+    }
+
+    & .list-email {
+      text-transform: initial;
+      display: flex;
+      align-items: center;
+      padding: 1.6em 1.6em 1.2em 1.6em;
+      justify-content: space-between;
+
+      & label {
+        @include title-personalization($bs-black,$second-size, $font-family-secondary, map-get($font-weight-scale, bold));
+        display: flex;
+        width: 62%; //36%;
+        float: left;
+      }
+
+      & p {
+        display: flex;
+        width: 60%;
+        float: left;
+        margin-bottom: 0rem;
+      }
+    }
+
+    & .content-verification-code {
+      padding: 1em;
+    }
+
+    @include respond-to(mobile-portrait) {
+      & {
+        width: 100%;
+      }
+
+      & .first-email {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5em;
+
+        & .container-label {
+          width: 100%;
+
+          & p {
+            width: 100%;
+          }
+        }
+
+        & p {
+          width: 100%;
+        }
+      }
+
+      & .list-email {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5em;
+
+        & .container-label {
+          width: 100%;
+
+          & p {
+            width: 100%;
+          }
+        }
+
+        & p {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+span.is-error {
+  color: #c40247;
+  font-size: 10px;
+  font-family: "Barlow",sans-serif;
+  font-weight: 400;
+}

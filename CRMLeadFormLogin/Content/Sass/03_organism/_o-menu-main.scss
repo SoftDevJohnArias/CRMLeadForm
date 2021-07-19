@@ -1,0 +1,186 @@
+﻿.menu-main {
+  width: 282px;
+  padding: 1.5em 1em 0 0;
+  margin-top: 3.2em;
+  background: $gs-white;
+  min-height: 100%;
+  position: fixed;
+  top: 57px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  @include set-styled-scroll(6px, 8px, $gs-gray);
+
+  & > ul {
+    padding: 0;
+    margin-left: 1.5em;
+
+    & li {
+      display: flex;
+      flex-direction: column;
+
+      & .parent {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 50px;
+        background: $gs-white 0% 0% no-repeat padding-box;
+        border: 1px solid $gs-gray-light;
+        border-left: none;
+        border-right: none;
+        cursor: pointer;
+        border-left: 3px solid transparent;
+
+        & .text-option {
+          display: flex;
+          align-items: center;
+          @include title-personalization($bs-black-second,$second-size,$font-family-secondary,map-get( $font-weight-scale, bold));
+
+          & i.left {
+            margin-right: 1em;
+            font-size: $main-size;
+          }
+        }
+
+        & i.rigth {
+          margin-right: 2em;
+          @include title-personalization($main-color,$fiveth-size,null,map-get( $font-weight-scale, bold));
+          line-height: 2;
+        }
+
+        &.expand {
+          border: none;
+          border-left: 3px solid $main-color;
+          background: $gs-gray-light;
+
+          & .text-option {
+            @include title-personalization($secondary-color,$second-size,$font-family-secondary,map-get( $font-weight-scale, semi-bold));
+
+            & i.lef {
+              @include title-personalization($secondary-color,null,$font-family-secondary,null);
+            }
+          }
+        }
+
+        &:hover {
+          @extend .expand;
+        }
+      }
+
+      & .active {
+        max-height: 50vh;
+        transition: max-height 0.4s ease-in-out;
+      }
+
+      & ul {
+        max-height: 0;
+        transition: max-height 0.4s ease-in-out;
+        overflow: hidden;
+        padding: 0;
+
+        & > li {
+
+          & .child {
+            display: flex;
+            align-items: flex-start;
+            align-items: center;
+            flex-direction: row;
+            height: 38px;
+            cursor: pointer;
+            border: 1px solid $gs-gray-light;
+            border-left: none;
+            border-right: none;
+            @include title-personalization($bs-black-second,$third-size,$font-family-secondary,map-get( $font-weight-scale, regular));
+
+            & span {
+              margin-left: 2.7em;
+            }
+
+            &.active {
+              background: $gs-light;
+            }
+
+            &:hover {
+              @extend .active;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  & .options-static {
+    position: fixed;
+    width: 282px;
+    bottom: 0;
+    padding: 1em 1.5em;
+    background: $gs-light;
+
+    & .help {
+      display: flex;
+      align-items: center;
+      height: 58px;
+      border-left: 3px solid transparent;
+
+      & a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        @include title-personalization($bs-black-second,$second-size,$font-family-main,map-get( $font-weight-scale, semi-bold));
+
+        & i {
+          margin-right: 1em;
+          font-size: $main-size;
+        }
+      }
+    }
+
+    & .log-out {
+      display: flex;
+      align-items: center;
+      height: 58px;
+
+      & a {
+        display: flex;
+        align-items: center;
+        @include title-personalization($main-color,$main-size,$font-family-main,map-get( $font-weight-scale, regular));
+
+        & span {
+          text-decoration: underline;
+        }
+
+        & i {
+          margin-right: 1em;
+          font-size: $main-size;
+        }
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+
+  @include respond-to(mobile-portrait) {
+    & {
+      display:none;
+    }
+  }
+}
+
+
+@media only screen and (max-width: 1400px) {
+  .menu-main {
+    width: 225px;
+  }
+}
+
+@include respond-to(mobile-portrait) {
+  .bg-app-Authenticated {
+    /* width:100%;*/
+    & .col-2.col-md-2.col-xl-2 {
+      /*display:none;*/
+      padding: 2.5em 0 0 1em;
+    }
+  }
+}

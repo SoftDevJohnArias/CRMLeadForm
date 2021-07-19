@@ -1,0 +1,132 @@
+﻿
+.filter-catalog-content{
+  height: 100%;
+  width: 90%;
+  margin: 0.5em 0;
+  background: $gs-white;
+  @extend %c-pointer;
+
+  & .separator {
+    border: 1px solid #e6e6e6;
+    margin: 0 2em 1em 1em;
+  }
+
+  & .row-filter div {
+    width: 21%;
+
+    & select, input, div {
+      width: 95%;
+    }
+  }
+
+
+
+  &.expand-collapse {
+    height: 48px;
+    overflow: hidden;
+    margin: 0.5em 0;
+    border: 1px solid $gs-gray;
+  }
+
+
+  & .filter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 1em;
+    /*&:empty ~ .section-add-filter {
+      display: none;
+    }*/
+  }
+
+
+
+  & .section-add-filter {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 0.5em;
+
+    & button i {
+      margin-right: 0.3em;
+      font-size: $main-big-size;
+    }
+  }
+
+  & .header {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    height: 48px;
+    color: $bs-black;
+    background: $gs-white;
+    /*&:empty ~ .section-add-filter {
+      display: none;
+    }*/
+    & .title {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      margin: 0 1em;
+
+      & i {
+        margin-right: 0.5em;
+      }
+    }
+
+    & .collapse-icon {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      margin: 0 1em;
+
+      & i {
+        font-weight: map-get( $font-weight-scale, bold);
+      }
+    }
+  }
+}
+
+
+.sticky {
+  position: fixed;
+  top: 30px;
+  width: 80%;
+}
+
+.sticky + .filter-catalog-content {
+  padding-top: 102px;
+}
+
+.message-rules-empty {
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  border: 1px solid $gs-gray;
+  background: $gs-white;
+  width: 80%;
+  padding: 0 0.5em 0.5em;
+  margin: 0.5em 0;
+
+  & img {
+    width: 16px;
+    height: 16px;
+    margin: 1.4em .5em 0 .7em;
+  }
+
+  & span {
+    @include title-personalization ($bs-light-black, $third-size, $font-family-quaternary, map-get( $font-weight-scale, regular), null );
+    margin: 1.5em 0 0 0;
+  }
+}
+
+.filter-catalog-header {
+  background: $gs-white;
+  @extend %c-pointer;
+
+  &.expand-collapse {
+    height: 48px;
+    overflow: hidden;
+    margin: 0.5em 0;
+    border: 1px solid $gs-gray;
+  }
+}

@@ -1,0 +1,16 @@
+﻿.lnk-main {
+  @include set-link($main-color, $main-size, $text-undeline);
+  @include title-personalization (null,null, $font-family-main, map-get($font-weight-scale, regular), null );
+}
+
+.lnk-cancel {
+  @include set-link($octanary-color, $main-size, $text-undeline);
+}
+
+.lnk-customer {
+  @include set-link($gs-white, $third-size);
+}
+
+.lnk-statement {
+  @include set-link($main-color, $third-size, $text-undeline);
+}

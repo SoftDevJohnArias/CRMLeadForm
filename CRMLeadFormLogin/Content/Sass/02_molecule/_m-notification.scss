@@ -1,0 +1,298 @@
+﻿.alert-notify-container {
+  position: fixed;
+  width: 83.5%;
+  z-index: 99999;
+
+  & .alert-notify {
+    width: 100%;
+    height: 0;
+    text-align: center;
+    background: $quaternary-color 0% 0% no-repeat padding-box;
+    opacity: 1;
+    overflow: hidden;
+    box-sizing: border-box;
+    transition: height .5s ease-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include title-personalization($gs-white,$sixth-size, $font-family-quaternary, map-get($font-weight-scale, semi-bold));
+
+
+    & p {
+      margin: 0;
+    }
+
+    & .alert-icon-success {
+      border-radius: 50%;
+      width: 16px;
+      height: 16px;
+      background: $gs-white;
+      color: $quaternary-color;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: .7em;
+
+      & i {
+        line-height: 2;
+      }
+    }
+
+    &.active {
+      height: 50px;
+      border: 1px solid $quaternary-color;
+    }
+
+    &.inactive {
+      height: 0;
+    }
+  }
+}
+
+
+.content-notification {
+  width: 965px;
+  height: auto;
+
+  & .content-title {
+    width: 965px;
+    height: 48px;
+  }
+
+  & p {
+    padding: 1.2em 3.5em;
+    text-align: center;
+    margin-bottom: 0rem;
+  }
+
+  & .title-main-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    line-height: 48px;
+    font-size: $sixth-size;
+  }
+
+
+  &.warning-info {
+    border: 1px solid $thirteenth-color;
+
+    & .content-title-warning {
+      border: 1px solid $thirteenth-color;
+      background: $thirteenth-color;
+      @include title-personalization($gs-white,$third-size, $font-family-quaternary, map-get($font-weight-scale, semi-bold));
+    }
+
+    & .title-second-info {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      margin: 1em 4em 0.5em 4em;
+      @include title-personalization($bs-light-black,$third-size, $font-family-quaternary,null);
+    }
+
+    .content-link {
+      display: flex;
+      justify-content: center;
+      gap: 0.4em;
+      line-height: 14px;
+      margin-bottom: .5em;
+    }
+  }
+
+  &.error-info {
+    border: 1px solid $twelveth-color;
+
+    & .content-title-error {
+      border: 1px solid $twelveth-color;
+      background: $octanary-color;
+      @include title-personalization($gs-white,$sixth-size, $font-family-quaternary, map-get($font-weight-scale, semi-bold));
+    }
+
+    & .title-second-error {
+      text-align: center;
+      margin: 1em 4em 0.5em 4em;
+      @include title-personalization($twelveth-color,$third-size, $font-family-quaternary,null);
+    }
+
+    & p {
+      margin: 0px;
+    }
+  }
+
+  @include respond-to(mobile-portrait) {
+    & {
+      width: 100%;
+
+      & > .content-title {
+        width: 100%;
+        height: auto;
+        & .title-main-info{
+          line-height:unset;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+.notification-static {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  border-radius: 2px;
+  border: 1px solid $gs-gray;
+  padding: 1em 1.5em;
+  width: 100%;
+  background: $gs-white;
+  /*margin: 1.5em 0;*/
+  margin: .5em 0;
+
+  & p {
+    @include title-personalization($bs-light-black,$third-size, $font-family-quaternary, map-get($font-weight-scale, regular));
+    margin: 0;
+  }
+
+  &.warning {
+    color: $octanary-color;
+
+    &:before {
+      @include set-icon("\e91b",$main-medium-size);
+      line-height: 1;
+    }
+  }
+
+
+  &.info {
+    &:before {
+      @include set-icon("\e942",$main-medium-size);
+      color: $main-color;
+      line-height: 1;
+      font-size: $main-size;
+    }
+  }
+  ///mobile
+  @include respond-to(mobile-portrait) {
+    & {
+      align-items: flex-start;
+      padding: .5em;
+      gap: 0;
+    }
+  }
+}
+
+.select-business{
+  padding-right: 40px;
+}
+
+.content-helper {
+  width: 388px;
+  height: 204px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $gs-gray;
+  border-radius: 2px;
+  padding: 1.4em 1em 1em 1em;
+  opacity: 1;
+  margin: 4.9em 1em 1em 0;
+
+  & .helper-title {
+    & p {
+      @include title-personalization(null,$second-size,$font-family-secondary, map-get( $font-weight-scale, bold), null );
+    }
+  }
+
+  & .helper-body {
+    & p {
+      @include title-personalization(null,$third-size,$font-family-quaternary, map-get( $font-weight-scale, regular), null );
+    }
+
+    & .p-second {
+      margin-top: 1em;
+    }
+
+    & .row-icon {
+      margin: 1em 0em 0em 0em;
+      display: flex;
+      justify-content: start;
+
+      & i {
+        margin-right: 0.3em;
+        font-size: 14px;
+      }
+    }
+  }
+  ///mobile
+  @include respond-to(mobile-portrait) {
+    & {
+      margin: 0;
+      width:341px;
+    }
+  }
+}
+
+
+
+.content-helper-steps {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $gs-gray;
+  border-radius: 2px;
+  width: 30%;
+  height: 16.5%;
+  padding: 2em 1em 2em 1em;
+  opacity: 1;
+
+
+
+  & .helper-steps-title {
+    & p {
+      @include title-personalization(null,$seventh-size,$font-family-secondary, map-get( $font-weight-scale, bold), null );
+    }
+
+    & hr {
+      background-color: $gs-gray;
+    }
+  }
+
+  & .helper-steps-body {
+    & p {
+      @include title-personalization(null,$second-size,$font-family-quaternary, map-get( $font-weight-scale, regular), null );
+    }
+
+    & .title-help {
+      @include title-personalization(null,$second-size,$font-family-secondary, map-get( $font-weight-scale, bold), null );
+    }
+
+    & .text-help {
+      padding-top: 1em;
+      @include title-personalization(null,$third-size,$font-family-quaternary, map-get( $font-weight-scale, regular), null );
+    }
+
+    & hr {
+      background-color: $gs-gray;
+    }
+
+    & .row-icon {
+      margin: 1em 0em 0em 0em;
+      display: flex;
+      justify-content: start;
+
+      & i {
+        margin-right: 0.3em;
+        font-size: $second-size;
+      }
+
+      & p {
+        @include title-personalization(null,$third-size,$font-family-quaternary, map-get( $font-weight-scale, regular), null );
+      }
+    }
+  }
+
+  & .helper-steps-footer {
+  }
+}

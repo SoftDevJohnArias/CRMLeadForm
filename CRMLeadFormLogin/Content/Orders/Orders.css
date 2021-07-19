@@ -1,0 +1,66 @@
+﻿.section-order {
+    animation-duration: 4s;
+    animation-name: fade;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+textarea {
+    max-height: 650px;
+    max-width: 470px;
+    resize: none;
+}
+
+.custom-checkbox1 {
+    width: 1.25rem;
+    height: 1.25rem;
+    position: absolute;
+}
+
+#div-Tilte {
+    font-family: 'Overpass';
+    font-weight:600;
+    font-size:26px;
+    color:#0AA9CB;
+}
+
+/*.container-page {
+    font-family: Barlow,Condensed;
+    font-size: 16px;
+}*/
+
+#aDetails {
+    font-family: Barlow Condensed !important;
+    font-size: 16px;
+}
+
+/*#modalBodyDetails {
+    width: 100%;
+    top:2rem;
+}
+
+#filterOrdersModal {
+    font-family: Barlow,Condensed;
+    font-size: 14px;
+}*/
+
+.section-tag {
+  border-radius: 8px;
+  background-color: #93DCFA;
+  padding: 0.3em 0.2em;
+  color: #FFFFFF;
+  width: 70px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Barlow condensed";
+  font-size: 14px;
+}

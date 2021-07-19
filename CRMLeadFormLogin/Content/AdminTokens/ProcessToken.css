@@ -1,0 +1,71 @@
+﻿.content-process-token {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 7rem 0 3rem;
+}
+
+.header-process-token {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1em;
+}
+
+  .header-process-token h3 {
+    font-size: 26px;
+    color: #0AA9CB;
+    font-family: Overpass;
+    font-weight: 600;
+  }
+
+
+
+.header-buttons {
+  display: flex;
+}
+
+  .header-buttons > button {
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-left: 0.5em;
+  }
+
+    .header-buttons > button i {
+      font-size: 1.5em;
+      margin-right: 0.2em;
+    }
+
+.section-paginate-tokens {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 1.2em 0 0;
+}
+
+.load-process-token {
+  width: 100%;
+  margin-bottom: 2em;
+}
+
+  .load-process-token textarea {
+    border: 1px solid #B3B3B3;
+    width: 100%;
+    resize: none;
+    overflow: auto;
+    height: 150px;
+  }
+
+    .load-process-token textarea:focus {
+      outline: none;
+    }
+
+.table-process-token {
+  width: 100%;
+}
+
+.hass-error-token {
+  color: #721c24;
+  background-color: #f8d7da;
+  border: 3px solid #f5c6cb;
+}

@@ -1,0 +1,24 @@
+﻿
+  <div class="navbar-collapse">
+    <div class="dropdown navbar-Left">
+      <ul class="navbar-nav navbar-left  dropbtn" id="LanguageId">
+        @CRMLeadObjects.Resources.Layout.Layout.Language
+
+      </ul>
+      <div class="dropdown-content">
+        <a onclick="ChangeLanguage('es')" value="es">@CRMLeadObjects.Resources.Layout.Layout.Spanish</a>
+        <a onclick="ChangeLanguage('en')" value="en">@CRMLeadObjects.Resources.Layout.Layout.English</a>
+        <a onclick="ChangeLanguage('pt')" value="pt">@CRMLeadObjects.Resources.Layout.Layout.Portuguese</a>
+      </div>
+    </div>
+  </div>
+<script>
+    //function ChangeLanguage(id_Lenguage) {
+    //  if (window.location.pathname != "/") {
+    //    window.location = window.location.origin + "/" + id_Lenguage + window.location.pathname.replace("/en", "").replace("/es", "").replace("/pt","");
+    //    }
+    //    else {
+    //        window.location = window.location.origin + "/" + id_Lenguage + "/Account/Login";
+    //    }
+    //}
+</script>

@@ -1,0 +1,13 @@
+﻿.container-setting-customer {
+  display: flex;
+  flex-direction:column;
+
+  & .default-locale {
+
+    display:flex;
+
+    & .selectDefaultLocale {
+      width: 230px;
+    }
+  }
+}

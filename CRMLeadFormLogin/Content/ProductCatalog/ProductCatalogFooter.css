@@ -1,0 +1,39 @@
+﻿.footer-container {
+  font-family: "Barlow";
+  font-size: 14px;
+  color: #191515;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1em;
+  font-family: "Barlow";
+  font-size: 14px;
+  color: #191515;
+  align-items: center;
+  /*background: #FCFCFC;*/
+}
+
+.btn-viewmore-footer {
+  width: 74px;
+  height: 32px;
+  font-size: 13px;
+}
+
+.fotter-all-price {
+  display: flex;
+}
+
+.footer-paginate {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 1em;
+}
+  .footer-paginate button {
+    color: #191515;
+  }
+
+.fotter-all-price .price {
+  font-weight: 600;
+  margin-left: 0.2em;
+}

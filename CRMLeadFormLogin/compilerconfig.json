@@ -1,0 +1,18 @@
+[
+  {
+    "outputFile": "Content/Sass/_partials.css",
+    "inputFile": "Content/Sass/_partials.scss"
+  },
+  {
+    "outputFile": "Content/Sass/style.css",
+    "inputFile": "Content/Sass/style.scss"
+  },
+  {
+    "outputFile": "Content/Sass/03_organism/_o-header.css",
+    "inputFile": "Content/Sass/03_organism/_o-header.scss"
+  },
+  {
+    "outputFile": "Content/Sass/04_template/_printSummary.css",
+    "inputFile": "Content/Sass/04_template/_printSummary.scss"
+  }
+] 

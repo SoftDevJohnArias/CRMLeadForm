@@ -1,0 +1,36 @@
+﻿@each $element, $size in $size-title {
+  #{$element} {
+    @include title-personalization ( null, $size, null, null, null, null );
+  }
+}
+
+
+.title-main {
+  @include title-personalization ($bs-light-black, null, $font-family-secondary, map-get( $font-weight-scale, bold), null )
+}
+
+
+.second-title {
+  @include title-personalization ($bs-light-black,$main-size, $font-family-secondary, map-get( $font-weight-scale, bold), null )
+}
+
+.title-danger {
+  color: $octanary-color;
+}
+
+.title-success {
+  @include title-personalization ($bs-light-black,$seventh-size,$font-family-secondary, map-get( $font-weight-scale, bold), null )
+}
+
+.third-title {
+  @include title-personalization ($bs-light-black,$main-medium-size,$font-family-secondary, map-get( $font-weight-scale, bold), null )
+}
+
+
+.text-ellipsis {
+  display: inline-block;
+  width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

@@ -1,0 +1,120 @@
+﻿
+.transparent-body {
+  position: fixed;
+  z-index: 10;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  transition: background-color 0.3s;
+}
+
+
+.menu-account-content {
+  position: fixed;
+  z-index: 1;
+  height: 100%;
+  width: 0;
+  top: 0;
+  right: 0;
+  background-color: #FFFFFF;
+  overflow-x: hidden;
+  transition: 0.5s;
+  opacity: 1;
+}
+
+.head-menu-account {
+    display: flex;
+    justify-content: flex-start;
+    font-family: 'Overpass';
+    font-weight:bold;
+
+}
+
+.head-menu-account-icon {
+  font-size: 20px;
+  color: #000;
+}
+
+.head-menu-account > p {
+  font-size: 20px;
+  font-weight: 700;
+  margin-left: 10px;
+}
+
+.menu-account-logout {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 59.22px;
+    width: 100%;
+    font-size: 16px;
+    font-family: "Barlow condensed";
+    background-color: #E6E6E6;
+    position: fixed;
+    bottom: 0;
+}
+
+.menu-account-logout-icon {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  color: #C40047;
+  border: 1px solid #C40047;
+  font-size: 10px;
+  margin: 0 20px;
+}
+
+/*.icon-ws-ico-min-close:before {
+    font-size: 40px;
+}*/
+
+
+    .menu-account-logout-icon i {
+        /*vertical-align: middle;*/
+        /*margin: 4px;*/
+        margin: -1px;
+        font-size: 20px;
+    }
+
+.menu-account-logout > a {
+  color: #333333;
+  font-size: 16px;
+  text-decoration: none;
+  display: flex;
+  margin-left: 1rem;
+}
+
+  .menu-account-logout > a span {
+    line-height: 100%;
+  }
+
+.content-options-menu {
+    list-style: none;
+    font-size: 18px;
+    font-family: "Barlow condensed";
+}
+
+.body-menu-account {
+  padding: 2rem;
+}
+
+.content-options-menu {
+  margin-top: 1rem;
+}
+
+  .content-options-menu li a {
+    text-decoration: none;
+    color: #333333;
+  }
+
+    .content-options-menu li a i {
+      margin: 2rem 1rem 0 0;
+    }
+
+  .content-options-menu li {
+    margin-top: 1rem;
+  }
+

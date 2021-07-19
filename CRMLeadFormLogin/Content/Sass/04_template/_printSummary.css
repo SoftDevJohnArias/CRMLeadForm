@@ -1,0 +1,10 @@
+﻿@media print {
+  @page {
+    padding: 10%; }
+  .container-header, .container-header, .confirm-lead-create, .content-helper-steps {
+    display: none; }
+  .content-data {
+    border: none;
+    border: 0px; }
+    .content-data .content-print {
+      display: none; } }

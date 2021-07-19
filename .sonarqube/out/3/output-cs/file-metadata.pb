@@ -1,0 +1,13 @@
+A
+8C:\Users\jaria304\source\repos\CRMLeadForm\BLL\ApiLog.csutf-8J
+AC:\Users\jaria304\source\repos\CRMLeadForm\BLL\GeneralSettings.csutf-8U
+LC:\Users\jaria304\source\repos\CRMLeadForm\BLL\Leads\Google_reCaptchaLead.csutf-8H
+?C:\Users\jaria304\source\repos\CRMLeadForm\BLL\Leads\LeadBLL.csutf-8Q
+HC:\Users\jaria304\source\repos\CRMLeadForm\BLL\Leads\ValidateCodeLead.csutf-8Y
+PC:\Users\jaria304\source\repos\CRMLeadForm\BLL\Leads\ValidateExternalServices.csutf-8F
+=C:\Users\jaria304\source\repos\CRMLeadForm\BLL\MulesoftBLL.csutf-8L
+CC:\Users\jaria304\source\repos\CRMLeadForm\BLL\NavigationMenuBLL.csutf-8R
+IC:\Users\jaria304\source\repos\CRMLeadForm\BLL\Properties\AssemblyInfo.csutf-8N
+EC:\Users\jaria304\source\repos\CRMLeadForm\BLL\SettingsCustomerBLL.csutf-8C
+:C:\Users\jaria304\source\repos\CRMLeadForm\BLL\UserInfo.csutf-8v
+kC:\Users\jaria304\source\repos\CRMLeadForm\BLL\obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.csutf-8

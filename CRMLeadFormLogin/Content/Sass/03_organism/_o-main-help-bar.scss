@@ -1,0 +1,44 @@
+﻿.content-main-help-bar {
+  display: -webkit-flex;
+  display: flex;
+  background-color: white;
+  height: 56px;
+  width: 100%;
+  box-shadow: 0px 1px 6px $gs-gray;
+  padding-top: 0.7em;
+
+  & .goStore-text {
+    padding-left: 7em;
+    display: inline-flex;
+  }
+
+  & .help-text {
+    display: inline-flex;
+    padding-left: 1em;
+  }
+
+  & p, a {
+    @include title-personalization($bs-black,$second-size,$font-family-quaternary,map-get( $font-weight-scale, bold));
+    padding-left: 0.5em;
+  }
+
+  & a {
+    padding: 0;
+    margin-left: 0.6em;
+  }
+
+  & .icon-down {
+    margin: 0.6em 0 0 0.5em;
+  }
+
+  & .icon-shop-car {
+    margin-top: 3px;
+  }
+}
+
+.contain {
+  display: flex;
+}
+
+
+

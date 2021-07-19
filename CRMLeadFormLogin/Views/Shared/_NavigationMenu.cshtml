@@ -1,0 +1,116 @@
+﻿@model ICollection<CRMLeadObjects.DTO.IWSPortal.NavigationMenu.NavigationMenuViewModel>
+<script src="~/Scripts/Menu/MenuMain.js"></script>
+<section id="NavbarMenu" class="menu-main">
+
+  @*<div id="anchoMenu" class="anchor-menu">
+        <span><i id="iconOpenMenu" class="icon-ws-ico-min-menu"></i></span>
+    </div>*@
+  @*<div class="head-menu">
+        <div class="head-menu-user-icon">
+            <span><i class="icon-ws-ico-min-user"></i></span>
+        </div>
+        <div class="head-menu-user">
+            <p>@User.Identity.Name</p>
+        </div>
+    </div>*@
+  <ul>
+    @foreach (var elem in Model)
+    {
+      var firstLevelText = CRMLeadObjects.Resources.Home.NavigationMenu.ResourceManager.GetString(elem.IdRecurso);
+      string languageId = string.Empty;
+      switch (Culture)
+      {
+        case "en-US":
+          languageId = "en";
+          break;
+        case "pt-BR":
+          languageId = "pt";
+          break;
+        default:
+          languageId = "es";
+          break;
+      };
+      var url = !elem.Children.Any() ? $"/{languageId}/{elem.Controller}/{elem.Action}" : "";
+
+      <li id="@elem.IdRecurso" data-text="@firstLevelText" class="@(elem.Controller == "AdminHome"? "home-option":"")">
+        <div class="parent" data-url="@url">
+          <div class="text-option">
+            <i class="icon left @elem.Icon"></i>
+            <span>
+              @firstLevelText
+            </span>
+          </div>
+          @if (elem.Children.Any())
+          {
+            <i class="rigth icon-ws-ico-min-down"></i>
+          }
+        </div>
+
+        @if (elem.Children.Any())
+        {
+          <ul>
+            @foreach (var child in elem.Children)
+            {
+              var urlSecond = !child.Children.Any() ? $"/{languageId}/{child.Controller}/{child.Action}" : "";
+              var secondLevelText = CRMLeadObjects.Resources.Home.NavigationMenu.ResourceManager.GetString(child.IdRecurso);
+              <li id="@child.IdRecurso">
+                <div class="child" data-url="@urlSecond">
+                  <span>
+                    @secondLevelText
+                  </span>
+                </div>
+              </li>
+            }
+          </ul>
+        }
+      </li>
+    }
+
+    <li>
+      <ul>
+        <li>
+          <div class="parent">
+            <div class="text-option">
+              <i class="icon left icon-ws-ico-min-help"></i>
+              <span>
+                @CRMLeadObjects.Resources.Home.NavigationMenu.Help @DateTime.Now
+              </span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="parent">
+            <div class="text-option">
+              <i class="icon left icon-ws-ico-min-logout"></i>
+              <span>
+                @CRMLeadObjects.Resources.Home.NavigationMenu.Logout
+              </span>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </li>
+
+  </ul>
+
+  <div class="options-static">
+      @*<div class="help">
+          <a href="#">
+            <i class="icon left icon-ws-ico-min-help"></i>
+            <span>
+              @CRMLeadObjects.Resources.Home.NavigationMenu.Help
+            </span>
+          </a>
+
+        </div>*@
+      <div class="log-out">
+          <a href="@Url.Action("Logout","Account")">
+              <i class="icon left icon-ws-ico-min-logout"></i>
+              <span>
+                  @CRMLeadObjects.Resources.Home.NavigationMenu.Logout
+              </span>
+          </a>
+      </div>
+  </div>
+
+</section>

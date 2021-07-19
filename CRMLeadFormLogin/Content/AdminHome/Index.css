@@ -1,0 +1,112 @@
+﻿.content-cards {
+  display: grid;
+  justify-content: center;
+  padding: 10px;
+  grid-template-columns: minmax(auto, 100%);
+}
+
+.items-cards {
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1.5rem;
+  grid-row-gap: 1.5em;
+  display: grid;
+}
+
+.btn-entry-cards {
+  border-radius: 19px 19px 19px 19px;
+  background-color: #0AA9CB;
+  color: #FFFFFF;
+  border: 1px solid #0AA9CB;
+  width: 100%;
+  height: 35px;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+  .btn-entry-cards:hover {
+    color: #FFFFFF;
+    background-color: rgba(10, 169, 203, 0.8);
+  }
+
+.content-buttom {
+  margin: 1rem 1rem 0;
+}
+
+.card-border {
+    box-shadow: 0px 6px 7px 6px #F2EDEC;
+    height: 100%;
+    font-family: "Barlow condensed";
+}
+
+.card-content-body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex: 1 1 auto;
+  padding: 1.25rem 0;
+}
+
+    .card-content-body h5 {
+        font-family: "Barlow condensed";
+        font-weight: 600;
+        margin: 0;
+        font-size:20px;
+    }
+
+  .card-content-body span {
+    font-size: 14px;
+    font-family: 'Overpass';
+    font-weight: bold;
+  }
+
+.container-welcome {
+    background-color: #6A7FA31A;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    bottom: 1rem;
+    width: 100%;
+    margin-bottom: 10px;
+   
+}
+
+.welcome {
+    color: #465875;
+    font-family: "Barlow";
+    font-size: 16px;
+    margin: 0;
+}
+
+.menusueSucces {
+    margin-bottom: 10px;
+}
+
+.card-title {
+    font-family: "Barlow condensed";
+    font-size:20px;
+    font-weight:600;
+    color: #0AA9CB;
+}
+
+
+.items-cards .icon-ws-ico-min-catalog:before {
+  color: #175C88;
+  font-size: 40px;
+}
+
+
+.items-cards .icon-ws-ico-min-ordenes,
+.items-cards .icon-ws-ico-min-ESD,
+.items-cards .icon-ws-ico-min-catalog,
+.items-cards .icon-ws-ico-min-Logs,
+.items-cards .icon-ws-ico-min-support:before {
+  color: #175C88;
+  font-size: 40px;
+
+}
+

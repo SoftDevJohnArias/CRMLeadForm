@@ -1,0 +1,105 @@
+﻿.content-table {
+  position: relative;
+  width: 100%;
+
+  & .table-striped {
+    width: 100%;
+
+
+    thead {
+      background: $gs-gray-light;
+      @include title-personalization ($bs-light-black, $third-size, $font-family-main, map-get( $font-weight-scale, semi-bold), null );
+      border: 0;
+
+      & tr {
+        height: 38px;
+        padding: 1em;
+
+        & > th:nth-child(-n+3) {
+          padding-left: 2.45em;
+          text-align: left;
+          width: 23%;
+        }
+
+        & > th:nth-last-child(1) {
+          padding-left: 2.45em;
+          text-align: left;
+          width: 31%;
+        }
+      }
+    }
+
+    tbody > tr {
+      border: 0;
+      border-bottom: 1px solid $gs-gray;
+      @include title-personalization ($bs-light-black, $main-size, $font-family-main, map-get( $font-weight-scale, regular), null );
+      height: 43px;
+
+      .text-ellipsis {
+        line-height: 2.5em;
+      }
+
+      &:nth-child(n+6) {
+
+        &:last-child {
+          opacity: 0.1;
+        }
+
+        &:nth-last-child(2) {
+          opacity: 0.2;
+        }
+      }
+
+      & > td {
+        padding-left: 2em;
+      }
+    }
+
+    tbody tr:nth-of-type(odd) {
+      background-color: $gs-white;
+    }
+
+    tbody tr:nth-of-type(even) {
+      background-color: $gs-white;
+    }
+  }
+
+
+  & .content-vieW-more {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    & button {
+      width: 104px;
+      font-family: $font-family-secondary;
+      font-weight: map-get( $font-weight-scale, extra-bold);
+      font-size: $fourth-size;
+    }
+  }
+
+  & .content-empty {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    color: $gs-gray-02;
+    font-size: $main-size;
+    margin: 2em;
+  }
+
+  .table-full-data.table-full-data {
+    tbody > tr {
+      &:last-child {
+        opacity: 1;
+      }
+
+      &:nth-last-child(2) {
+        opacity: 1;
+      }
+    }
+  }
+}

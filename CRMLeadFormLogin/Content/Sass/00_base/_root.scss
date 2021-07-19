@@ -1,0 +1,78 @@
+﻿
+//Transitions
+$transition-hover: all .5s ease-in-out 0s;
+
+//Radius
+$main-border-radius: 5px;
+$second-border-radius: 3px;
+
+$absolute-border-radius: 2px;
+
+//Shadows
+$main-border-shadow: 0px 0px 1px 1px;
+
+
+//size title
+$size-title: ( h1: 36px, h2: 32px, h3: 28px, h4: 26px, h5: 22px, h6: 18px );
+
+//size paragraph
+$main-superbig-size: 36px;
+$main-big-large-size: 32px;
+$main-big-size: 24px;
+$main-medium-size: 22px;
+$main-small-size: 20px;
+$main-size: 16px;
+$second-size: 14px;
+$third-size: 13px;
+$fourth-size: 12px;
+$fiveth-size: 11px;
+$sixth-size: 15px;
+$seventh-size: 18px;
+$eigthth-size: 10px;
+
+
+// Bold
+$font-weight-scale: (thin: 100, extra-light: 200, light: 300, regular: 400, medium: 500, semi-bold: 600, bold: 700, extra-bold: 800, black: 900);
+// Aling
+$main-aling: left;
+$second-aling: right;
+$third-aling: center;
+
+
+//Text Deacoration
+
+$text-undeline: underline;
+
+
+//icon check
+$icon-check: "\e923";
+
+input:active {
+  outline: none;
+  border: none;
+}
+
+input:focus {
+  outline: 0;
+}
+
+
+
+
+.element-disable {
+  pointer-events: none;
+  background: $gs-light;
+  opacity: 0.4;
+}
+//window-size
+$small: 576px;
+$medium: 768px;
+$large: 1024px;
+
+//responsive-size
+$small-desktop: 960px;
+$large-desktop: 1200px;
+$handheld: 768px;
+$handhelds-landscape: 1024px;
+$mobile: 480px;
+$mobile-landscape: 768px;

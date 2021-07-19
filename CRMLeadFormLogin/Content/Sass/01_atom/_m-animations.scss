@@ -1,0 +1,52 @@
+﻿.fade-anima {
+  animation-duration: 1s;
+  animation-name: fade;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+
+.fade-add-item {
+  opacity: 0;
+  animation: new-item-animation .5s linear forwards;
+}
+
+@keyframes new-item-animation {
+  from {
+    opacity: 0;
+    transform: translateY(-400px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.fade-delete-elment {
+  animation: fade-delete-elment 1s cubic-bezier(0.55, -0.04, 0.91, 0.94) forwards;
+  transform-origin: 0% 100%;
+}
+
+@keyframes fade-delete-elment {
+  0% {
+    opacity: 1;
+    transform: rotateZ(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(600px) rotateZ(90deg);
+  }
+}

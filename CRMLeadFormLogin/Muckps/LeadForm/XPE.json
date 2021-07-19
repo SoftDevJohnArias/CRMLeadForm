@@ -1,0 +1,427 @@
+{
+  "CompanyID": "XPE",
+  "CountryID": "61e5d422-080a-446d-9d8c-b929ae7c42b3",
+  "ContactDocument": "2654e95d-be3b-eb11-a813-00224802c009",
+  "CompanyPhone": "+511 716.5017",
+  "Stepts": [
+    {
+      "SteptID": 1,
+      "SteptName": "CompanyInformation",
+      "Sections": [
+        {
+          "SectionID": 1,
+          "SectionName": "CompanyInformation",
+          "fields": [
+            {
+              "fieldID": 1,
+              "isRequired": true,
+              "label": "XEC-ph_documenttypeid",
+              "name": "ph_companyidentification",
+              "guidValue": "2654e95d-be3b-eb11-a813-00224802c009",
+              "fieldType": "text",
+              "showSummary": true,
+              "isVisible": true,
+              "hasDependency": true,
+              "rules": {
+                "minlength": 11,
+                "maxlength": 11,
+                "validationType": {
+                  "type": "onlyNumber"
+                }
+              }
+            },
+            {
+              "fieldID": 2,
+              "isRequired": false,
+              "label": "ph_companytypeid",
+              "name": "company_type_id",
+              "fieldType": "select",
+              "hasDependency": true,
+              "showSummary": true,
+              "isVisible": true,
+              "isBlock": true,
+              "optionSet": "XPEph_companytypeid"
+            },
+            {
+              "fieldID": 3,
+              "isRequired": true,
+              "label": "companyname",
+              "name": "companyname",
+              "fieldType": "text",
+              "showSummary": true,
+              "isVisible": true,
+              "rules": {
+                "uppercase": true,
+                "minlength": 5,
+                "maxlength": 60,
+                "validationType": {
+                  "type": "alphanumeric"
+                }
+              }
+            },
+            {
+              "fieldID": 4,
+              "isRequired": false,
+              "label": "XPE-ph_commercialname",
+              "name": "ph_commercialname",
+              "fieldType": "text",
+              "showSummary": true,
+              "isVisible": true,
+              "rules": {
+                "uppercase": true,
+                "minlength": 5,
+                "maxlength": 60,
+                "validationType": {
+                  "type": "alphanumeric"
+                }
+              }
+            },
+            {
+              "fieldID": 5,
+              "isRequired": true,
+              "label": "address1_name",
+              "name": "address1_name",
+              "fieldType": "text",
+              "showSummary": true,
+              "isVisible": true,
+              "rules": {
+                "minlength": 5,
+                "maxlength": 80,
+                "validationType": {
+                  "type": "alphanumeric"
+                  //"specialCharacters": [ "#", "/" ]
+                }
+              }
+            },
+            {
+              "fieldID": 6,
+              "isRequired": true,
+              "label": "ph_geographiclevel1",
+              "name": "geographic_level_1",
+              "fieldType": "select",
+              "showSummary": true,
+              "isVisible": true,
+              "geographicLevel": 1,
+              "hasDependency": true,
+              "group": {
+                "groupId": 1,
+                "order": 1,
+                "classStyle": "select-medium"
+              }
+            },
+            {
+              "fieldID": 7,
+              "isRequired": true,
+              "label": "ph_geographiclevel2",
+              "name": "geographic_level_2",
+              "fieldType": "select",
+              "showSummary": true,
+              "isVisible": true,
+              "geographicLevel": 2,
+              "hasDependency": true,
+              "group": {
+                "groupId": 1,
+                "order": 2,
+                "classStyle": "select-medium"
+              }
+            },
+            {
+              "fieldID": 8,
+              "isRequired": true, //retornar a true
+              "label": "District",
+              "name": "geographic_level_3",
+              "fieldType": "select",
+              "showSummary": true,
+              "isVisible": true,
+              "geographicLevel": 3
+            },
+            {
+              "fieldID": 9,
+              "isRequired": true,
+              "label": "telephone1",
+              "name": "telephone1",
+              "fieldType": "phone",
+              "showSummary": true,
+              "isVisible": true,
+              "indicative": "+51",
+              "rules": {
+                "minlength": 6,
+                "maxlength": 7,
+                "validationType": {
+                  "type": "onlyNumber"
+                }
+              }
+            },
+            {
+              "fieldID": 10,
+              "isRequired": true,
+              "label": "ph_telephone2",
+              "name": "telephone2",
+              "fieldType": "cellphone",
+              "showSummary": true,
+              "isVisible": true,
+              "indicative": "+51",
+              "rules": {
+                "minlength": 9,
+                "maxlength": 11,
+                "validationType": {
+                  "type": "onlyNumber"
+                }
+              }
+            },
+            {
+              "fieldID": 11,
+              "isRequired": true,
+              "label": "emailaddress2",
+              "name": "emailaddress2",
+              "fieldType": "email",
+              "showSummary": true,
+              "isVisible": true,
+              "rules": {
+                "maxlength": 100
+              }
+            },
+            {
+              "fieldID": 12,
+              "isRequired": true,
+              "label": "Markets Segment",
+              "name": "MarketsSegment",
+              "fieldType": "checkbox",
+              "showSummary": false,
+              "isVisible": true,
+              "optionSet": "MarketsSegment"
+            },
+            {
+              "fieldID": 13,
+              "isRequired": true,
+              "label": "Business Divisions",
+              "name": "BusinessDivisions",
+              "fieldType": "checkbox",
+              "showSummary": false,
+              "isVisible": true,
+              "optionSet": "BusinessDivisions"
+            },
+            {
+              "fieldID": 14,
+              "isRequired": true,
+              "label": "ph_Purchaseintention",
+              "name": "ph_purchaseintention",
+              "fieldType": "select",
+              "showSummary": false,
+              "isVisible": true,
+              "optionSet": "ph_purchaseintention"
+            },
+            {
+              "fieldID": 15,
+              "isRequired": true,
+              "label": "",
+              "name": "ph_agreepersonaldatause",
+              "fieldType": "checkbox",
+              "showSummary": false,
+              "isVisible": true,
+              "hasDependency": true,
+              "optionSet": "ph_agreepersonaldatause"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SteptID": 2,
+      "SteptName": "ContactsInformation",
+      "Sections": [
+        {
+          "SectionID": 1,
+          "SectionName": "ContactAdministrator",
+          "SubTitle": "SubTitleContacts",
+          "fields": [
+            {
+              "fieldID": 1,
+              "isRequired": true,
+              "label": "ph_contactfirstname",
+              "name": "firstname",
+              "fieldType": "text",
+              "showSummary": true,
+              "isVisible": true,
+              "rules": {
+                "minlength": 2,
+                "maxlength": 10,
+                "validationType": {
+                  "type": "charactersOnly"
+                }
+              }
+            },
+            {
+              "fieldID": 2,
+              "isRequired": false,
+              "label": "ph_contactmiddlename",
+              "name": "middlename",
+              "fieldType": "text",
+              "showSummary": true,
+              "isVisible": true,
+              "rules": {
+                "maxlength": 10,
+                "validationType": {
+                  "type": "charactersOnly"
+                }
+              }
+            },
+            {
+              "fieldID": 3,
+              "isRequired": true,
+              "label": "ph_contactlastname",
+              "name": "lastname",
+              "fieldType": "text",
+              "showSummary": true,
+              "isVisible": true,
+              "rules": {
+                "minlength": 2,
+                "maxlength": 20,
+                "validationType": {
+                  "type": "charactersOnly"
+                }
+              }
+            },
+            {
+              "fieldID": 4,
+              "isRequired": false,
+              "label": "ph_secondsurname",
+              "name": "ph_secondlastname",
+              "fieldType": "text",
+              "showSummary": true,
+              "isVisible": true,
+              "rules": {
+                "maxlength": 15,
+                "validationType": {
+                  "type": "charactersOnly"
+                }
+              }
+            },
+            {
+              "fieldID": 5,
+              "isRequired": true,
+              "label": "DocumentNumber",
+              "name": "ph_identification",
+              "fieldType": "text",
+              "showSummary": true,
+              "isVisible": true,
+              "rules": {
+                "minlength": 8,
+                "maxlength": 8,
+                "validationType": {
+                  "type": "onlyNumber"
+                }
+              }
+            },
+            {
+              "fieldID": 6,
+              "isRequired": true,
+              "label": "jobtitle",
+              "name": "jobtitle",
+              "fieldType": "text",
+              "showSummary": true,
+              "isVisible": true,
+              "rules": {
+                "minlength": 5,
+                "maxlength": 20,
+                "validationType": {
+                  "type": "charactersOnly"
+                }
+              }
+            },
+            {
+              "fieldID": 7,
+              "label": "mobilephone",
+              "name": "mobilephone",
+              "fieldType": "tel",
+              "showSummary": true,
+              "isVisible": true,
+              "isRequired": true,
+              "indicative": "+503",
+              "rules": {
+                "minlength": 9,
+                "maxlength": 11,
+                "validationType": {
+                  "type": "onlyNumber"
+                }
+              }
+            },
+            {
+              "fieldID": 9,
+              "isRequired": true,
+              "label": "SelectFeatures",
+              "name": "SelectFeatures",
+              "fieldType": "checkbox",
+              "showSummary": false,
+              "isVisible": true,
+              "optionSet": "SelectFeatures"
+            },
+            {
+              "fieldID": 8,
+              "isRequired": false,
+              "label": "emailaddress-alterno",
+              "name": "emailaddress3",
+              "fieldType": "email",
+              "showSummary": false,
+              "isVisible": true,
+              "rules": {
+                "maxlength": 100
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SteptID": 3,
+      "SteptName": "ph_urlfilesharepoint",
+      "Sections": [
+        {
+          "SectionID": 1,
+          "SectionName": "ph_urlfilesharepoint",
+          "SubTitle": "SubTitleDocument",
+          "fields": [
+            {
+              "fieldID": 1,
+              "label": "ph_rucfotocopy",
+              "name": "ph_rucfotocopy",
+              "isRequired": true,
+              "fieldType": "file",
+              "showSummary": false,
+              "isVisible": true
+            },
+            {
+              "fieldID": 2,
+              "label": "ph_dnifotocopy",
+              "name": "ph_dnifotocopy",
+              "isRequired": true,
+              "fieldType": "file",
+              "showSummary": false,
+              "isVisible": true
+            },
+            {
+              "fieldID": 3,
+              "label": "ph_LegalRepresentativeDNIFotocopy",
+              "name": "ph_LegalRepresentativeDNIFotocopy",
+              "isRequired": true,
+              "fieldType": "file",
+              "showSummary": false,
+              "isVisible": true
+            }
+            //{
+            //  "fieldID": 4,
+            //  "isRequired": true,
+            //  "label": "",
+            //  "name": "ph_acceptterms",
+            //  "fieldType": "checkbox",
+            //  "showSummary": false,
+            //  "hasDependency": true,
+            //  "isVisible": true,
+            //  "optionSet": "ph_acceptterms"
+            //}
+          ]
+        }
+      ]
+    }
+  ]
+}

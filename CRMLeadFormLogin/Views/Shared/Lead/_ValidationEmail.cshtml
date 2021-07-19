@@ -1,0 +1,20 @@
+﻿@using Resources = CRMLeadObjects.Resources.Lead.Lead;
+<section class="content-validation-email">
+  <div class="input-user ">
+    <div class="field form-group">
+      <input type="email"
+             name="emailaddress2"
+             id="emailLead"
+             data-validate-rule="email"
+             class="input-big "
+             placeholder="@Resources.CorporateMail"
+             required
+             data-required>
+      <label title="@Resources.CorporateMail" for="lbemail" data-title="Correo corporativo"></label>
+    </div>
+    <button type="button" id="btnCheckEmail" class="btn btn-medium btn-white">
+      @Resources.ValidateMail
+    </button>
+    <i class="info-icon"></i>
+  </div>
+</section>

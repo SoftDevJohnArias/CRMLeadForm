@@ -1,0 +1,247 @@
+﻿@mixin button-bg($bg, $colorHover) {
+  background: $bg;
+
+  &:hover {
+    background: darken($bg,3%);
+    transition: all 0.3s ease;
+    color: $colorHover;
+  }
+
+  &:active {
+    background: darken($bg,25%);
+  }
+}
+
+@mixin set-separator($heigth, $border-color, $size-border) {
+  width: 0;
+  height: $heigth;
+  border: $size-border solid $border-color;
+}
+
+
+@mixin set-link($color, $fontSize, $decocator: null, $hover-color: $eleventh-color, $color-active: $secondary-color) {
+
+  $text-decoration: if($decocator, $decocator, none );
+
+  color: $color;
+  font-size: $fontSize;
+  text-decoration: $text-decoration;
+
+  &:hover {
+    text-decoration: $text-decoration;
+    color: $hover-color;
+  }
+
+  &:active {
+    color: $color-active;
+  }
+}
+
+
+
+//Specify the different properties to set to titles with opcional parameters
+@mixin title-personalization($color: null, $font-size: null, $font-family: null, $font-weight: null, $font-style: null, $text-align: null) {
+
+  @if $color != null {
+    color: $color;
+  }
+
+  @if $font-size != null {
+    font-size: $font-size;
+  }
+
+  @if $font-family != null {
+    font-family: $font-family;
+  }
+
+  @if $font-weight != null {
+    font-weight: $font-weight;
+  }
+
+  @if $font-style != null {
+    font-style: $font-style;
+  }
+
+  @if $text-align != null {
+    text-align: $text-align;
+  }
+}
+
+
+@mixin set-icon-button($colorIcon, $icon) {
+  font-family: $font-family-icon;
+  content: $icon;
+  line-height: 1em;
+  vertical-align: middle;
+  color: $colorIcon;
+}
+
+@mixin set-icon($icon, $font-size) {
+  font-family: $font-family-icon;
+  content: $icon;
+  font-size: $font-size;
+}
+
+
+@mixin checkbox-radio-general($content, $radio) {
+  display: none;
+
+  + input[type="hidden"] + label {
+    cursor: pointer;
+    position: relative;
+    padding: 0 0 0 25px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 18px;
+      height: 18px;
+      border-radius: $radio;
+      background: $gs-white;
+      text-align: center;
+      font-family: $font-family-icon;
+      font-weight: bold;
+      border: 1px solid $gs-gray;
+      top: 3px;
+    }
+  }
+
+  &:checked + input[type="hidden"] + label {
+    &:before {
+      content: $content;
+      color: $gs-white;
+      background: $main-color;
+      border-color: $main-color;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &:disabled + input[type="hidden"] + label {
+    color: $gs-gray-light;
+    cursor: not-allowed;
+
+    &:before {
+      opacity: 0.4;
+    }
+  }
+}
+
+
+@mixin set-styled-scroll($width, $radius, $bg) {
+  &::-webkit-scrollbar {
+    width: $width;
+  }
+
+
+
+  &::-webkit-scrollbar-thumb {
+    background: $bg;
+    border-radius: $radius;
+    height: 80px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+
+@mixin set-circle($width, $height, $bg: null, $content: null) {
+  width: $width;
+  height: $height;
+
+  @if $bg != null {
+    background: $bg;
+  }
+
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @if $content != null {
+    &:before {
+      font-family: $font-family-icon;
+      content: $content;
+    }
+  }
+}
+
+@mixin vh() {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+
+
+//Mixin screen types
+@mixin respond-to($media) {
+  @if $media == largeDesktop {
+    @media only screen and (min-width: $large-desktop) {
+      @content
+    }
+  }
+
+  @if $media == smallDesktop {
+    @media only screen and (max-width: $small-desktop) {
+      @content;
+    }
+  }
+
+  @if $media == big-desktop {
+    @media only screen and (min-width: 1460px) and (max-width: 2500px) {
+      @content;
+    }
+  }
+
+  @if $media == handhelds {
+    @media only screen and (min-width: 600px) and (max-width: $handheld) {
+      @content;
+    }
+  }
+
+  @if $media == handhelds-landscape {
+    @media only screen and (min-device-width : $handheld) and (max-device-width : $handhelds-landscape) and (orientation : landscape) {
+      @content;
+    }
+  }
+
+  @if $media == mobile {
+    @media only screen and (max-width: $mobile) {
+      @content;
+    }
+  }
+
+  @if $media == mobile-portrait {
+    @media only screen and (min-width: 320px) and (max-width: $mobile) and (orientation : portrait) {
+      @content;
+    }
+  }
+
+  @if $media == mobile-landscape {
+    @media only screen and (min-width: 320px) and (max-width: $mobile-landscape) and (orientation : landscape) {
+      @content;
+    }
+  }
+
+  @if $media == retina {
+    @media (-webkit-min-device-pixel-ratio: 2) {
+      @content;
+    }
+  }
+
+  @if $media == iphone5 {
+    @media only screen and (device-aspect-ratio: 40/71) {
+      @content
+    }
+  }
+}

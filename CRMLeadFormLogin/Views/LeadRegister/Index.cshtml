@@ -1,0 +1,107 @@
+﻿@*@{
+    Layout = null;
+  }*@
+
+<script src="~/Scripts/intlTelInput.js"></script>
+<script src="~/Scripts/Lead/TemplateFieldsForm.js"></script>
+<script src="~/Scripts/Lead/TemplatesLead.js"></script>
+<script src="~/Scripts/Lead/RequetsOperations.js"></script>
+<script src="~/Scripts/Lead/ValidationEmail.js"></script>
+<script src="~/Scripts/Lead/LeadForm.js"></script>
+<script src="~/Scripts/Lead/Steps.js"></script>
+<script src="~/Scripts/Lead/ContactLead.js"></script>
+<script src="~/Scripts/Lead/DocumentLead.js"></script>
+<script src="~/Scripts/Lead/NotificationLead.js"></script>
+<script src="~/Scripts/Lead/SummaryLead.js"></script>
+<script src="~/Scripts/Lead/ValidationRules.js"></script>
+<script src="~/Scripts/Lead/CompanyLead.js"></script>
+<script src="~/Scripts/Lead/DependenciesLead.js"></script>
+<script src="~/Scripts/Lead/IntlTelInputLead.js"></script>
+<script src="~/Scripts/Lead/ValidationLeadExistence.js"></script>
+<script src="~/Scripts/Lead/reCaptchaLead.js"></script>
+<script src="~/Scripts/vanillajs-form-validator.js"></script>
+<script src="https://www.google.com/recaptcha/api.js"
+        async defer>
+</script>
+@using ResourcesLead = CRMLeadObjects.Resources.Lead.Lead;
+
+
+<div class="content-lead">
+  <header id="header"></header>
+  <div class="content-steps"></div>
+  @*<div class="notifications"></div>
+    <div class="notification-form"></div>*@
+  <div class="content-body-lead">
+    <div class="content-register">
+      @*<div class="content-response"></div>*@
+      @*<section class="section-contact">
+          <div class="contact-list"></div>
+        </section>*@
+      <form class="form-Lead" novalidate>
+        <header>
+          <h2>@ResourcesLead.CustomerRegister</h2>
+        </header>
+        <div class="content-response"></div>
+        <div class="notifications"></div>
+        <div class="notification-form"></div>
+        <section class="content-fields">
+        </section>
+      </form>
+    </div>
+    @Html.Partial("Lead/_Help")
+  </div>
+  @Html.Partial("Lead/_StatementPopup")
+  <footer id="footer">
+    @*<div class="footer-lead">
+        <p>© 2019 Intcomex Corp. | Intcomex is a registered Corp All Rights Reserved 5.44.5 - VMSTORE7</p>
+        <div class="content-country">
+          <select name="companies" id="companies" class="select-company">
+            <option value="XMX">México</option>
+            <option value="XCR">Costa Rica</option>
+            <option value="XCB">Colombia</option>
+          </select>
+        </div>
+      </div>*@
+  </footer>
+</div>
+
+
+
+<script>
+  const leadModule = (() => {
+
+    let widthDesktop = '';
+    if (screen.width < 1450)
+      widthDesktop = 'small';
+
+    if (screen.width > 1450)
+      widthDesktop = 'big';
+
+
+
+    const electronicBillingLead = '@System.Configuration.ConfigurationManager.AppSettings["ElectronicBillingLead"]';
+    const urlStoreService= '@System.Configuration.ConfigurationManager.AppSettings["urlStoreService"]';
+    const urlStoreServiceXCB= '@System.Configuration.ConfigurationManager.AppSettings["urlStoreServiceXCB"]';
+    const urlStoreLogin= '@System.Configuration.ConfigurationManager.AppSettings["urlStoreLogin"]';
+    const urlStoreForgotPassword= '@System.Configuration.ConfigurationManager.AppSettings["urlStoreForgotPassword"]';
+    const urlStoreLoginXCB= '@System.Configuration.ConfigurationManager.AppSettings["urlStoreLoginXCB"]';
+    const urlStorePasswordXCB= '@System.Configuration.ConfigurationManager.AppSettings["urlStorePasswordXCB"]';
+
+    return {
+      electronicBillingLead,
+      urlStoreService,
+      urlStoreServiceXCB,
+      widthDesktop,
+      urlStoreLogin,
+      urlStoreForgotPassword,
+      urlStoreLoginXCB,
+      urlStorePasswordXCB
+    }
+
+  })();
+</script>
+
+
+
+
+

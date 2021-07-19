@@ -1,0 +1,40 @@
+﻿<script src="~/Scripts/Lead/TemplatesLead.js"></script>
+<script src="~/Scripts/Lead/XUS/LeadFormXUS.js"></script>
+<script src="~/Scripts/Lead/CompanyLead.js"></script>
+<script src="~/Scripts/Lead/reCaptchaLead.js"></script>
+@*<script src="~/Scripts/Lead/XUS/recaptchaApi.js"></script>*@
+@*<script src="~/Scripts/Utils/common.js"></script>*@
+<script src="~/Scripts/Lead/XUS/vanillajs-form-validator-XUS.js"></script>
+@*<script src="https://www.google.com/recaptcha/api.js"></script>*@
+
+<div class="content-lead">
+  <header id="header"></header>
+
+  <div class="content-body-lead">
+    <div class="content-register">
+      <form class="form-Lead" novalidate>
+        <header>
+          <h2>New Customer</h2>
+        </header>
+        <div class="content-response"></div>
+        <div class="notifications"></div>
+        <div class="notification-form"></div>
+        <section class="content-fields">
+          <div class="section-content">
+            @Html.Partial("Lead/XUS/_CompanyInformation")
+            @Html.Partial("Lead/XUS/_ContactInformation")
+          </div>
+          <div class="section-next-step section-send">
+            <button type="submit" class="btn btn-blue btn-big-large btn-save-lead next">
+              SAVE
+            </button>
+          </div>
+        </section>
+
+      </form>
+    </div>
+    @Html.Partial("Lead/_Help")
+  </div>
+  <footer id="footer">
+  </footer>
+</div>

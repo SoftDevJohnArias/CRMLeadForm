@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AgregarOrden" xml:space="preserve">
+    <value>Adicionar pedido</value>
+    <comment>Texto Agregar Orden</comment>
+  </data>
+  <data name="Buscar" xml:space="preserve">
+    <value>Pesquisar</value>
+    <comment>Buscar</comment>
+  </data>
+  <data name="de" xml:space="preserve">
+    <value>de</value>
+    <comment>de</comment>
+  </data>
+  <data name="Descargar" xml:space="preserve">
+    <value>Baixar</value>
+    <comment>Descargar</comment>
+  </data>
+  <data name="Filtrar" xml:space="preserve">
+    <value>Filtro</value>
+    <comment>Filtrar</comment>
+  </data>
+  <data name="Ordenes" xml:space="preserve">
+    <value>Pedidos</value>
+    <comment>Texto vista Ordenes</comment>
+  </data>
+  <data name="Resultados" xml:space="preserve">
+    <value>Resultados</value>
+    <comment>Resultados</comment>
+  </data>
+  <data name="Agregar" xml:space="preserve">
+    <value>Adicionar</value>
+    <comment>Titulo boton cancelar</comment>
+  </data>
+  <data name="AgregarNuevaOrden" xml:space="preserve">
+    <value>Adicionar novo pedido</value>
+    <comment>Texto titulo  en el modal</comment>
+  </data>
+  <data name="Cancelar" xml:space="preserve">
+    <value>Cancelar</value>
+    <comment>Titulo boton agregar</comment>
+  </data>
+  <data name="Comentarios" xml:space="preserve">
+    <value>Comentários</value>
+    <comment>Texto comentarios detalle</comment>
+  </data>
+  <data name="Fecha" xml:space="preserve">
+    <value>Data</value>
+    <comment>Texto fecha Filtro</comment>
+  </data>
+  <data name="NotaFiltrarOrdenes" xml:space="preserve">
+    <value>Digite os pedidos separados por ","</value>
+    <comment>Texto informativo modal</comment>
+  </data>
+  <data name="Orden" xml:space="preserve">
+    <value>Pedido</value>
+    <comment>Texto orden detalle</comment>
+  </data>
+  <data name="Producto" xml:space="preserve">
+    <value>Produto</value>
+    <comment>Texto producto</comment>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Estado</value>
+    <comment>Texto status filtro</comment>
+  </data>
+  <data name="Cliente" xml:space="preserve">
+    <value>Cliente</value>
+    <comment>Cliente</comment>
+  </data>
+  <data name="PrecioUnitario" xml:space="preserve">
+    <value>Preço unitário</value>
+    <comment>Precio Unitario</comment>
+  </data>
+  <data name="TodasLasPaginas" xml:space="preserve">
+    <value>Todas as páginas</value>
+    <comment>Descargar todas las paginas</comment>
+  </data>
+  <data name="NoRegistros" xml:space="preserve">
+    <value>Nenhum registro encontrado para os filtros selecionados</value>
+    <comment>Mensaje no existen registros</comment>
+  </data>
+  <data name="product" xml:space="preserve">
+    <value>produto</value>
+    <comment>product</comment>
+  </data>
+  <data name="Unidad" xml:space="preserve">
+    <value>Unidade</value>
+    <comment>unidad</comment>
+  </data>
+  <data name="VerDetalle" xml:space="preserve">
+    <value>Ver detalhe</value>
+    <comment>VerDetalle</comment>
+  </data>
+  <data name="RealizadaEn" xml:space="preserve">
+    <value>Feito em</value>
+  </data>
+  <data name="OrderCustomer" xml:space="preserve">
+    <value>Pedido do Cliente</value>
+  </data>
+  <data name="PrecioExtendido" xml:space="preserve">
+    <value>Ext. Preco</value>
+  </data>
+  <data name="FulltextSearch" xml:space="preserve">
+    <value>Intcomex ou número do pedido do cliente, SKU, número da peça, marca, descrição</value>
+  </data>
+  <data name="Regresar" xml:space="preserve">
+    <value>Voltar</value>
+  </data>
+  <data name="VerLog" xml:space="preserve">
+    <value>Ver log</value>
+  </data>
+  <data name="SelectStatus" xml:space="preserve">
+    <value>Selecione estado</value>
+  </data>
+  <data name="Qty" xml:space="preserve">
+    <value>Quantidade</value>
+  </data>
+</root>

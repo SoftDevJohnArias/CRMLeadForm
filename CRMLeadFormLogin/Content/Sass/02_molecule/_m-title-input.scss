@@ -1,0 +1,11 @@
+﻿
+.title-input-select {
+  display: flex;
+  align-items: center;
+
+  & select {
+    width: 700px;
+    background-color: $gs-gray-light;
+    margin: 1em;
+  }
+}

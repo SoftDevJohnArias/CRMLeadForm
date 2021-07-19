@@ -1,0 +1,94 @@
+﻿.content-steps {
+  display: flex;
+  align-items: center;
+  gap: .5em;
+  width: 100%;
+  height: 64px;
+  background: $gs-gray-light;
+  padding: 1em;
+  ///mobile
+  @include respond-to(mobile-portrait) {
+    justify-content: center;
+    height: 40%;
+    padding: .5em;
+    margin-top: 16px;
+  }
+
+  & .step {
+    display: flex;
+    align-items: center;
+    gap: .5em;
+    @include title-personalization (null,$second-size,$font-family-secondary, map-get( $font-weight-scale, bold), null );
+    ///mobile
+    @include respond-to(mobile-portrait) {
+
+      & {
+        font-size: $fourth-size;
+
+        & > span {
+          display: none;
+        }
+      }
+    }
+
+    &.active {
+      color: $main-color;
+
+      & .number-step.number-step {
+        @extend %number-step-base;
+      }
+
+      & .separator {
+        @extend %separator-base;
+        border: 1px solid $main-color;
+      }
+    }
+
+
+    &.inactive {
+      color: $gs-gray-dark;
+
+      & .number-step.number-step {
+        @extend %number-step-base;
+        font-weight: map-get( $font-weight-scale, regular);
+        background: $gs-gray-dark;
+      }
+
+      & .separator {
+        @extend %separator-base;
+        border: 1px solid $gs-gray-dark;
+      }
+    }
+
+    &.complete {
+      color: $quinary-color;
+
+      & .number-step.number-step {
+        @extend %number-step-base;
+        background: $quinary-color;
+
+        &::before {
+          content: "\e923";
+          font-family: $font-family-icon;
+        }
+      }
+
+      & .separator {
+        @extend %separator-base;
+        border: 1px solid $quinary-color;
+      }
+    }
+  }
+}
+
+%number-step-base {
+  @include set-circle(24px,24px, null, null);
+  background: $main-color;
+  font-weight: map-get( $font-weight-scale, bold);
+  color: $gs-white;
+}
+
+%separator-base {
+  width: 32px;
+  height: 0px;
+}

@@ -1,0 +1,54 @@
+﻿.icon-Process {
+    background-color: #C40047;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    color: #C40047;
+    border: 1px solid #C40047;
+    font-size: 10px;
+    margin: 0 20px;
+}
+
+    .icon-Process i {
+        vertical-align: middle;
+        margin: 4px;
+    }
+
+.menusue {
+    width: 100%;
+    color: #C40047;
+    background-color: #F8D7DA;
+    border: 1px solid #C40047;
+    height: 30px;
+    padding: 3px;
+    font-size: 16px;
+    font-family: 'Barlow,Condensed';
+}
+
+.menusueSucces {
+    width: 100%;
+    color: #72C15E;
+    background-color: #D4EDDA;
+    border: 1px solid #72C15E;
+    height: 30px;
+    padding: 3px;
+    font-size: 16px;
+    font-family: 'Barlow,Condensed';
+}
+
+
+.menusue div span .icon-ws-ico-min-alert:before {
+  color: white;
+  display: flex;
+  line-height: 0px;
+  font-size: 16px;
+}
+
+.icon-ws-ico-min-check:before {
+    color: white;
+    font-size:16px;
+    display:flex;
+    line-height:0px;
+    
+}
+

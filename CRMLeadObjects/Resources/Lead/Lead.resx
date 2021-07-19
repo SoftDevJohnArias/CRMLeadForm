@@ -1,0 +1,1325 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ActiveCode" xml:space="preserve">
+    <value>Recuerda que el código es válido solo por 20 minutos después de ser enviado</value>
+  </data>
+  <data name="AddContact" xml:space="preserve">
+    <value>GUARDAR CONTACTO</value>
+  </data>
+  <data name="address1_line1" xml:space="preserve">
+    <value>Nombre de la calle</value>
+  </data>
+  <data name="address1_line2" xml:space="preserve">
+    <value>#Externo</value>
+  </data>
+  <data name="address1_line3" xml:space="preserve">
+    <value>#Interno</value>
+  </data>
+  <data name="address1_name" xml:space="preserve">
+    <value>Dirección </value>
+  </data>
+  <data name="address1_postalcode" xml:space="preserve">
+    <value>Código postal</value>
+  </data>
+  <data name="AnotherBillingEmail" xml:space="preserve">
+    <value>Enviaremos un código de verificación a tu correo electrónico para validarlo. Recuerda que una vez registrado, este será el correo electrónico con el que ingresarás a nuestro WebStore.</value>
+  </data>
+  <data name="AnyQuestion" xml:space="preserve">
+    <value>Si tiene alguna pregunta, llámenos, envíenos un correo electrónico o use nuestro chat en línea.</value>
+  </data>
+  <data name="Business Divisions" xml:space="preserve">
+    <value>Qué tipo de productos comercializa</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>CANCELAR</value>
+  </data>
+  <data name="Celular" xml:space="preserve">
+    <value>Celular</value>
+  </data>
+  <data name="CheckCode" xml:space="preserve">
+    <value>VERIFICAR CÓDIGO</value>
+  </data>
+  <data name="CheckMail" xml:space="preserve">
+    <value>VERIFICAR CORREO</value>
+  </data>
+  <data name="city" xml:space="preserve">
+    <value>Ciudad</value>
+  </data>
+  <data name="CodeIncorrect" xml:space="preserve">
+    <value>Lo sentimos, el código que ingresaste es incorrecto o ha caducado</value>
+  </data>
+  <data name="CompanyInformation" xml:space="preserve">
+    <value>Información de la compañía</value>
+  </data>
+  <data name="companyname" xml:space="preserve">
+    <value>Nombre o razón social</value>
+  </data>
+  <data name="ContactList" xml:space="preserve">
+    <value>Lista de contactos</value>
+  </data>
+  <data name="ContactsInformation" xml:space="preserve">
+    <value>Información de contactos</value>
+  </data>
+  <data name="CorporateMail" xml:space="preserve">
+    <value>Correo corporativo</value>
+  </data>
+  <data name="correo electronico" xml:space="preserve">
+    <value>Mismo correo electrónico</value>
+  </data>
+  <data name="CustomerRegister" xml:space="preserve">
+    <value>Registro de cliente</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Eliminar</value>
+  </data>
+  <data name="DescErrorDocumentsEmpty" xml:space="preserve">
+    <value>No se han seleccionado los documentos requeridos para enviar la información. Por favor revisar la sección de documentación.</value>
+  </data>
+  <data name="DescErrorInputsEmpty" xml:space="preserve">
+    <value>Aún hay información requerida sin llenar. Por favor completa los campos faltantes.</value>
+  </data>
+  <data name="DescErrorUser" xml:space="preserve">
+    <value>Por favor vuelva a realizar la verificación del Captcha.</value>
+  </data>
+  <data name="DocumentNumber" xml:space="preserve">
+    <value>Número de documento</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Editar</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>email</value>
+  </data>
+  <data name="EmailAddress" xml:space="preserve">
+    <value>Su dirección de correo eléctronico</value>
+  </data>
+  <data name="emailaddress-confirmacion" xml:space="preserve">
+    <value>Correo para facturación electrónica</value>
+  </data>
+  <data name="emailaddress1" xml:space="preserve">
+    <value>Correo electrónico</value>
+  </data>
+  <data name="emailaddress2" xml:space="preserve">
+    <value>Correo electrónico</value>
+  </data>
+  <data name="EmailAlreadyRegistered" xml:space="preserve">
+    <value>Este correo ya está registrado</value>
+  </data>
+  <data name="EmailElectronicBilling" xml:space="preserve">
+    <value>Correo para facturación electronica</value>
+  </data>
+  <data name="EnterCode" xml:space="preserve">
+    <value>Ingresa el código aquí</value>
+  </data>
+  <data name="ErrorValidateDocument" xml:space="preserve">
+    <value>Ya existe un cliente registrado con este numero de identificación. Por favor comuniquese con el representante legal de su empresa para obtener la información de acceso a nuestro WebStore o contáctenos para brindarte ayuda.</value>
+  </data>
+  <data name="firstname" xml:space="preserve">
+    <value>Primer nombre</value>
+  </data>
+  <data name="ForgetPass" xml:space="preserve">
+    <value>Olvidé mi contraseña</value>
+  </data>
+  <data name="GetEmail" xml:space="preserve">
+    <value>Recibirás un correo electrónico de confirmación del registro con detalles e instrucciones. En el correo encontrarás información sobre cómo ingresar a la sección “Mi cuenta” y comenzar a utilizar nuestras herramientas y servicios.</value>
+  </data>
+  <data name="GoBack" xml:space="preserve">
+    <value>REGRESAR</value>
+  </data>
+  <data name="GoStore" xml:space="preserve">
+    <value>IR AL WEBSTORE</value>
+  </data>
+  <data name="HelperTextFirst" xml:space="preserve">
+    <value>Para que este proceso sea más fácil, a continuación, solicitaremos información sobre tu negocio.
+
+Si necesitas ayuda, por favor escríbenos un email, chatea con nosotros o comunícate al:</value>
+  </data>
+  <data name="HelperTextSecond" xml:space="preserve">
+    <value>Si necesitas ayuda para ingresar al sitio, envíanos un correo electrónico o usa nuestro chat en línea.</value>
+  </data>
+  <data name="IForgotMyPassword" xml:space="preserve">
+    <value>Olvidé mi contraseña</value>
+  </data>
+  <data name="important" xml:space="preserve">
+    <value>Importante</value>
+  </data>
+  <data name="InformacionLegal" xml:space="preserve">
+    <value>Información legal</value>
+  </data>
+  <data name="jobtitle" xml:space="preserve">
+    <value>Cargo</value>
+  </data>
+  <data name="LogIn" xml:space="preserve">
+    <value>Iniciar sesión</value>
+  </data>
+  <data name="lastname" xml:space="preserve">
+    <value>Primer apellido</value>
+  </data>
+  <data name="LoginAccount" xml:space="preserve">
+    <value>Ingresar con tu cuenta</value>
+  </data>
+  <data name="Markets Segment" xml:space="preserve">
+    <value>Segmento de mercado</value>
+  </data>
+  <data name="MessageValidationContact" xml:space="preserve">
+    <value>Debe agregar por lo menos un contacto.</value>
+  </data>
+  <data name="MessageValidationEmail" xml:space="preserve">
+    <value>Debe realizar la validación de correo.</value>
+  </data>
+  <data name="MessageWarning" xml:space="preserve">
+    <value>Ten en cuenta que tu proceso de registro como cliente no se finalizará hasta que tu dirección de correo electrónico sea verificada al final del proceso.</value>
+  </data>
+  <data name="middlename" xml:space="preserve">
+    <value>Segundo nombre</value>
+  </data>
+  <data name="mobilephone" xml:space="preserve">
+    <value>Celular</value>
+  </data>
+  <data name="MXM-mobilephone" xml:space="preserve">
+    <value>+593</value>
+  </data>
+  <data name="Names" xml:space="preserve">
+    <value>Nombres</value>
+  </data>
+  <data name="NeedHelp" xml:space="preserve">
+    <value>¿Necesitas ayuda?</value>
+  </data>
+  <data name="NextStep" xml:space="preserve">
+    <value>IR AL SIGUIENTE PASO</value>
+  </data>
+  <data name="NextSteps" xml:space="preserve">
+    <value>¿Qué sigue?</value>
+  </data>
+  <data name="NotReceivedMail" xml:space="preserve">
+    <value>Solicitar código nuevo</value>
+  </data>
+  <data name="OtherEmail" xml:space="preserve">
+    <value>Deseo usar este correo para facturación electrónica</value>
+  </data>
+  <data name="Permissions" xml:space="preserve">
+    <value>Permisos</value>
+  </data>
+  <data name="ph_branchid" xml:space="preserve">
+    <value>Sucursal preferida</value>
+  </data>
+  <data name="ph_companyidentification" xml:space="preserve">
+    <value>Número de documento</value>
+  </data>
+  <data name="ph_companytypeid" xml:space="preserve">
+    <value>Tipo de persona</value>
+  </data>
+  <data name="ph_constitutiveact" xml:space="preserve">
+    <value>Acta constitutiva</value>
+  </data>
+  <data name="ph_contactfirstname" xml:space="preserve">
+    <value>Primer nombre</value>
+  </data>
+  <data name="ph_contactlastname" xml:space="preserve">
+    <value>Primer apellido</value>
+  </data>
+  <data name="ph_contactmiddlename" xml:space="preserve">
+    <value>Segundo nombre</value>
+  </data>
+  <data name="ph_d140copynotolderthan3months" xml:space="preserve">
+    <value>Copia de D-140 no mayor a 3 meses</value>
+  </data>
+  <data name="ph_deseofacturacion" xml:space="preserve">
+    <value>Deseo usar este correo para facturación electrónica</value>
+  </data>
+  <data name="ph_documenttypeid" xml:space="preserve">
+    <value>RFC</value>
+  </data>
+  <data name="ph_emailadministrador" xml:space="preserve">
+    <value>Deseo usar otro correo para el usuario administrador</value>
+  </data>
+  <data name="ph_fantasyname" xml:space="preserve">
+    <value>Nombre comercial</value>
+  </data>
+  <data name="XCR-ph_identificationfotocopy" xml:space="preserve">
+    <value>Fotocopia del RUT</value>
+  </data>
+  <data name="ph_lastdigits" xml:space="preserve">
+    <value>Últimos 4 digitos</value>
+  </data>
+  <data name="ph_legalrepresentativeidentification" xml:space="preserve">
+    <value>Fotocopia de la cédula del representante legal</value>
+  </data>
+  <data name="ph_paymentmethodsid" xml:space="preserve">
+    <value>Forma de pago</value>
+  </data>
+  <data name="ph_Purchaseintention" xml:space="preserve">
+    <value>Razón de compra</value>
+  </data>
+  <data name="ph_secondlastname" xml:space="preserve">
+    <value>Segundo apellido</value>
+  </data>
+  <data name="ph_secondsurname" xml:space="preserve">
+    <value>Segundo apellido</value>
+  </data>
+  <data name="ph_serviceprovider" xml:space="preserve">
+    <value>Proveedor de servicios</value>
+  </data>
+  <data name="ph_taxinvoicerequired" xml:space="preserve">
+    <value>Requiere factura fiscal</value>
+  </data>
+  <data name="ph_taxstatusproof" xml:space="preserve">
+    <value>Constancia de situación fiscal</value>
+  </data>
+  <data name="ph_telephone2" xml:space="preserve">
+    <value>Celular</value>
+  </data>
+  <data name="ph_urlfilesharepoint" xml:space="preserve">
+    <value>Adjuntos</value>
+  </data>
+  <data name="RegistrationProcess" xml:space="preserve">
+    <value>El correo ya está en proceso de registro</value>
+  </data>
+  <data name="SecondName" xml:space="preserve">
+    <value>Segundo nombre</value>
+  </data>
+  <data name="SeeLess" xml:space="preserve">
+    <value>Ver menos</value>
+  </data>
+  <data name="segmento" xml:space="preserve">
+    <value>Segmento de mercado</value>
+  </data>
+  <data name="SelectFeatures" xml:space="preserve">
+    <value>Selecciona los roles para este contacto</value>
+  </data>
+  <data name="SubTitleContacts" xml:space="preserve">
+    <value>Por favor ingresa los datos del usuario administrador de la cuenta, quien será el representante legal ante Intcomex.</value>
+  </data>
+  <data name="SubTitleDocument" xml:space="preserve">
+    <value>Por favor, adjunta los siguientes documentos (fomatos Word, PDF o JPG con un tamaño máximo de 1MB)</value>
+  </data>
+  <data name="SuccessfullyVerified" xml:space="preserve">
+    <value>Tu correo se ha verificado con éxito</value>
+  </data>
+  <data name="Surnames" xml:space="preserve">
+    <value>Apellidos</value>
+  </data>
+  <data name="telephone1" xml:space="preserve">
+    <value>Teléfono fijo</value>
+  </data>
+  <data name="TextCheckEmailAdministrator" xml:space="preserve">
+    <value>Deseo usar otro correo para el usuario administrador</value>
+  </data>
+  <data name="TextConfirmDown" xml:space="preserve">
+    <value>contigo para confirmar tu registro como cliente.</value>
+  </data>
+  <data name="TextConfirmUp" xml:space="preserve">
+    <value>Revisaremos tu información y pronto nos comunicaremos </value>
+  </data>
+  <data name="TextElectronicBilling" xml:space="preserve">
+    <value>Deseo usar este correo para facturación electrónica</value>
+  </data>
+  <data name="TextEmailAlreadyRegistered" xml:space="preserve">
+    <value>El correo que has ingresado ha sido registrado previamente en nuestra base de datos. Por favor inténtalo nuevamente con una opción diferente.</value>
+  </data>
+  <data name="TextInformationContactAdministratorWebStore" xml:space="preserve">
+    <value>Recuerda que una vez registrado, este correo electrónico  sera tu usuario para acceder al WebStore.</value>
+  </data>
+  <data name="TextInformationContactWebStore" xml:space="preserve">
+    <value>Recuerda que este correo será el usuario de acceso para el contacto al WebStore.</value>
+  </data>
+  <data name="TextInformationEmailWebStore" xml:space="preserve">
+    <value>Enviaremos un código de verificación a tu correo para validarlo. Recuerda que una vez registrado, este será el correo electrónico con el que ingresarás a nuestra plataforma como usuario.</value>
+  </data>
+  <data name="TextRegistrationProcess" xml:space="preserve">
+    <value>El correo que has ingresado ya se encuentra en proceso de registro.</value>
+  </data>
+  <data name="ThanksInformation" xml:space="preserve">
+    <value>¡Tus datos han sido enviados con éxito!</value>
+  </data>
+  <data name="TitleErrorDocumentsEmpty" xml:space="preserve">
+    <value>Aún faltan los documentos</value>
+  </data>
+  <data name="TitleErrorInputsEmpty" xml:space="preserve">
+    <value>Aún faltan campos por llenar</value>
+  </data>
+  <data name="TitleErrorUser" xml:space="preserve">
+    <value>Registro de Usuario</value>
+  </data>
+  <data name="TitleVerify" xml:space="preserve">
+    <value>Hemos enviado el código de verificación a tu correo electrónico (recuerda revisar la carpeta Spam). Cópialo e ingrésalo a continuación.</value>
+  </data>
+  <data name="tupeprod" xml:space="preserve">
+    <value>Qué tipo de productos comercializa</value>
+  </data>
+  <data name="UpdateContact" xml:space="preserve">
+    <value>ACTUALIZAR CONTACTO</value>
+  </data>
+  <data name="UploadFile" xml:space="preserve">
+    <value>Subir archivo</value>
+  </data>
+  <data name="ValidateEmail" xml:space="preserve">
+    <value>VALIDAR CORREO</value>
+  </data>
+  <data name="ValidateMail" xml:space="preserve">
+    <value>VALIDAR CORREO</value>
+  </data>
+  <data name="VerifyYourEmail" xml:space="preserve">
+    <value>Verifique su correo electrónico</value>
+  </data>
+  <data name="ViewEmail" xml:space="preserve">
+    <value>En el correo electrónico de confirmación de registro encontrará más información para acceder a la sección Mi cuenta y comenzar a usar todas nuestras herramientas y servicios, así como agregar nuevos.</value>
+  </data>
+  <data name="ViewMore" xml:space="preserve">
+    <value>Ver más</value>
+  </data>
+  <data name="ViewStatus" xml:space="preserve">
+    <value>Ver estado de solicitud</value>
+  </data>
+  <data name="websiteurl" xml:space="preserve">
+    <value>Website</value>
+  </data>
+  <data name="XCR-ph_commercialname" xml:space="preserve">
+    <value>Nombre de fantasía</value>
+  </data>
+  <data name="XCRphdocumenttypeid" xml:space="preserve">
+    <value>Cédula de identidad</value>
+  </data>
+  <data name="XCR-ph_documenttypeid" xml:space="preserve">
+    <value>Cédula de identidad</value>
+  </data>
+  <data name="XCR-ph_geographiclevel1" xml:space="preserve">
+    <value>Provincia</value>
+  </data>
+  <data name="XCR-ph_geographiclevel3" xml:space="preserve">
+    <value>Canton</value>
+  </data>
+  <data name="XCR-ph_geographiclevel4" xml:space="preserve">
+    <value>Distrito</value>
+  </data>
+  <data name="XMX-ph_companyidentification" xml:space="preserve">
+    <value>RFC</value>
+  </data>
+  <data name="XMX-ph_ContactDocumentTypeid" xml:space="preserve">
+    <value>INE - Pasaporte</value>
+  </data>
+  <data name="XMX-ph_geographiclevel1" xml:space="preserve">
+    <value>Estado</value>
+  </data>
+  <data name="XMX-ph_geographiclevel3" xml:space="preserve">
+    <value>Municipio</value>
+  </data>
+  <data name="XMX-ph_geographiclevel4" xml:space="preserve">
+    <value>Colonia</value>
+  </data>
+  <data name="Cedula-ph_companyidentification" xml:space="preserve">
+    <value>Cédula de identidad</value>
+  </data>
+  <data name="NIT-ph_companyidentification" xml:space="preserve">
+    <value>NIT</value>
+  </data>
+  <data name="ph_ERUT" xml:space="preserve">
+    <value>Fotocopia del RUT (Vigencia no mayor a 90 días)</value>
+  </data>
+  <data name="RUT-ph_companyidentification" xml:space="preserve">
+    <value>RUT</value>
+  </data>
+  <data name="XCB-companyname" xml:space="preserve">
+    <value>Nombre o razón social</value>
+  </data>
+  <data name="XCB-ph_commercialname" xml:space="preserve">
+    <value>Nombre comercial</value>
+  </data>
+  <data name="XCB-ph_ContactDocumentTypeid" xml:space="preserve">
+    <value>Número de documento</value>
+  </data>
+  <data name="XCB-ph_geographiclevel1" xml:space="preserve">
+    <value>Departamento</value>
+  </data>
+  <data name="XCB-ph_geographiclevel3" xml:space="preserve">
+    <value>Ciudad</value>
+  </data>
+  <data name="XCB-ph_identificationfotocopy" xml:space="preserve">
+    <value>Fotocopia de la cédula</value>
+  </data>
+  <data name="ph_buildingtype" xml:space="preserve">
+    <value>Detalle</value>
+  </data>
+  <data name="ph_commercialname" xml:space="preserve">
+    <value>Nombre comercial</value>
+  </data>
+  <data name="ph_dpidocument" xml:space="preserve">
+    <value>DPI</value>
+  </data>
+  <data name="ph_dpilegalrepresentativedocument" xml:space="preserve">
+    <value>DPI de rep. Legal</value>
+  </data>
+  <data name="ph_legalrepresentativeappointment" xml:space="preserve">
+    <value>Nombramiento de representante legal</value>
+  </data>
+  <data name="ph_nationalvalididentification" xml:space="preserve">
+    <value>Identificación válida nacional</value>
+  </data>
+  <data name="ph_operationsnotification" xml:space="preserve">
+    <value>Aviso de operaciones</value>
+  </data>
+  <data name="ph_roadnumber1" xml:space="preserve">
+    <value>Número</value>
+  </data>
+  <data name="ph_roadnumber2" xml:space="preserve">
+    <value>#</value>
+  </data>
+  <data name="ph_roadtype" xml:space="preserve">
+    <value>Dirección </value>
+  </data>
+  <data name="ph_rucfotocopy" xml:space="preserve">
+    <value>Fotocopia del RUC</value>
+  </data>
+  <data name="XCL-Cedula-ph_documenttypeid" xml:space="preserve">
+    <value>Cédula de identidad</value>
+  </data>
+  <data name="XCL-ph_commercialname" xml:space="preserve">
+    <value>Nombre de fantasía</value>
+  </data>
+  <data name="XCL-ph_ContactDocumentTypeid" xml:space="preserve">
+    <value>Cédula de identidad</value>
+  </data>
+  <data name="XCL-ph_geographiclevel1" xml:space="preserve">
+    <value>Region</value>
+  </data>
+  <data name="XCL-ph_geographiclevel3" xml:space="preserve">
+    <value>Provincia</value>
+  </data>
+  <data name="XCL-ph_geographiclevel4" xml:space="preserve">
+    <value>Comuna</value>
+  </data>
+  <data name="XCL-ph_roadtype" xml:space="preserve">
+    <value>Dirección comercial</value>
+  </data>
+  <data name="XCL-RUT-ph_documenttypeid" xml:space="preserve">
+    <value>RUT</value>
+  </data>
+  <data name="XEC-ph_ContactDocumentTypeid" xml:space="preserve">
+    <value>Cédula de identidad</value>
+  </data>
+  <data name="XEC-ph_documenttypeid" xml:space="preserve">
+    <value>RUC</value>
+  </data>
+  <data name="XEC-ph_geographiclevel1" xml:space="preserve">
+    <value>Provincia</value>
+  </data>
+  <data name="XEC-ph_geographiclevel3" xml:space="preserve">
+    <value>Ciudad o canton</value>
+  </data>
+  <data name="XEC-ph_geographiclevel4" xml:space="preserve">
+    <value>Parroquia</value>
+  </data>
+  <data name="XGT-ph_ContactDocumentTypeid" xml:space="preserve">
+    <value>DPI</value>
+  </data>
+  <data name="XGT-ph_documenttypeid" xml:space="preserve">
+    <value>NIT</value>
+  </data>
+  <data name="XGT-ph_geographiclevel1" xml:space="preserve">
+    <value>Departamento</value>
+  </data>
+  <data name="XGT-ph_geographiclevel3" xml:space="preserve">
+    <value>Municipio o ciudad</value>
+  </data>
+  <data name="XGT-ph_nitdocument" xml:space="preserve">
+    <value>NIT</value>
+  </data>
+  <data name="XJM-ph_ContactDocumentTypeid" xml:space="preserve">
+    <value>TRN</value>
+  </data>
+  <data name="XJM-ph_documenttypeid" xml:space="preserve">
+    <value>TRN</value>
+  </data>
+  <data name="XJM-ph_geographiclevel1" xml:space="preserve">
+    <value>Departamento</value>
+  </data>
+  <data name="XJM-ph_geographiclevel3" xml:space="preserve">
+    <value>Ciudad</value>
+  </data>
+  <data name="XPA-DV-ph_documenttypeid" xml:space="preserve">
+    <value>D.V.</value>
+  </data>
+  <data name="XPA-ph_ContactDocumentTypeid" xml:space="preserve">
+    <value>Cédula</value>
+  </data>
+  <data name="XPA-ph_documenttypeid" xml:space="preserve">
+    <value>RUC o cédula</value>
+  </data>
+  <data name="XPA-ph_geographiclevel1" xml:space="preserve">
+    <value>Provincia</value>
+  </data>
+  <data name="XPA-ph_geographiclevel3" xml:space="preserve">
+    <value>Municipio o ciudad</value>
+  </data>
+  <data name="XEC-Estado-ph_documenttypeid" xml:space="preserve">
+    <value>Estado civil</value>
+  </data>
+  <data name="XEC-ph_legalrepresentativeappointment" xml:space="preserve">
+    <value>Nombramiento del representante legal</value>
+  </data>
+  <data name="ph_dui" xml:space="preserve">
+    <value>DUI</value>
+  </data>
+  <data name="ph_identificationfotocopy" xml:space="preserve">
+    <value>Fotocopia de la cédula</value>
+  </data>
+  <data name="ph_nrc" xml:space="preserve">
+    <value>NRC</value>
+  </data>
+  <data name="XCL-ph_legalrepresentativeidentification" xml:space="preserve">
+    <value>Cédula representante legal</value>
+  </data>
+  <data name="XSV-companyname" xml:space="preserve">
+    <value>Nombre o Razón Social (según NIT)</value>
+  </data>
+  <data name="XSV-ph_companyidentification" xml:space="preserve">
+    <value>NIT</value>
+  </data>
+  <data name="ph_geographiclevel1" xml:space="preserve">
+    <value>Departamento</value>
+  </data>
+  <data name="ph_geographiclevel3" xml:space="preserve">
+    <value>Municipio</value>
+  </data>
+  <data name="ph_salebill" xml:space="preserve">
+    <value>Una factura de venta</value>
+  </data>
+  <data name="XCR-ph_legalrepresentativeidentification" xml:space="preserve">
+    <value>Cédula representante legal</value>
+  </data>
+  <data name="XMX-ph_legalrepresentativeidentification" xml:space="preserve">
+    <value>Identificación oficial del representante legal</value>
+  </data>
+  <data name="ph_BusinessLineid" xml:space="preserve">
+    <value>Giro de negocio</value>
+  </data>
+  <data name="ph_duidocument" xml:space="preserve">
+    <value>DUI</value>
+  </data>
+  <data name="ph_legalrepresentativedui" xml:space="preserve">
+    <value>DUI de representante legal</value>
+  </data>
+  <data name="ph_legalrepresentativenit" xml:space="preserve">
+    <value>NIT de representante legal</value>
+  </data>
+  <data name="ph_nitdocument" xml:space="preserve">
+    <value>NIT</value>
+  </data>
+  <data name="ph_NRCdocument" xml:space="preserve">
+    <value>NRC</value>
+  </data>
+  <data name="ph_politicalties" xml:space="preserve">
+    <value>¿Qué tipo de vinculación?</value>
+  </data>
+  <data name="ph_salesrange" xml:space="preserve">
+    <value>Rango de ventas al mes</value>
+  </data>
+  <data name="XSV-ph_ContactDocumentTypeid" xml:space="preserve">
+    <value>DUI</value>
+  </data>
+  <data name="XUY-ph_commercialname" xml:space="preserve">
+    <value>Nombre de fantasía</value>
+  </data>
+  <data name="Natural-ph_companyidentification" xml:space="preserve">
+    <value>Tipo de documento</value>
+  </data>
+  <data name="ph_chamberofcommerce" xml:space="preserve">
+    <value>Fotocopia de la cámara de comercio</value>
+  </data>
+  <data name="ph_Specifyfundsourceanddestination" xml:space="preserve">
+    <value>Especifique</value>
+  </data>
+  <data name="ph_voluntarydeclarationfundsource" xml:space="preserve">
+    <value>Por favor seleccione de dónde provienen sus ingresos</value>
+  </data>
+  <data name="XBC-ph_identificationfotocopy" xml:space="preserve">
+    <value>Fotocopia de la cédula</value>
+  </data>
+  <data name="titleStatement" xml:space="preserve">
+    <value>Declaración voluntaria sobre el origen de los fondos</value>
+  </data>
+  <data name="btnContinue" xml:space="preserve">
+    <value>Continuar</value>
+  </data>
+  <data name="seeStatement" xml:space="preserve">
+    <value>Ver declaración</value>
+  </data>
+  <data name="AddContactAdministrator" xml:space="preserve">
+    <value>GUARDAR CONTACTO ADMINISTRADOR</value>
+  </data>
+  <data name="AddOtherContact" xml:space="preserve">
+    <value>Agregar otro contacto</value>
+  </data>
+  <data name="InfoContacts" xml:space="preserve">
+    <value>Nuevo contacto</value>
+  </data>
+  <data name="statementEight" xml:space="preserve">
+    <value>Autorizo a saldar las obligaciones o depósitos que mantenga en esta institución, en el caso de infracción de cualquiera de los numerales contenidos en este documento,</value>
+  </data>
+  <data name="statementFive" xml:space="preserve">
+    <value>Declaro que los recursos propios o que entrego no provienen de ninguna actividad ilícita de las contempladas en el Código Penal Colombiano o en cualquier norma que lo modifique o adicione.</value>
+  </data>
+  <data name="statementFour" xml:space="preserve">
+    <value>Los recursos propios o que entrego para la constitución de negocios, depósitos o el pago de obligaciones provienen de las siguientes fuentes (detalle de la ocupación, oficio, profesión, actividad, negocio, etc.). No colocar genéricos, como por ejemplo: Comerciante.</value>
+  </data>
+  <data name="statementNine" xml:space="preserve">
+    <value>eximiendo a XCB de Colombia Limited sucursal Colombiana, de toda responsabilidad que se derive por información errónea, falsa o inexacta, que yo hubiese proporcionado en este documento o de la violación del mismo.</value>
+  </data>
+  <data name="statementOne" xml:space="preserve">
+    <value>Obrando en nombre propio y de manera voluntaria y dando certeza de que todo lo aquí consignado es cierto, realizo la siguiente declaración de fuente de fondos a XCB de Colombia Limited sucursal Colombiana,</value>
+  </data>
+  <data name="statementSeven" xml:space="preserve">
+    <value>ni efectuar transacciones destinadas a tales actividades o en favor de personas relacionadas con las mismas.</value>
+  </data>
+  <data name="statementSix" xml:space="preserve">
+    <value>No admitiré que terceros efectúen depósitos a mis cuentas con fondos provenientes de las actividades ilícitas contempladas en el Código Penal Colombiano o en cualquier norma que lo modifique o adicione,</value>
+  </data>
+  <data name="statementThree" xml:space="preserve">
+    <value>Ley 190 de 1995 y Ley 1474 de 2011 "Estatuto anticorrupción" y demás normas legales concordantes.</value>
+  </data>
+  <data name="statementTwo" xml:space="preserve">
+    <value>con el propósito que se dé cumplimiento con lo estipulado por la Superintendencia Financiera de Colombia, (circular externa No. 007 de 1996), el Estatuto Orgánico del Sistema Financiero (Decreto 663 de 1993),</value>
+  </data>
+  <data name="MessageRut" xml:space="preserve">
+    <value>El RUT no es válido</value>
+  </data>
+  <data name="TextToolTipContact" xml:space="preserve">
+    <value>El usuario administrador es el nivel más alto de acceso dentro de una cuenta de cliente. Tiene privilegios para actualizar información general del perfil, agregar o modificar contactos; además, puede consultar los estados de cuenta y de crédito.</value>
+  </data>
+  <data name="TextNotificationRoles" xml:space="preserve">
+    <value>Podrás asignar más roles en la sección 'Mi cuenta' dentro de nuestra plataforma.</value>
+  </data>
+  <data name="emailaddress-alterno" xml:space="preserve">
+    <value>Correo electrónico alterno</value>
+  </data>
+  <data name="ContactAdministrator" xml:space="preserve">
+    <value>Contacto Administrador</value>
+  </data>
+  <data name="RequiredFiles" xml:space="preserve">
+    <value>Falta poco por terminar, sin embargo existen campos que son requeridos y no se han llenado. Por favor revisa los campos faltantes</value>
+  </data>
+  <data name="Cedula-ph_identification" xml:space="preserve">
+    <value>Cédula física</value>
+  </data>
+  <data name="Dimex-ph_identification" xml:space="preserve">
+    <value>DIMEX</value>
+  </data>
+  <data name="Avenue" xml:space="preserve">
+    <value>Avenida</value>
+  </data>
+  <data name="Both" xml:space="preserve">
+    <value>Ambos</value>
+  </data>
+  <data name="Carrier" xml:space="preserve">
+    <value>Carrier</value>
+  </data>
+  <data name="Co-Partnership" xml:space="preserve">
+    <value>Coparticipación</value>
+  </data>
+  <data name="Corporation" xml:space="preserve">
+    <value>Corporación</value>
+  </data>
+  <data name="Department" xml:space="preserve">
+    <value>Departamento</value>
+  </data>
+  <data name="Higher" xml:space="preserve">
+    <value>y mas alto que $1M</value>
+  </data>
+  <data name="IncomeProducingActivity" xml:space="preserve">
+    <value>Actividad productora de renta</value>
+  </data>
+  <data name="IndividualProprietorship" xml:space="preserve">
+    <value>Propiedad individual</value>
+  </data>
+  <data name="LessThan" xml:space="preserve">
+    <value>menos que $20,000</value>
+  </data>
+  <data name="None" xml:space="preserve">
+    <value>Ninguno</value>
+  </data>
+  <data name="Office" xml:space="preserve">
+    <value>Oficina</value>
+  </data>
+  <data name="Other" xml:space="preserve">
+    <value>Otra</value>
+  </data>
+  <data name="PersonalUse" xml:space="preserve">
+    <value>Uso personal</value>
+  </data>
+  <data name="PrecisePurchasing" xml:space="preserve">
+    <value>Compra precisa</value>
+  </data>
+  <data name="Redistribution" xml:space="preserve">
+    <value>Redistribución</value>
+  </data>
+  <data name="SolutionsIntegrator" xml:space="preserve">
+    <value>Integrador de soluciones</value>
+  </data>
+  <data name="Street" xml:space="preserve">
+    <value>Calle</value>
+  </data>
+  <data name="Trader" xml:space="preserve">
+    <value>Comerciante</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Si</value>
+  </data>
+  <data name="XUY-ph_companytypeid" xml:space="preserve">
+    <value>Tipo de documento</value>
+  </data>
+  <data name="XUY-ph_ERUT" xml:space="preserve">
+    <value>Copia del RUT</value>
+  </data>
+  <data name="XUY-ph_geographiclevel1" xml:space="preserve">
+    <value>Departamento</value>
+  </data>
+  <data name="XUY-ph_geographiclevel3" xml:space="preserve">
+    <value>Provincia</value>
+  </data>
+  <data name="XUY-ph_identificationfotocopy" xml:space="preserve">
+    <value>Copia de la CI</value>
+  </data>
+  <data name="ph_dnifotocopy" xml:space="preserve">
+    <value>Fotocopia del DNI</value>
+  </data>
+  <data name="ph_geographiclevel2" xml:space="preserve">
+    <value>Provincia</value>
+  </data>
+  <data name="ph_LegalRepresentativeDNIFotocopy" xml:space="preserve">
+    <value>Fotocopia del DNI del representante legal</value>
+  </data>
+  <data name="Accessories" xml:space="preserve">
+    <value>Accesorios</value>
+  </data>
+  <data name="CloudSolution" xml:space="preserve">
+    <value>Nube de soluciones IoT</value>
+  </data>
+  <data name="Components" xml:space="preserve">
+    <value>Componentes</value>
+  </data>
+  <data name="ConsumerElectronics" xml:space="preserve">
+    <value>Electrónica de consumo</value>
+  </data>
+  <data name="Corporate" xml:space="preserve">
+    <value>Corporativo</value>
+  </data>
+  <data name="Educative" xml:space="preserve">
+    <value>Educativo</value>
+  </data>
+  <data name="Gaming" xml:space="preserve">
+    <value>Gaming</value>
+  </data>
+  <data name="Government" xml:space="preserve">
+    <value>Gobierno</value>
+  </data>
+  <data name="Healthy" xml:space="preserve">
+    <value>Salud</value>
+  </data>
+  <data name="Mobiles" xml:space="preserve">
+    <value>Móviles</value>
+  </data>
+  <data name="Peripherals" xml:space="preserve">
+    <value>Periféricos</value>
+  </data>
+  <data name="PointSale" xml:space="preserve">
+    <value>Punto de venta</value>
+  </data>
+  <data name="Portability" xml:space="preserve">
+    <value>Computo y portabilidad</value>
+  </data>
+  <data name="Print" xml:space="preserve">
+    <value>Impresión</value>
+  </data>
+  <data name="PublicGeneral" xml:space="preserve">
+    <value>Público en general</value>
+  </data>
+  <data name="PyMe" xml:space="preserve">
+    <value>PyMe</value>
+  </data>
+  <data name="Security" xml:space="preserve">
+    <value>Seguridad</value>
+  </data>
+  <data name="ServerNetworks" xml:space="preserve">
+    <value>Servidores y redes</value>
+  </data>
+  <data name="Software" xml:space="preserve">
+    <value>Software</value>
+  </data>
+  <data name="agreepersonaldatause" xml:space="preserve">
+    <value>Confirmo que los datos proporcionados son correctos y pueden usarse para fines de facturación.</value>
+  </data>
+  <data name="AnonymusSociety" xml:space="preserve">
+    <value>Sociedad anónima</value>
+  </data>
+  <data name="CommercialContact" xml:space="preserve">
+    <value>Contacto comercial</value>
+  </data>
+  <data name="IndividualPerson" xml:space="preserve">
+    <value>Persona individual</value>
+  </data>
+  <data name="InvoicePay" xml:space="preserve">
+    <value>Pago de factura</value>
+  </data>
+  <data name="JurisdictionalPerson" xml:space="preserve">
+    <value>Persona jurídica</value>
+  </data>
+  <data name="LegalRepresentative" xml:space="preserve">
+    <value>Representante legal</value>
+  </data>
+  <data name="Merchandise" xml:space="preserve">
+    <value>Retiro de mercadería</value>
+  </data>
+  <data name="MoralPerson" xml:space="preserve">
+    <value>Persona moral</value>
+  </data>
+  <data name="NaturalPerson" xml:space="preserve">
+    <value>Persona natural</value>
+  </data>
+  <data name="NaturalPhysical" xml:space="preserve">
+    <value>Persona natural o física</value>
+  </data>
+  <data name="PhysicalPerson" xml:space="preserve">
+    <value>Persona física</value>
+  </data>
+  <data name="ph_acceptsarlaft" xml:space="preserve">
+    <value>Acepto que el origen de mis fondos no proviene de ninguna actividad ilícita.</value>
+  </data>
+  <data name="ph_acceptterms" xml:space="preserve">
+    <value>Al hacer click en "enviar", entiendo y acepto que los productos que adquiriré a través de Intcomex son exclusivamente para reventa y no de uso personal. Confirmo que mi información puede ser usada para fines comerciales de acuerdo a los términos y condiciones expresados en la Política de tratamiento y privacidad de Intcomex.</value>
+  </data>
+  <data name="Send" xml:space="preserve">
+    <value>ENVIAR</value>
+  </data>
+  <data name="Divorced" xml:space="preserve">
+    <value>Divorciado</value>
+  </data>
+  <data name="FreeUnion" xml:space="preserve">
+    <value>Unión libre</value>
+  </data>
+  <data name="Married" xml:space="preserve">
+    <value>Casado</value>
+  </data>
+  <data name="Single" xml:space="preserve">
+    <value>Soltero</value>
+  </data>
+  <data name="Widower" xml:space="preserve">
+    <value>Viudo</value>
+  </data>
+  <data name="Askpolitically" xml:space="preserve">
+    <value>¿Tiene algún vínculo con personas expuestas políticamente?</value>
+  </data>
+  <data name="TaxpayerIVA" xml:space="preserve">
+    <value>No soy contribuyente de IVA</value>
+  </data>
+  <data name="XPE-ph_commercialname" xml:space="preserve">
+    <value>Nombre comercial</value>
+  </data>
+  <data name="ComputerProgramming" xml:space="preserve">
+    <value>Actividades de programación informática</value>
+  </data>
+  <data name="ElectricalInstallations" xml:space="preserve">
+    <value>Instalaciones eléctricas</value>
+  </data>
+  <data name="FinishingBuildings" xml:space="preserve">
+    <value>Terminación y acabado de edificios</value>
+  </data>
+  <data name="InformationConsultancy" xml:space="preserve">
+    <value>Actividades de consultoría de informática y de gestión de instalaciones informáticas</value>
+  </data>
+  <data name="InstallationEquipment" xml:space="preserve">
+    <value>Instalación de maquinaria y equipos industriales</value>
+  </data>
+  <data name="ManufactureCommunications" xml:space="preserve">
+    <value>Fabricación de equipo de comunicaciones</value>
+  </data>
+  <data name="ManufactureComputer" xml:space="preserve">
+    <value>Fabricación de computadores y equipo periférico</value>
+  </data>
+  <data name="ManufactureElectronic" xml:space="preserve">
+    <value>Fabricación de aparatos electrónicos de consumo</value>
+  </data>
+  <data name="OtherTechnology" xml:space="preserve">
+    <value>Otras actividades de tecnología de la información y de servicios informáticos</value>
+  </data>
+  <data name="OtherTelecommunications" xml:space="preserve">
+    <value>Otras actividades de telecomunicaciones N.C.P.</value>
+  </data>
+  <data name="PrivateCompanies" xml:space="preserve">
+    <value>Servicios de seguridad privada prestados por empresas</value>
+  </data>
+  <data name="PrivateIndependents" xml:space="preserve">
+    <value>Servicios de seguridad privada prestados por independientes</value>
+  </data>
+  <data name="RepairCommunications" xml:space="preserve">
+    <value>Reparación de equipo de comunicaciones (incluye la reparación teléfonos celulares)</value>
+  </data>
+  <data name="RepairConsumption" xml:space="preserve">
+    <value>Reparación de aparatos electrónicos de consumo (incluye aparatos de televisión y radio)</value>
+  </data>
+  <data name="RepairElectrical" xml:space="preserve">
+    <value>Reparación de equipo eléctrico (excepto reparación de equipo y enseres domésticos)</value>
+  </data>
+  <data name="RepairPeripheralEquipment" xml:space="preserve">
+    <value>Reparación de computadores y equipo periférico</value>
+  </data>
+  <data name="RetailCellphone" xml:space="preserve">
+    <value>Telefonía móvil celular</value>
+  </data>
+  <data name="RetailHardware" xml:space="preserve">
+    <value>Venta al por menor de artículos de ferretería y materiales de construcción</value>
+  </data>
+  <data name="RetailHousehold" xml:space="preserve">
+    <value>Venta al por menor de aaratos eléctricos, textiles para el hogar y otros enseres domésticos N.C.P.</value>
+  </data>
+  <data name="RetailPeripheral" xml:space="preserve">
+    <value>Venta al por menor de computadores, equipo periférico, programas informáticos y equipo de telecomunicaciones</value>
+  </data>
+  <data name="SecurityActivities" xml:space="preserve">
+    <value>Actividades de servicios de sistemas de seguridad (incluye servicios de cerrajería)</value>
+  </data>
+  <data name="WholesaleComputers" xml:space="preserve">
+    <value>Venta al por mayor de computadores, equipo periférico y programas informáticos</value>
+  </data>
+  <data name="WholesaleElectrical" xml:space="preserve">
+    <value>Venta al por mayor de artículos eléctricos y electrónicos para el hogar</value>
+  </data>
+  <data name="WholesaleEquipment" xml:space="preserve">
+    <value>Venta al por mayor de equipo, partes y piezas electrónicos y de telecomunicaciones</value>
+  </data>
+  <data name="Carrer" xml:space="preserve">
+    <value>Carrera</value>
+  </data>
+  <data name="Dpt" xml:space="preserve">
+    <value>Depto.</value>
+  </data>
+  <data name="Local" xml:space="preserve">
+    <value>Local</value>
+  </data>
+  <data name="NaturalPhysicalPerson" xml:space="preserve">
+    <value>Persona natural o física</value>
+  </data>
+  <data name="CI-ph_companyidentification" xml:space="preserve">
+    <value>CI</value>
+  </data>
+  <data name="SizeExceeded" xml:space="preserve">
+    <value>El archivo debe pesar menos de 1MB</value>
+  </data>
+  <data name="salesRange" xml:space="preserve">
+    <value>100.001  en adelante</value>
+  </data>
+  <data name="Cash" xml:space="preserve">
+    <value>Efectivo</value>
+  </data>
+  <data name="Check" xml:space="preserve">
+    <value>Cheque</value>
+  </data>
+  <data name="CreditCard" xml:space="preserve">
+    <value>Tarjeta de crédito</value>
+  </data>
+  <data name="DebitCard" xml:space="preserve">
+    <value>Tarjeta débito</value>
+  </data>
+  <data name="ElectronicTransfer" xml:space="preserve">
+    <value>Transferencia electrónica</value>
+  </data>
+  <data name="Activations" xml:space="preserve">
+    <value>Activaciones</value>
+  </data>
+  <data name="Cloud" xml:space="preserve">
+    <value>Soluciones Cloud</value>
+  </data>
+  <data name="Communications" xml:space="preserve">
+    <value>Comunicaciones</value>
+  </data>
+  <data name="Exclusive" xml:space="preserve">
+    <value>Exclusivo</value>
+  </data>
+  <data name="IoT" xml:space="preserve">
+    <value>IoT</value>
+  </data>
+  <data name="Mobile" xml:space="preserve">
+    <value>Móviles</value>
+  </data>
+  <data name="Networking" xml:space="preserve">
+    <value>Redes</value>
+  </data>
+  <data name="OEM" xml:space="preserve">
+    <value>OEM</value>
+  </data>
+  <data name="POS" xml:space="preserve">
+    <value>POS</value>
+  </data>
+  <data name="Printing" xml:space="preserve">
+    <value>Impresoras</value>
+  </data>
+  <data name="Servers" xml:space="preserve">
+    <value>Servidores</value>
+  </data>
+  <data name="Systems" xml:space="preserve">
+    <value>Sistemas</value>
+  </data>
+  <data name="ThirdPartyLogistics" xml:space="preserve">
+    <value>Lógica externa</value>
+  </data>
+  <data name="NoAddContact" xml:space="preserve">
+    <value>Aún no has aregado ningún contacto</value>
+  </data>
+  <data name="NoContacts" xml:space="preserve">
+    <value>Sin contactos</value>
+  </data>
+  <data name="AssigningMail" xml:space="preserve">
+    <value>ASIGNAR CORREO</value>
+  </data>
+  <data name="ChooseContact" xml:space="preserve">
+    <value>A continuación, podrás escoger el contacto que recibirá nuestra facturación electrónica.</value>
+  </data>
+  <data name="ElectronicBill" xml:space="preserve">
+    <value>Facturación electrónica</value>
+  </data>
+  <data name="EmailAssignment" xml:space="preserve">
+    <value>Aún no has asignado el correo de facturación</value>
+  </data>
+  <data name="MessageBill" xml:space="preserve">
+    <value>Es necesario que el correo de facturación esté asociado a uno de tus contactos, puede ser  el tuyo como administrador u otro que registres.</value>
+  </data>
+  <data name="EmailAlt" xml:space="preserve">
+    <value>Correo electrónico alterno</value>
+  </data>
+  <data name="OtherEmailContact" xml:space="preserve">
+    <value>Deseo usar otro correo para facturación electrónica</value>
+  </data>
+  <data name="RUT" xml:space="preserve">
+    <value>RUT</value>
+  </data>
+  <data name="WhatsNext" xml:space="preserve">
+    <value>¿Qué sigue?</value>
+  </data>
+  <data name="TextEmailAlreadyRegisteredTwo" xml:space="preserve">
+    <value>El correo que has ingresado ya está registrado en nuestra base de datos. Por favor, inténtalo nuevamente con una opción diferente o contacta al administrador de tu empresa para solicitar las credenciales de acceso.</value>
+  </data>
+  <data name="SelectionElectronicBilling" xml:space="preserve">
+    <value>A continuación, por favor escoge el contacto que recibirá nuestra facturación electrónica. Recuerda que este correo de facturación debe ser verificado; puedes hacerlo directamente en este formulario, o una vez te hayas autenticado iniciando sesión en el WebStore.</value>
+  </data>
+  <data name="TextValidateLater" xml:space="preserve">
+    <value>Puedes validar este correo ahora o una vez te hayas autenticado en nuestro WebStore</value>
+  </data>
+  <data name="DocumentExists" xml:space="preserve">
+    <value>Ya existe un cliente registrado con este número de identificación. Por favor comunícate con el representante legal de tu empresa para obtener la información del acceso al WebStore, o contáctanos para brindarte ayuda.</value>
+  </data>
+  <data name="Here" xml:space="preserve">
+    <value>aquí</value>
+  </data>
+  <data name="InfoAct" xml:space="preserve">
+    <value>Sube al menos las 8 primeras páginas del Acta constitutiva</value>
+  </data>
+  <data name="InfoConst" xml:space="preserve">
+    <value>Para descargar la constancia de la situación fiscal, haz clic</value>
+  </data>
+  <data name="InfoWebSat" xml:space="preserve">
+    <value>Para más información visita</value>
+  </data>
+  <data name="ValidSucessEmail" xml:space="preserve">
+    <value>Debe realizar la validación del correo</value>
+  </data>
+  <data name="ph_accepttermsOne" xml:space="preserve">
+    <value>Al hacer click en 'enviar', entiendo y acepto que los productos que adquiriré a través de Intcomex son exclusivamente para reventa y no de uso personal. Confirmo que mi información puede ser usada para fines comerciales de acuerdo a los </value>
+  </data>
+  <data name="ph_accepttermsTwo" xml:space="preserve">
+    <value>expresados en la Política de tratamiento y privacidad de Intcomex.</value>
+  </data>
+  <data name="termsConditions" xml:space="preserve">
+    <value>términos y condiciones </value>
+  </data>
+  <data name="Jurisdictional" xml:space="preserve">
+    <value>Jurídica</value>
+  </data>
+  <data name="Physical" xml:space="preserve">
+    <value>Física</value>
+  </data>
+  <data name="XECph_legalrepresentativeidentification" xml:space="preserve">
+    <value>Cédula representante legal</value>
+  </data>
+  <data name="ToPrint" xml:space="preserve">
+    <value>imprimir</value>
+  </data>
+  <data name="RequiredFields" xml:space="preserve">
+    <value>Por favor revisa los campos requeridos</value>
+  </data>
+  <data name="CloudContact" xml:space="preserve">
+    <value>Especialista cloud</value>
+  </data>
+  <data name="Marketing" xml:space="preserve">
+    <value>Mercadeo</value>
+  </data>
+  <data name="OtherContact" xml:space="preserve">
+    <value>Otro tipo de contacto</value>
+  </data>
+  <data name="Pickup" xml:space="preserve">
+    <value>Retiro de mercadería</value>
+  </data>
+  <data name="PurchasingContact" xml:space="preserve">
+    <value>Comercial</value>
+  </data>
+  <data name="Shop" xml:space="preserve">
+    <value>Compras</value>
+  </data>
+  <data name="SignatureInvoice" xml:space="preserve">
+    <value>Firma de factura</value>
+  </data>
+  <data name="ErrorDocument" xml:space="preserve">
+    <value>Un contacto de este formulario ya tiene ese documento </value>
+  </data>
+  <data name="ErrorEmail" xml:space="preserve">
+    <value>Un contacto de este formulario ya tiene este correo electrónico</value>
+  </data>
+  <data name="DocumentExistenceContactAccount" xml:space="preserve">
+    <value>Ya existe un cliente o contacto registrado con este número de identificación. Por favor comunícate con el representante legal de tu empresa para obtener la información de acceso al Webstore, o contáctanos para brindarte ayuda.</value>
+  </data>
+  <data name="DocumentExistenceLead" xml:space="preserve">
+    <value>Ya existe un cliente o contacto en proceso de registro con este número de identificación. Por favor comunícate con el representante legal de tu empresa para obtener la información de acceso al Webstore, o contáctanos para brindarte ayuda.</value>
+  </data>
+  <data name="EmailExistenceContactAccount" xml:space="preserve">
+    <value>El correo que has ingresado ya esta registrado en nuestra base de datos. Por favor, inténtalo nuevamente con una opción diferente o contacta al administrador de tu empresa para solicitar las credenciales de acceso.</value>
+  </data>
+  <data name="EmailExistenceLead" xml:space="preserve">
+    <value>El correo que has ingresado ya se encuentra en proceso de registro.</value>
+  </data>
+  <data name="District" xml:space="preserve">
+    <value>Distrito</value>
+  </data>
+  <data name="TitleEmailExistenceContactAccount" xml:space="preserve">
+    <value>Este correo ya está registrado </value>
+  </data>
+  <data name="TitleEmailExistenceLead" xml:space="preserve">
+    <value>El correo ya está en proceso de registro</value>
+  </data>
+  <data name="AddContactComercial" xml:space="preserve">
+    <value>AGREGAR CONTACTO</value>
+  </data>
+  <data name="ComputingPortability" xml:space="preserve">
+    <value>Computo y portabilidad</value>
+  </data>
+  <data name="Consumables" xml:space="preserve">
+    <value>Consumables</value>
+  </data>
+  <data name="Technical" xml:space="preserve">
+    <value>Técnico</value>
+  </data>
+</root>

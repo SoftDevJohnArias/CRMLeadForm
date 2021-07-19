@@ -1,0 +1,107 @@
+﻿.table-fixed thead {
+    width: 97%;
+}
+
+.table-fixed tbody {
+    height: 230px;
+    overflow-y: auto;
+    width: 100%;
+}
+
+.table-fixed thead, .table-fixed tbody, .table-fixed tr, .table-fixed td, .table-fixed th {
+    display: block;
+}
+
+    .table-fixed tbody td, .table-fixed thead > tr > th {
+        float: left;
+        border-bottom-width: 0;
+    }
+
+.content-order-details {
+    font-family: "Barlow condensed";
+    font-size: 16px;
+    top: 30px;
+    padding-left:60px;
+    padding-right:60px;
+}
+
+.text-label-details{
+    font-weight:600;
+}
+
+.close-modal {
+    color: #0aa9cb;
+}
+
+#divComments {
+    border: 1px solid #e9ebed;
+    padding-top: 10px;
+    font-family: "Barlow condensed";
+    font-size: 14px;
+    color: #333333;
+}
+
+.table thead {
+    font-family: "Barlow condensed";
+    font-size:16px;
+    color:#333333;
+}
+
+.label-bold {
+    font-family: "Barlow condensed";
+    font-size: 16px;
+    color: #333333;
+    font-weight:700;
+}
+
+.label-bold-subtotal {
+    font-family: "Barlow condensed";
+    font-size: 12px;
+    color: #565656;
+}
+
+.label-bold-total {
+    font-family: "Barlow condensed";
+    font-size: 14px;
+    color: #333333;
+    font-weight: 700;
+}
+
+.label-regular-total {
+    font-family: "Barlow condensed";
+    font-size: 14px;
+    color: #565656;
+}
+
+
+.label-regular {
+    font-family: "Barlow condensed";
+    font-size: 12px;
+    color: #B3B3B3;
+}
+
+.label-description{
+    font-family: "Barlow";
+    font-size: 14px;
+}
+
+.label-brand {
+    font-family: "Barlow condensed";
+    font-size: 12px;
+    color: #565656;
+    font-weight: 700
+}
+
+.label-SKU-MPN {
+    font-family: "Barlow condensed";
+    font-size: 12px;
+    color: #A8A8A8;
+}
+
+.tr-border{
+    border-bottom:dashed 1px;
+    border-color:#E6E6E6;
+}
+
+
+

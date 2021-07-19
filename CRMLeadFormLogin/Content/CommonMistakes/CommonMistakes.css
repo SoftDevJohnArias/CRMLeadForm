@@ -1,0 +1,36 @@
+﻿/*  header title View ,Searh */
+
+h3 {
+    font-size: 26px;
+    color: #0AA9CB;
+    font-family: Overpass;
+    font-weight: 600;
+}
+
+
+/*body*/
+#tableCommonMistakes
+{
+    margin-top:10px;
+}
+
+
+.icon-ws-ico-min-estado-ok:before {
+    color: #CBE530;
+    font-size:23.94px;
+}
+.closeIcon {
+    color: #C40047;
+    font-size: 35px;
+}
+
+.icon-ws-ico-min-editar:before {
+    color: #72C15E;
+    font-size: 20px;
+}
+
+.table tbody {
+    font-family: "Barlow condensed";
+    font-size:14px; 
+}
+

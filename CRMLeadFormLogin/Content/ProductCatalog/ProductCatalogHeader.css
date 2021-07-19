@@ -1,0 +1,91 @@
+﻿#sortBy {
+  font-size: 14px;
+}
+
+.product-catalog-options {
+  font-family: "Barlow";
+  font-size: 14px;
+  color: #191515;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #FCFCFC;
+  width: 100%;
+}
+
+.options-download {
+  display: flex;
+  align-items: center;
+  width: 50%;
+}
+
+@media only screen and (max-width: 1300px) {
+  .options-download {
+    width: 30%;
+  }
+}
+
+.options-filter {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: flex-end;
+  margin-right: 1em;
+  gap: 2em;
+}
+
+  .options-filter .title-sortby {
+    font-weight: 600;
+  }
+
+  .options-filter span {
+    font-family: 'Barlow';
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    color: #191515;
+  }
+
+    .options-filter span i {
+      color: #0AA9CB;
+      margin-left: 0.5em;
+    }
+
+/*.options-download i {
+  margin-right: 1.25em;
+}*/
+
+.options-download span {
+  font-family: 'Barlow';
+  font-size: 14px;
+}
+
+.options-download > a {
+  font-family: 'Barlow';
+  margin-left: 1em;
+  text-decoration: underline;
+  font-size: 14px;
+  color: #0AA9CB;
+}
+
+.iconsviewcatalog > i {
+  cursor: pointer;
+  color: #B6B6B6;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.iconsviewcatalog > i {
+  cursor: pointer;
+  color: #B6B6B6;
+}
+
+  .iconsviewcatalog > i.selected {
+    color: #0AA9CB;
+  }
+
+.separator-item {
+  height: 24px;
+  width: 0px;
+  border: 1px solid #E6E6E6;
+}

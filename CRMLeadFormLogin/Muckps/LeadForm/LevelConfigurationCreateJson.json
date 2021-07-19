@@ -1,0 +1,274 @@
+[
+  {
+    "companyId": "XPE",
+    "level": [
+      {
+        "levelId": 1,
+        "tableSQL": "nivel1SQL",
+        "nextLevel": 2,
+        "levelReference": "NG1"
+      },
+      {
+        "levelId": 2,
+        "tableSQL": "nivel3SQL",
+        "nextLevel": 3,
+        "levelReference": "NG2"
+      },
+      {
+        "levelId": 3,
+        "tableSQL": "nivel4SQL",
+        "nextLevel": 0
+      }
+    ]
+  },
+  {
+    "companyId": "XMX",
+    "level": [
+      {
+        "levelId": 1,
+        "tableSQL": "nivel1SQL",
+        "nextLevel": 2,
+        "levelReference": "NG1"
+      },
+      {
+        "levelId": 2,
+        "tableSQL": "nivel2SQL",
+        "nextLevel": 3,
+        "levelReference": "NG2"
+      },
+      {
+        "levelId": 3,
+        "tableSQL": "nivel3SQL",
+        "nextLevel": 4,
+        "levelReference": "NG3"
+      },
+      {
+        "levelId": 4,
+        "tableSQL": "nivel4SQL",
+        "nextLevel": 0
+      }
+    ]
+  },
+  {
+    "companyId": "XCR",
+    "level": [
+      {
+        "levelId": 1,
+        "tableSQL": "nivel1SQL",
+        "nextLevel": 2,
+        "levelReference": "NG2"
+      },
+      {
+        "levelId": 2,
+        "tableSQL": "nivel2SQL",
+        "nextLevel": 3,
+        "levelReference": "NG2"
+      },
+      {
+        "levelId": 3,
+        "tableSQL": "nivel3SQL",
+        "nextLevel": 4,
+        "levelReference": "NG3"
+      },
+      {
+        "levelId": 4,
+        "tableSQL": "nivel4SQL",
+        "nextLevel": 0
+      }
+    ]
+  },
+  {
+    "companyId": "XCB",
+    "level": [
+      {
+        "levelId": 1,
+        "tableSQL": "nivel1SQL",
+        "nextLevel": 2,
+        "levelReference": "NG2"
+      },
+      {
+        "levelId": 2,
+        "tableSQL": "nivel2SQL",
+        "nextLevel": 3,
+        "levelReference": "NG2"
+      },
+      {
+        "levelId": 3,
+        "tableSQL": "nivel3SQL",
+        "nextLevel": 0,
+        "levelReference": "NG3"
+      }
+    ]
+  },
+  {
+    "companyId": "XPA",
+    "level": [
+      {
+        "levelId": 1,
+        "tableSQL": "nivel1SQL",
+        "nextLevel": 2,
+        "levelReference": "NG2"
+      },
+      {
+        "levelId": 2,
+        "tableSQL": "nivel2SQL",
+        "nextLevel": 3,
+        "levelReference": "NG2"
+      },
+      {
+        "levelId": 3,
+        "tableSQL": "nivel3SQL",
+        "nextLevel": 0,
+        "levelReference": "NG3"
+      }
+    ]
+  },
+  {
+    "companyId": "XGT",
+    "level": [
+      {
+        "levelId": 1,
+        "tableSQL": "nivel1SQL",
+        "nextLevel": 2,
+        "levelReference": "NG2"
+      },
+      {
+        "levelId": 2,
+        "tableSQL": "nivel2SQL",
+        "nextLevel": 3,
+        "levelReference": "NG2"
+      },
+      {
+        "levelId": 3,
+        "tableSQL": "nivel3SQL",
+        "nextLevel": 0,
+        "levelReference": "NG3"
+      }
+    ]
+  },
+  {
+    "companyId": "XJM",
+    "level": [
+      {
+        "levelId": 1,
+        "tableSQL": "nivel1SQL",
+        "nextLevel": 2,
+        "levelReference": "NG2"
+      },
+      {
+        "levelId": 2,
+        "tableSQL": "nivel2SQL",
+        "nextLevel": 3,
+        "levelReference": "NG2"
+      },
+      {
+        "levelId": 3,
+        "tableSQL": "nivel3SQL",
+        "nextLevel": 0,
+        "levelReference": "NG3"
+      }
+    ]
+  },
+  {
+    "companyId": "XEC",
+    "level": [
+      {
+        "levelId": 1,
+        "tableSQL": "nivel1SQL",
+        "nextLevel": 2,
+        "levelReference": "NG2"
+      },
+      {
+        "levelId": 2,
+        "tableSQL": "nivel2SQL",
+        "nextLevel": 3,
+        "levelReference": "NG2"
+      },
+      {
+        "levelId": 3,
+        "tableSQL": "nivel3SQL",
+        "nextLevel": 4,
+        "levelReference": "NG3"
+      },
+      {
+        "levelId": 4,
+        "tableSQL": "nivel4SQL",
+        "nextLevel": 0
+      }
+    ]
+  },
+  {
+    "companyId": "XCL",
+    "level": [
+      {
+        "levelId": 1,
+        "tableSQL": "nivel1SQL",
+        "nextLevel": 2,
+        "levelReference": "NG2"
+      },
+      {
+        "levelId": 2,
+        "tableSQL": "nivel2SQL",
+        "nextLevel": 3,
+        "levelReference": "NG2"
+      },
+      {
+        "levelId": 3,
+        "tableSQL": "nivel3SQL",
+        "nextLevel": 4,
+        "levelReference": "NG3"
+      },
+      {
+        "levelId": 4,
+        "tableSQL": "nivel4SQL",
+        "nextLevel": 0
+      }
+    ]
+  },
+  {
+    "companyId": "XSV",
+    "level": [
+      {
+        "levelId": 1,
+        "tableSQL": "nivel1SQL",
+        "nextLevel": 2,
+        "levelReference": "NG2"
+      },
+      {
+        "levelId": 2,
+        "tableSQL": "nivel2SQL",
+        "nextLevel": 3,
+        "levelReference": "NG2"
+      },
+      {
+        "levelId": 3,
+        "tableSQL": "nivel3SQL",
+        "nextLevel": 4,
+        "levelReference": "NG3"
+      }
+    ]
+  },
+  {
+    "companyId": "XUY",
+    "level": [
+      {
+        "levelId": 1,
+        "tableSQL": "nivel1SQL",
+        "nextLevel": 2,
+        "levelReference": "NG2"
+      },
+      {
+        "levelId": 2,
+        "tableSQL": "nivel2SQL",
+        "nextLevel": 3,
+        "levelReference": "NG2"
+      },
+      {
+        "levelId": 3,
+        "tableSQL": "nivel3SQL",
+        "nextLevel": 4,
+        "levelReference": "NG3"
+      }
+    ]
+  }
+]

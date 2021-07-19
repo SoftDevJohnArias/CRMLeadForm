@@ -1,0 +1,148 @@
+﻿@using System.Web.Mvc;
+@using CRMLeadFormLogin.Utils;
+@using CRMLeadFormLogin.Models;
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lead Form</title>
+  <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:300,400,400i,600,700|Overpass:300,400,400i,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  @Styles.Render("~/Content/css")
+  @Scripts.Render("~/bundles/modernizr")
+  @Scripts.Render("~/bundles/jquery")
+  @Scripts.Render("~/bundles/bootstrap")
+  @Styles.Render("~/Content/ComponentSitecss")
+  <script src="/Scripts/autoCompleteCustomer.js"></script>
+  <script src="~/Areas/Admin/Scripts/Authentication.js"></script>
+  <script src="~/Scripts/Utils/common.js"></script>
+  @*<script src="~/Scripts/vanillajs-form-validator.js"></script>*@
+  <script src="~/Scripts/vanilla-js-form-validator.js"></script>
+  @Scripts.Render("~/bundles/ComponentSite")
+  @Scripts.Render("~/bundles/GeneralSite")
+  @Scripts.Render("~/bundles/bootstrap")
+  @RenderSection("scripts", required: false)
+  <link href="~/Content/Sass/style.min.css" rel="stylesheet" />
+  <link href="~/Content/Sass/04_template/_printSummary.min.css" rel="stylesheet" media="print" />
+  <script src="~/Scripts/imask.js"></script>
+
+  @if (Request.IsAuthenticated)
+  {
+    <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=99ac459d-2db0-4a5f-9308-f441f7fc5b63"></script>
+  }
+</head>
+<body style=" margin-top: 4em;">
+  @{
+    string language = string.Empty;
+    switch (Culture)
+    {
+      case "en-US":
+        language = "en";
+        break;
+      case "pt-BR":
+        language = "pt";
+        break;
+      default:
+        language = "es";
+        break;
+    };
+    var url = $"/{language}/Settings/Index";
+    var urlHome = $"/{language}/AdminHome/Index";
+  }
+  @if (!Request.Url.AbsoluteUri.Contains("LeadRegister"))
+  {
+    <nav class="navbar-expand-lg navbar-light bg-light">
+      @Html.Partial("_Header")
+    </nav>
+  }
+  <div class="row @(Request.IsAuthenticated ? "bg-app-Authenticated":string.Empty)">
+    @if (Request.IsAuthenticated)
+    {
+
+      string languageId = string.Empty;
+      switch (Culture)
+      {
+        case "en-US":
+          languageId = "en";
+          break;
+        case "pt-BR":
+          languageId = "pt";
+          break;
+        default:
+          languageId = "es";
+          break;
+      };
+      <div class="col-2 col-md-2 col-xl-2">
+        @Html.Action("NavigationMenu", "Home", new { lang = languageId })
+      </div>
+      @Html.Action("AccountMenu", "Home");
+    }
+
+    <div class="@(Request.IsAuthenticated ?"col-10 col-md-10 col-xl-10 render-body":"col-12 col-md-12 col-xl-12 render-body-logout")">
+      @RenderBody()
+      @if (Request.IsAuthenticated)
+      {
+        <hr />
+        <footer class="text-center footer-app">
+          <p>Copyright-Intcomex @DateTime.Now.Year</p>
+        </footer>
+      }
+    </div>
+  </div>
+
+  @Html.Partial("_ModalGetCustomer")
+  @Html.Partial("_LoaderSpinner")
+  @Html.Partial("SettingResources")
+
+</body>
+</html>
+
+<script>
+
+  const customerModule = (() => {
+
+      @{
+
+        CustomPrincipalSerialize customPrincipalSerialize = new CustomPrincipalSerialize();
+        string singleSignOnActive = System.Configuration.ConfigurationManager.AppSettings["singleSignOnActive"];
+        bool.TryParse(singleSignOnActive, out var isSingleSignOn);
+
+        HttpCookie cookie = isSingleSignOn ? HttpContext.Current.Request.Cookies["access-token"] : HttpContext.Current.Request.Cookies[FormsAuthentication.FormsCookieName];
+        if (cookie != null)
+        {
+          customPrincipalSerialize= DeserializeValueCookie.Deserialize(cookie.Value);
+        }
+        else
+        {
+          return;
+        }
+        }
+
+
+        const electronicBillingLead= '@System.Configuration.ConfigurationManager.AppSettings["ElectronicBillingLead"]';
+        const customerCurrency = "@customPrincipalSerialize.CurrencyId";
+        const productCatalogDetailed =  @(customPrincipalSerialize.ValueSetting.ContainsKey("products.catalog.detailed") ? customPrincipalSerialize.ValueSetting["products.catalog.detailed"] : "false");
+        const productCatalogAdmin = "@customPrincipalSerialize.ValueSetting["products.catalog.admin"]";@*@(customPrincipalSerialize.ValueSetting.ContainsKey("products.catalog.admin") ? customPrincipalSerialize.ValueSetting["products.catalog.admin"] : "");*@
+        const generalLocale = "@customPrincipalSerialize.ValueSetting["general.locale"]";
+        const productsCatalogSource = "@customPrincipalSerialize.ValueSetting["products.catalog.source"]";
+        const companyCurrency = "@customPrincipalSerialize.CompanyId";
+        const userCurrency = "@customPrincipalSerialize.UserId";
+
+        return {
+          customerCurrency,
+          productCatalogAdmin,
+          productCatalogDetailed,
+          generalLocale,
+          productsCatalogSource,
+          electronicBillingLead,
+          companyCurrency,
+          userCurrency,
+        }
+
+    })();
+
+
+</script>
+

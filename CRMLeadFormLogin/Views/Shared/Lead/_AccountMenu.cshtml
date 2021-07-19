@@ -1,0 +1,56 @@
+﻿
+@using Resorces = CRMLeadObjects.Resources;
+
+@model ICollection<CRMLeadObjects.DTO.IWSPortal.NavigationMenu.NavigationMenuViewModel>
+<link href="~/Content/AccountMenu/AccountMenu.css" rel="stylesheet" />
+@{
+    var languageId = "es";
+
+    switch (Culture)
+    {
+        case "en-US":
+            languageId = "en";
+            break;
+        case "pt-BR":
+            languageId = "pt";
+            break;
+        default:
+            languageId = "es";
+            break;
+    };
+}
+<section id="containerAccountMenu">
+    <div id="menuAccount" class="menu-account-content">
+        <div id="closeAccountMenu" class="close-menu">
+            <span><i class="icon-ws-ico-min-close"></i></span>
+        </div>
+        <div class="body-menu-account">
+            <div class="head-menu-account">
+                <div class="head-menu-account-icon">
+                    <span><i class="icon-ws-ico-min-user"></i></span>
+                </div>
+                <p>@Resorces.Account.Login.Account</p>
+            </div>
+            <ul class="content-options-menu">
+                @foreach (var item in Model)
+                {
+                    var text = CRMLeadObjects.Resources.Home.NavigationMenu.ResourceManager.GetString(item.IdRecurso);
+                    var url = $"/{languageId}/{item.Controller}/{item.Action}";
+                    <li>
+                        <a href="@url">
+                            <i class="@item.Icon"></i>@text
+                        </a>
+                    </li>
+                }
+            </ul>
+        </div>
+        <div class="menu-account-logout">
+            <a id="logout" href="@Url.Action("Logout","Account")">
+                <div class="menu-account-logout-icon">
+                    <span><i class="icon-ws-ico-min-close"></i></span>
+                </div>
+                <span>@Resorces.Account.Login.SignOut</span>
+            </a>
+        </div>
+    </div>
+</section>  

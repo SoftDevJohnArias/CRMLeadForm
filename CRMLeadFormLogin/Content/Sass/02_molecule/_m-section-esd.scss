@@ -1,0 +1,226 @@
+﻿//Buscador
+.search-input {
+  float: left;
+  width: 60%;
+
+  & .search {
+    padding: 1em 1em;
+    color: $gs-gray;
+
+    & .icon-search {
+      width: 40px;
+      height: 40px;
+      border-radius: 2px;
+      background: #0AA9CB;
+      color: #FFFFFF;
+      position: absolute;
+      top: 19px;
+      right: 39px;
+    }
+
+    & input {
+      border: 1px solid $gs-gray;
+      border-radius: 3px;
+      padding: 1em;
+      width: 739px;
+      height: 48px;
+      @include title-personalization($gs-gray-04,$sixth-size,$font-family-quaternary,map-get( $font-weight-scale, medium));
+    }
+  }
+}
+
+//Paginador con botón
+.content-paginator, .content-paginator-clients {
+  width: 100%;
+  position: absolute;
+  background: linear-gradient(180deg, $wh-transparent,$wh-transparent-light,$wh-white-light,$wh-white);
+  height: 176px;
+  padding-top: 3.4em;
+  margin-left: -63px;
+
+  & .content-text-page {
+    text-align: center;
+
+    p {
+      @include title-personalization($bs-light-black,$second-size,$font-family-quaternary,map-get( $font-weight-scale, regular));
+    }
+  }
+
+  & .content-btn {
+    display: flex;
+    justify-content: center;
+    padding-top: 0.6em;
+  }
+}
+//Pagindor sin botón
+.content-pager, .content-pager-clients {
+  text-align: center;
+  margin-top: 1.5em;
+
+  p {
+    @include title-personalization($bs-light-black,$second-size,$font-family-quaternary,map-get( $font-weight-scale, regular));
+  }
+}
+
+.content-list {
+  padding: 1.5em;
+  border: 1px solid #E6E6E6;
+  margin-top: 1.5em;
+  background-color: white;
+}
+
+.license-style {
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
+  padding-top: 0.8em;
+
+  & img {
+    width: 54px;
+    height: 74px;
+  }
+
+  & p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  & .name {
+    @include title-personalization($bs-light-black,$main-size,$font-family-main,map-get( $font-weight-scale, semi-bold));
+  }
+
+  & .brand {
+    @include title-personalization($bs-black,$third-size,$font-family-main,map-get( $font-weight-scale, semi-bold));
+  }
+
+  & .sku {
+    @include title-personalization($gs-gray-dark,$third-size,$font-family-main,map-get( $font-weight-scale, regular))
+  }
+}
+
+.availability, .btn-send {
+  margin-top: 40px;
+}
+
+.separator {
+  color: #13c3e8 !important;
+}
+
+.content-my-codes-distributed {
+
+  & .return-esd {
+    color: $main-color;
+
+    & a {
+      @include title-personalization($main-color,$main-size, $font-family-main, map-get($font-weight-scale, regular));
+    }
+  }
+
+  & h5 {
+    margin-top: 1em;
+    @include title-personalization($bs-light-black,$main-medium-size, $font-family-secondary, map-get($font-weight-scale, bold));
+  }
+
+  & .table-codes {
+    background-color: $gs-gray-light;
+    padding: 1em 1.5em 0 1.5em;
+    margin: 1.2em 0 1.2em 0;
+
+    & .row-title {
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      height: 34px;
+
+      & span {
+        @include title-personalization($bs-black,$second-size, $font-family-secondary, map-get($font-weight-scale, bold));
+      }
+    }
+
+    & .separator {
+      border: 1px solid $gs-white;
+      margin: 0;
+    }
+
+    & .table-details {
+      & .row-info {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        height: 34px;
+
+        & span {
+          @include title-personalization($bs-light-black,$third-size,$font-family-quaternary, map-get($font-weight-scale, regular));
+        }
+      }
+    }
+  }
+}
+
+.content-style {
+  padding: 1.5em;
+  border: 1px solid $gs-gray;
+  background-color: $gs-white;
+}
+
+
+.content-my-codes-distributed {
+  & .nameCode {
+    @include title-personalization($bs-light-black, $seventh-size, $font-family-secondary, map-get($font-weight-scale, regular));
+    padding: 0.5em 0;
+  }
+
+  & .detailscodes {
+    @include title-personalization($bs-light-black, $seventh-size, $font-family-secondary, map-get($font-weight-scale, bold));
+    padding: 0.8em 0 0 0;
+  }
+
+  & .detailsText {
+    @include title-personalization($bs-light-black, $main-size, $font-family-secondary, map-get($font-weight-scale, regular));
+    padding: 0.7em 0 0.7em 0
+  }
+
+  & .btn-codes {
+    display: flex;
+    gap: 1em;
+    padding-top: 0.5em;
+  }
+
+  & .separator-codes {
+    border: 1px solid #e6e6e6;
+    margin: 1em 0;
+  }
+
+  & h5 {
+    padding: 0.5em 0 0.2em 0;
+  }
+
+ 
+}
+
+.align-text-notification-codes {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5em;
+  margin: 0 0 .5em 0;
+}
+@include respond-to(mobile-portrait) {
+  .content-ESD {
+    flex-direction: column;
+    padding: 1.5em 1em;
+
+    & .body-list {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+      gap: 1em;
+      width: 100%;
+
+      & .btn-send{
+        margin-top:0px;
+      }
+    }
+  }
+}
+

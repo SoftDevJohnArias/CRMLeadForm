@@ -1,0 +1,50 @@
+﻿.custom-checkbox {
+    width: 1.25rem;
+    height: 1.25rem;
+    position: absolute;
+}
+
+.mt-0 {
+    margin-top: 15px !important;
+}
+
+.btn-outline-secondary1 {
+    color: #6c757d;
+    border-color: #6c757d;
+}
+
+.select-row-grid {
+    background-color: lightslategray;
+}
+
+.table-hover > tbody > tr:hover > td,
+.table-hover > tbody > tr:hover > th {
+    background-color: lightgrey;
+}
+
+.container-fluid
+{
+    border:1px solid;
+    border-radius:10px;
+}
+
+#botones
+{
+    margin-bottom:3rem;
+}
+
+.btn-outline-secondary {
+    color: #8E8E8E;
+    background-color:white;
+}
+
+h4 {
+    color: #0AA9CB;
+    font-size:26px;
+    font-weight:600;
+}
+
+.modal-dialog
+{
+    width:600px;
+}

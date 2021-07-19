@@ -1,0 +1,22 @@
+﻿.row-filter {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 0.5em;
+
+  & .floating-label select {
+    margin-right: 1.5em;
+  }
+
+  & input {
+    margin-right: 1.5em;
+  }
+
+  & > button {
+    margin-right: 1em;
+  }
+}
+
+.space-blank {
+  width: 155px;
+}
+

@@ -1,0 +1,22 @@
+﻿@media print {
+  @page {
+    padding: 10%;
+  }
+
+  $non-printable-section: '.container-header','.container-header','.confirm-lead-create','.content-helper-steps';
+
+  .container-header,.container-header,.confirm-lead-create,.content-helper-steps {
+    display: none;
+  }
+
+
+  .content-data {
+    border: none;
+    border: 0px;
+
+    & .content-print {
+      display: none;
+    }
+  }
+  
+}

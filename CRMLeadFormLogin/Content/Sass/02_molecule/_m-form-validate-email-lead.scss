@@ -1,0 +1,147 @@
+﻿.content-validation-email {
+  display: flex;
+  flex-direction: column;
+  /*margin: 1em;*/
+  gap: .5em;
+  max-width: 680px;
+  margin-bottom: 1em;
+
+  & .form-group {
+    margin: 0;
+  }
+
+  & .input-user {
+    display: flex;
+    align-items: center;
+    gap: .8em;
+
+    & button {
+      font-size: $second-size;
+    }
+  }
+
+  & .input-user {
+    &.verify-code {
+      & button {
+        font-size: $third-size;
+      }
+    }
+  }
+
+  & .content-verification-code {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1em;
+    border-left: 1px solid $gs-gray;
+    gap: .5em;
+    margin-top: 1em;
+  }
+
+
+
+  .message-validation {
+
+    &.m-success {
+      display: flex;
+      align-items: center;
+      gap: 1em;
+
+      & .title-success {
+        margin-top: 0.2em;
+      }
+
+      & ~ .verify-code {
+        display: none;
+      }
+    }
+  }
+
+  & .content-other-email {
+    & .inputs-other-email {
+      margin-top: 1em;
+    }
+    /* & #chkOtherEmail:checked .button-check-email {
+      animation: validatemail 1s;
+    }*/
+    & .content-button-validate {
+      display: flex;
+      margin: 1em 0 1em 0;
+      gap: 0.6em;
+      /*& .button-check-email {
+        position: absolute;
+      }*/
+    }
+  }
+
+  & .notification-static {
+    margin: 0;
+  }
+
+
+
+  @include respond-to(mobile-portrait) {
+    & .input-user .form-group {
+      width: 100%;
+    }
+
+
+
+    & .content-other-email {
+
+      & .content-button-validate {
+        flex-direction: column;
+
+        .button-check-email {
+          position: unset;
+
+          & button {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.content-email-already-register {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1em;
+  border-left: 1px solid $gs-gray;
+  gap: .5em;
+  margin: 1em 0;
+  width: 476px;
+  ///mobile
+  @include respond-to(mobile-portrait) {
+    width: 338px;
+  }
+
+  & span {
+    @include title-personalization($twelveth-color,$main-size, $font-family-secondary, map-get($font-weight-scale, bold));
+  }
+
+  & p {
+    @include title-personalization($bs-light-black,$third-size, $font-family-quaternary, null);
+    margin-bottom: .5em;
+  }
+
+  .content-link {
+    display: flex;
+    gap: 0.4em;
+    line-height: 14px;
+    margin-bottom: .5em;
+    @include title-personalization($main-color,$main-size, $font-family-main, null);
+  }
+}
+
+@keyframes validatemail {
+  0% {
+    left: 0px;
+  }
+
+  100% {
+    left: 244px;
+  }
+}
+
+

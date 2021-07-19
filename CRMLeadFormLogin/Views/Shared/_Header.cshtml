@@ -1,0 +1,162 @@
+﻿@{
+  string language = string.Empty;
+  switch (Culture)
+  {
+    case "en-US":
+      language = "en";
+      break;
+    case "pt-BR":
+      language = "pt";
+      break;
+    default:
+      language = "es";
+      break;
+  };
+  var url = $"/{language}/Settings/Index";
+  var urlHome = $"/{language}/AdminHome/Index";
+  var header = Request.IsAuthenticated ? "container-header-login" : "container-header";
+  var singleSignOnActive = Convert.ToBoolean(System.Configuration.ConfigurationManager.AppSettings["singleSignOnActive"]) == true ? "" : "hidden";
+}
+
+<header class="@header">
+  <div class="content-title">
+    <a>
+      <img src="~/Content/img/intcomex/logo-int-w.svg" class="img-fluid" />
+    </a>
+    <div class="separator-title-2x"></div>
+    <span class="title-app">PORTAL IWS</span>
+  </div>
+
+  <div class="customer-content">
+
+    @if (Session["userActiveDirectoy"] != null && Request.IsAuthenticated)
+    {
+      <div class="customer-header">
+        <a class="nav-link" data-user="@Json.Encode(Session["userActiveDirectoy"])" id="changeCustomer" href="#">@CRMLeadObjects.Resources.Layout.Layout.ChangeCustomer</a>
+      </div>
+    }
+
+  </div>
+
+  @if (Request.IsAuthenticated)
+  {
+    <div class="content-help">
+
+
+    </div>
+  }
+  else
+  {
+
+    string languageId = string.Empty;
+    switch (Culture)
+    {
+      case "en-US":
+        languageId = "en";
+        break;
+      case "pt-BR":
+        languageId = "pt";
+        break;
+      default:
+        languageId = "es";
+        break;
+    };
+
+
+    <div class="content-help">
+      <div class="language-header">
+        <i class="icon-ws-ico-min-world"></i>
+        <a tabindex="0"
+           class="nav-link"
+           role="button"
+           data-html="true"
+           data-toggle="popover"
+           data-trigger="focus"
+           data-content="<div class='languaje content-language'><a id='es' onclick='ChangeLanguage()' >@CRMLeadObjects.Resources.Layout.Layout.Spanish</a></div> <div class='languaje' ><a id='en' onclick='ChangeLanguage()'>@CRMLeadObjects.Resources.Layout.Layout.English</a></div>">
+          <span id="textLanguage"></span>
+        </a>
+      </div>
+      <div @singleSignOnActive class="sign-in">
+        <ul class="nav navbar-nav navbar-right">
+          <li>@Html.ActionLink(@CRMLeadObjects.Resources.Account.Login.InicioSesion, "SignUpSignIn", "Account", routeValues: new { language = languageId }, htmlAttributes: new { id = "signUpSignInLink" })</li>
+        </ul>
+      </div>
+      <i class="icon-ws-ico-min-info"></i>
+      <span>@CRMLeadObjects.Resources.Account.Login.Help</span>
+    </div>
+  }
+</header>
+@if (Request.IsAuthenticated)
+{
+    string languageId = string.Empty;
+    switch (Culture)
+    {
+        case "en-US":
+            languageId = "en";
+            break;
+        case "pt-BR":
+            languageId = "pt";
+            break;
+        default:
+            languageId = "es";
+            { }
+            break;
+    };
+
+    string TempUrlStore = @System.Configuration.ConfigurationManager.AppSettings["urlStoreHome"];
+    string TempUrlStoreXCB = @System.Configuration.ConfigurationManager.AppSettings["urlStoreHomeXCB"];
+
+    //string companyId = ((CRMLeadFormLogin.Models.CustomPrincipal)((System.Web.HttpContextWrapper)Context)?.User)?.CompanyId;
+
+    string companyId = "XCB";
+
+    string urlStore = TempUrlStore.Replace("{language}", languageId).Replace("{company}", companyId);
+    string urlStoreXCB = TempUrlStoreXCB.Replace("{language}", languageId).Replace("{company}", companyId);
+
+    string urlStoreFinal = companyId.Contains("XCB") ? urlStoreXCB : urlStore;
+
+<div class="content-main-help-bar">
+    <div class="column-big contain">
+        <div class="help-text">
+            <i class="icon-info-main"></i>
+            <a class="nav-link">@CRMLeadObjects.Resources.Account.Login.Help</a>
+        </div>
+    </div>
+    <div class="column-small-02 contain">
+        <div class="goStore-text">
+            <i class="icon-shop-car"></i>
+            <a target="_blank" href="@urlStoreFinal" class="nav-link">Ir al webstore</a>
+        </div>
+    </div>
+    <div class="column-small-04 contain">
+        <i class="icon-language"></i>
+        <p>Español</p>
+        @*<i class="icon-down"></i>*@
+        <div class="dropdown-language" style="float:right;">
+            <i class="icon-down dropbtn-language"></i>
+            <div class="dropdown-content-language">
+                <a href="#" class="esp">Español</a>
+                <a href="#" class="ing">Inglés</a>
+            </div>
+        </div>
+    </div>
+    @*<div class="column-small-04 contain">
+          <i class="icon-language"></i>
+          <a tabindex="0"
+             class="nav-link"
+             role="button"
+             data-html="true"
+             data-toggle="popover"
+             data-trigger="focus"
+             data-placement="bottom"
+             data-content="<div class='languaje content-language'><a id='es' onclick='ChangeLanguage()' >@CRMLeadObjects.Resources.Layout.Layout.Spanish</a></div><div class='languaje' ><a id='en' onclick='ChangeLanguage()'>@CRMLeadObjects.Resources.Layout.Layout.English</a></div>">
+            <span id="textLanguage" style="color:black;"></span>
+          </a>
+          <i class="icon-down"></i>
+        </div>*@
+</div>
+}
+
+
+
+

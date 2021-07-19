@@ -1,0 +1,23 @@
+﻿.separator-header-title {
+  @include set-separator(30px, $gs-white, 4px);
+}
+
+.separator-header {
+  @include set-separator(30px, $gs-white, 1px);
+}
+
+.separator-title {
+  @include set-separator(48px, $gs-white, 1px);
+}
+
+.separator-title-2x {
+  @include set-separator(30px, $gs-white, 2px);
+}
+
+.separator-link {
+  @include set-separator(15px, $main-color, 1px);
+}
+hr {
+  border: 1px solid $gs-gray;
+  margin: 1.5em 0;
+}

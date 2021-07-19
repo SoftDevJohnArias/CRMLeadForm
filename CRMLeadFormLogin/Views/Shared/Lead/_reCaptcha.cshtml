@@ -1,0 +1,32 @@
+﻿@{
+  string _googlesitekey = System.Configuration.ConfigurationManager.AppSettings["reCaptchaSiteKey"];
+}
+
+@*<article class="g-recaptcha"
+           data-callback="VerifyRecaptchaCallback"
+           data-expired-callback="ExpiredRecaptchaCallback">
+  </article>
+  <input type="search" class="form-control d-none" />
+  <div class="recatch-message"><p></p></div>*@
+
+@*<section class="reCaptcha">
+  <div id="html_element"></div>
+</section>*@
+
+@*<script>
+  var verifyCallback = function (response) {
+    alert(response);
+  };
+
+  var onloadCallback = function () {
+    grecaptcha.render('html_element', {
+      'sitekey': '@_googlesitekey',
+       'callback': verifyCallback,
+    });
+  };
+</script>*@
+
+
+
+
+

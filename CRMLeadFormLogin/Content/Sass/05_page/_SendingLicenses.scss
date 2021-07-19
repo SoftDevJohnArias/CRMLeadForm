@@ -1,0 +1,58 @@
+﻿.content-sending-licenses {
+  & .return-licences-purchase {
+    color: $main-color;
+
+    & a {
+      @include title-personalization($main-color,$main-size, $font-family-main, map-get($font-weight-scale, regular));
+    }
+  }
+
+
+  & h5 {
+    margin-top: 1em;
+    @include title-personalization($bs-light-black,$main-medium-size, $font-family-secondary, map-get($font-weight-scale, bold));
+  }
+
+  & .my-clients-licenses {
+    & .content-search {
+      & .content-title {
+        margin: 0.5em 0 0em 0.8em;
+
+        & .title-desc {
+          @include title-personalization($bs-light-black,$third-size,$font-family-quaternary, map-get($font-weight-scale, regular));
+        }
+      }
+
+      & .search-header {
+        & h2 {
+          @include title-personalization($bs-light-black,$seventh-size,$font-family-secondary, map-get($font-weight-scale, bold));
+        }
+      }
+
+      & .search-body {
+        margin-top: 0;
+      }
+    }
+  }
+
+  & .column-quantity {
+    display: flex;
+    align-items: center;
+  }
+
+  & .content-quantity {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $gs-gray-light;
+    width: 80px;
+    height: 48px;
+    @include title-personalization($bs-light-black,$third-size,$font-family-quaternary, map-get($font-weight-scale, regular));
+
+    & button {
+      border: none;
+      background-color: $gs-gray-light;
+      @include title-personalization($bs-black,18px,$font-family-quaternary, map-get($font-weight-scale, regular));
+    }
+  }
+}

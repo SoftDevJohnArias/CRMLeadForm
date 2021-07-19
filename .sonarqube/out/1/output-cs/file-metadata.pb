@@ -1,0 +1,14 @@
+M
+DC:\Users\jaria304\source\repos\CRMLeadForm\DAL\ActiveDirectoryDAL.csutf-8D
+;C:\Users\jaria304\source\repos\CRMLeadForm\DAL\ApiLogDAL.csutf-8C
+:C:\Users\jaria304\source\repos\CRMLeadForm\DAL\EmailDAL.csutf-8B
+9C:\Users\jaria304\source\repos\CRMLeadForm\DAL\LeadDAL.csutf-8T
+KC:\Users\jaria304\source\repos\CRMLeadForm\DAL\Leads\ValidateCodeLeadDAL.csutf-8[
+RC:\Users\jaria304\source\repos\CRMLeadForm\DAL\NavigationMenu\NavigationMenuDAL.csutf-8Q
+HC:\Users\jaria304\source\repos\CRMLeadForm\DAL\Processes\ProcessesDAL.csutf-8R
+IC:\Users\jaria304\source\repos\CRMLeadForm\DAL\Properties\AssemblyInfo.csutf-8I
+@C:\Users\jaria304\source\repos\CRMLeadForm\DAL\RestCallLogDAL.csutf-8_
+VC:\Users\jaria304\source\repos\CRMLeadForm\DAL\SettingsCustomer\SettingsCustomerDAL.csutf-8C
+:C:\Users\jaria304\source\repos\CRMLeadForm\DAL\TraxUser.csutf-8c
+ZC:\Users\jaria304\source\repos\CRMLeadForm\DAL\WebServiceSettings\WebServiceSettingsDAL.csutf-8v
+kC:\Users\jaria304\source\repos\CRMLeadForm\DAL\obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.csutf-8

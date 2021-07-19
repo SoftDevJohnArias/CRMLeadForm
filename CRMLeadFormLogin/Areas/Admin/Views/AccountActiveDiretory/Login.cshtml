@@ -1,0 +1,88 @@
+﻿@using Resources = CRMLeadObjects.Resources;
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model  CRMLeadObjects.DTO.IWSPortal.Login
+
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>IWSPortal Admin</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="~/Content/login/fonts.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.5/awesomplete.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.5/awesomplete.min.js" async></script>
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <link href="~/Content/login/style.css" rel="stylesheet" />
+</head>
+<body class="salsify bg-home">
+    @*<header class="bg-blue">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <img src="~/Content/img/intcomex/logo-int-w.svg" width="256" class="img-fluid" />
+                    </div>
+                </div>
+            </div>
+        </header>*@
+    <section class="texto ">
+        <div class="container">
+            <div class="row justify-content-center align-items-center minh-100">
+                <div class="col-md-7 col-lg-8">
+                    <h5 style="color:white">@Resources.Account.Login.Bienvenida</h5>
+                </div>
+                <div class="col-md-5  col-lg-4 ">
+                    <div class="form-ingreso">
+                        <h3 class="my-4">@Resources.Account.Login.InicioSesion user admin</h3>
+
+                        <h6 class="invalid-login">@ViewBag.error</h6>
+
+                        <form class="needs-validation" id="formLoginAdmin">
+                            @Html.AntiForgeryToken()
+                            <div class="form-group">
+                                @Html.TextBoxFor(modelUser => modelUser.User, new { @class = "form-control", required = "required" })
+
+                                <label class="form-control-placeholder" for="User">@Resources.Account.Login.Usuario</label>
+                                <div class="invalid-feedback">
+                                    <span class="icon-ws-ico-min-alert"></span>	Usuario invalido
+                                </div>
+                            </div>
+                            <div class="form-group input-group">
+                                @Html.PasswordFor(modelUser => modelUser.Password, new { @class = "form-control input-z0", required = "required", autocomplete = "on" })
+                                <label class="form-control-placeholder" for="Password">@CRMLeadObjects.Resources.Account.Login.Contraseña</label>
+                                <span class="input-group-append" onclick="confi.ShowPassword(this);">
+                                    <button class="btn btn-outline-secondary" type="button">
+                                        <i class="icon-ws-ico-min-view"></i>
+                                    </button>
+                                </span>
+                            </div>
+
+                            <button type="submit" id="btnLogin" class="btn-sfy btn-blue-sfy btn-box btn-lg-sfy my-1">@Resources.Account.Login.InicioSesion</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer fixed-bottom pt-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p> @CRMLeadObjects.Resources.Layout.Layout.FooterLogin </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    @Html.Partial("_ModalGetCustomer")
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+

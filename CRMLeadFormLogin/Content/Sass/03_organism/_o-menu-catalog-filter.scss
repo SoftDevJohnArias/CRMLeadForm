@@ -1,0 +1,75 @@
+﻿
+.menu-catalog-content {
+  width: 100%;
+  padding: 1em;
+  background: $gs-light;
+
+  &.sticky {
+    position: fixed;
+    width: 14%;
+    margin-top: 1.75em;
+
+    @media only screen and (max-width: 1280px) {
+      & {
+        width: 12%;
+      }
+    }
+  }
+
+  & ul {
+    padding: 0;
+
+    & > li {
+      display: flex;
+      flex-direction: column;
+
+
+      & .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 39px;
+        border: 1px solid $gs-gray;
+        border-left: none;
+        border-right: none;
+        cursor: pointer;
+        @include title-personalization($bs-black,$second-size,$font-family-secondary,map-get( $font-weight-scale, bold));
+      }
+
+
+      & .active {
+        max-height: 50vh;
+        overflow: auto;
+        overflow-x: hidden;
+        margin-top: .8em;
+        transition: all 0.5s ease-in-out;
+      }
+
+      & ul {
+        max-height: 0;
+        overflow: hidden;
+        padding: 0;
+        @include set-styled-scroll(6px, 8px, $gs-gray);
+        transition: all 0.5s ease-in-out;
+
+        & > li {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          flex-direction: row;
+          @include title-personalization($bs-light-black,$third-size,$font-family-main,map-get( $font-weight-scale, regular));
+
+          & .counter {
+            width: 16px;
+            height: 14px;
+            background: $gs-gray;
+            border-radius: 2px;
+            text-align: center;
+            margin-right: 1em;
+            @include title-personalization($gs-gray-dark,$fiveth-size,$font-family-main,map-get( $font-weight-scale, semi-bold));
+          }
+        }
+      }
+    }
+  }
+}
